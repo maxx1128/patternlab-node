@@ -10,7 +10,12 @@ var pkg = require('./package.json'),
     header = require('gulp-header'),
     nodeunit = require('gulp-nodeunit'),
     eslint = require('gulp-eslint'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    autoprefixer = require('gulp-autoprefixer'),
+    notify = require('gulp-notify'),
+    rename = require('gulp-rename'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps');
 
 require('gulp-load')(gulp);
 var banner = [ '/** ',
@@ -151,6 +156,34 @@ gulp.task('connect', ['lab'], function () {
   );
 
 });
+
+// Converts the Sass partials into a single CSS file
+gulp.task('sass', function () {
+    
+    var sassOptions = { 
+        outputStyle: 'expanded',
+    };
+
+    var autoprefixerOptions = {
+      browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+    };
+
+  return gulp
+    .src('sass/main.scss')
+    .pipe(sourcemaps.init())
+    // Write Sass for either dev or prod
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write())
+    .pipe(rename("style.css"))
+    // Sends the Sass file to either the app or dist folder
+    .pipe(gulp.dest('source/css-test'))
+    .pipe(notify({ message: 'Sass Processed!', onLast: true }))
+    .pipe(browserSync.stream());
+});
+
+
+
 
 //lint
 gulp.task('eslint', function () {
