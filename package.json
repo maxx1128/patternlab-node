@@ -20,6 +20,7 @@
     "gulp-copy": "0.0.2",
     "gulp-eslint": "^2.0.0",
     "gulp-header": "^1.7.1",
+    "gulp-include": "^2.1.0",
     "gulp-load": "^0.1.1",
     "gulp-nodeunit": "0.0.5",
     "gulp-notify": "^2.2.0",

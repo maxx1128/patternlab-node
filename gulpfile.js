@@ -12,10 +12,24 @@ var pkg = require('./package.json'),
     eslint = require('gulp-eslint'),
     browserSync = require('browser-sync').create(),
     autoprefixer = require('gulp-autoprefixer'),
+    include = require('gulp-include'),
     notify = require('gulp-notify'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps');
+
+/*
+gulp.task('browserSync', function() {
+    var appSettings = {
+        server: { baseDir: 'public' },
+        reload: ({ stream: true}),
+        notify: false
+    };
+
+    browserSync(appSettings)
+});
+*/
+
 
 require('gulp-load')(gulp);
 var banner = [ '/** ',
@@ -177,11 +191,20 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write())
     .pipe(rename("style.css"))
     // Sends the Sass file to either the app or dist folder
-    .pipe(gulp.dest('source/css-test'))
+    .pipe(gulp.dest('source/css'))
     .pipe(notify({ message: 'Sass Processed!', onLast: true }))
     .pipe(browserSync.stream());
 });
 
+gulp.task("scripts", function() { 
+  gulp.src("js/main.js")
+    .pipe(include())
+      .on('error', console.log)
+    .pipe(rename("init.js"))
+    .pipe(gulp.dest("source/js"))
+    .pipe(notify({ message: 'JS Scripted!', onLast: true }))
+    .pipe(browserSync.stream());
+});
 
 
 
@@ -200,12 +223,20 @@ gulp.task('nodeunit', function () {
 });
 
 
+// Watch task
+gulp.task('watch', function(){
+  gulp.watch('sass/**/**/*.scss', ['sass']);
+  gulp.watch('js/**/**/*.js', ['scripts']);
+  gulp.watch(['source/_patterns/**/**/**/*.+(json|mustache)', 'source/_data/*.json'], ['lab']);
+});
+
+
 gulp.task('lab-pipe', ['lab'], function (cb) {
   cb();
   browserSync.reload();
 });
 
-gulp.task('default', ['lab']);
+gulp.task('default', ['sass', 'scripts', 'lab', 'watch']);
 
 gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
 gulp.task('prelab', ['clean', 'assets']);
