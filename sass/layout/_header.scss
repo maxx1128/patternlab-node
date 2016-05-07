@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+.header {
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.logo {
+  float: left;
+  max-width: 8rem;
+  margin: 0.4rem;
+}
+@media all and (min-width: 46.8em) {
+  .logo {
+    max-width: 9rem;
+  }
+}
+
+.nav-toggle {
+  float: right;
+  display: block;
+  padding: 0.9rem 1rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-left: 1px solid #dbdbdb;
+}
+@media all and (min-width: 46.8em) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.search-form {
+  overflow: hidden;
+  max-height: 0;
+}
+@media all and (min-width: 46.8em) {
+  .search-form {
+    float: right;
+    max-height: none;
+    margin: 0.65em 0.5em 0 0;
+  }
+}
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+.nav {
+  clear: both;
+  overflow: hidden;
+  max-height: 0;
+}
+.nav a {
+  display: block;
+  padding: 1rem;
+  border-top: 1px solid #eeeeee;
+}
+.nav.active {
+  max-height: 40em;
+}
+@media all and (min-width: 46.8em) {
+  .nav {
+    max-height: none;
+    float: right;
+    clear: none;
+  }
+  .nav li {
+    float: left;
+  }
+  .nav a {
+    border: 0;
+  }
+}

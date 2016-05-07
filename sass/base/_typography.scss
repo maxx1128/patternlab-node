@@ -1,0 +1,93 @@
+/* Links */
+a {
+  color: #333333;
+  text-decoration: none;
+  outline: 0;
+}
+a:hover, a:focus {
+  color: gray;
+}
+
+/* Headings */
+/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+h1, .alpha {
+  line-height: 1.2;
+}
+
+h2, .beta {
+  line-height: 1.2;
+}
+
+h3, .gamma {
+  line-height: 1.2;
+}
+
+/* Subheadings */
+.subheading {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+/* Text-Related Elements */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid gray;
+  color: gray;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  height: 2px;
+  background: #eeeeee;
+  margin: 2rem 0;
+}
+
+abbr {
+  border-bottom: 1px dotted gray;
+  cursor: help;
+}
+
+
+
+/* Global Font Classes */
+.font-secondary {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.intro {
+  font-size: 1.0625em;
+  font-weight: bold;
+}
+
+.pullquote {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4375em;
+}
+
+.text a {
+  text-decoration: underline;
+}
+.text ul {
+  list-style: disc;
+  margin: 0 0 1rem 1.2em;
+}
+.text ul ul {
+  margin-bottom: 0;
+}
+.text ol {
+  list-style: decimal;
+  margin: 0 0 1rem 1.2em;
+}
+.text ol ol {
+  margin-bottom: 0;
+}
+
+

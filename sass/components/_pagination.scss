@@ -1,0 +1,13 @@
+.pagination {
+  overflow: hidden;
+}
+.pagination li {
+  float: left;
+  border-right: 1px solid #eeeeee;
+}
+.pagination li:last-child {
+  border: 0;
+}
+.pagination a {
+  padding: 1rem;
+}

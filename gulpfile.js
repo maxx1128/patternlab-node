@@ -14,21 +14,23 @@ var pkg = require('./package.json'),
     autoprefixer = require('gulp-autoprefixer'),
     include = require('gulp-include'),
     notify = require('gulp-notify'),
+    plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps');
 
-/*
-gulp.task('browserSync', function() {
-    var appSettings = {
-        server: { baseDir: 'public' },
-        reload: ({ stream: true}),
-        notify: false
-    };
 
-    browserSync(appSettings)
-});
-*/
+// Function for plumber to handle errors
+function customPlumber(errTitle) {
+    return plumber({
+        errorHandler: notify.onError({
+            // Custom error titles go here
+            title: errTitle || 'Error running Gulp',
+            message: "<%= error.message %>",
+            sound: 'Submarine',
+        })
+    });
+}
 
 
 require('gulp-load')(gulp);
@@ -84,7 +86,15 @@ gulp.task('banner', function () {
 // JS copy
 gulp.task('cp:js', function () {
   return gulp.src('**/*.js', {cwd: path.resolve(paths().source.js)})
-    .pipe(gulp.dest(path.resolve(paths().public.js)));
+    .pipe(gulp.dest(path.resolve(paths().public.js)))
+    .pipe(browserSync.stream());
+});
+
+// CSS Copy
+gulp.task('cp:css', function () {
+  return gulp.src(path.resolve(paths().source.css, 'style.css'))
+    .pipe(gulp.dest(path.resolve(paths().public.css)))
+    .pipe(browserSync.stream());
 });
 
 // Images copy
@@ -105,13 +115,6 @@ gulp.task('cp:font', function () {
 gulp.task('cp:data', function () {
   return gulp.src('annotations.js', {cwd: path.resolve(paths().source.data)})
     .pipe(gulp.dest(path.resolve(paths().public.data)));
-});
-
-// CSS Copy
-gulp.task('cp:css', function () {
-  return gulp.src(path.resolve(paths().source.css, 'style.css'))
-    .pipe(gulp.dest(path.resolve(paths().public.css)))
-    .pipe(browserSync.stream());
 });
 
 // Styleguide Copy
@@ -152,7 +155,16 @@ gulp.task('connect', ['lab'], function () {
       ]
     }
   });
+
+  gulp.watch('sass/**/**/*.scss', ['sass'],
+    function () { browserSync.reload(); } );
+
+  gulp.watch('js/**/**/*.js', ['scripts'],
+    function () { browserSync.reload(); } );
+
   gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['cp:css']);
+
+  gulp.watch(path.resolve(paths().source.js, '**/*.js'), ['cp:js']);
 
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*'), ['cp:styleguide']);
 
@@ -184,6 +196,7 @@ gulp.task('sass', function () {
 
   return gulp
     .src('sass/main.scss')
+    .pipe(customPlumber('Error running Sass'))
     .pipe(sourcemaps.init())
     // Write Sass for either dev or prod
     .pipe(sass(sassOptions))
@@ -222,13 +235,6 @@ gulp.task('nodeunit', function () {
     .pipe(nodeunit());
 });
 
-
-// Watch task
-gulp.task('watch', function(){
-  gulp.watch('sass/**/**/*.scss', ['sass']);
-  gulp.watch('js/**/**/*.js', ['scripts']);
-  gulp.watch(['source/_patterns/**/**/**/*.+(json|mustache)', 'source/_data/*.json'], ['lab']);
-});
 
 
 gulp.task('lab-pipe', ['lab'], function (cb) {

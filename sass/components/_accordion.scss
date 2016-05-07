@@ -1,0 +1,28 @@
+.accordion {
+  margin-bottom: 1rem;
+}
+
+.acc-handle {
+  background: #131313;
+  color: white;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  padding: 0.5rem;
+  border-bottom: 1px solid #dddddd;
+}
+.acc-handle:after {
+  content: "+";
+  float: right;
+}
+.acc-handle:hover {
+  color: white;
+  background: #333333;
+}
+.acc-handle.active {
+  background: #333333;
+}
+.acc-handle.active:after {
+  content: "-";
+}

@@ -1,0 +1,6 @@
+// This is the function to pull colors out. It's here instead of on the functions sheet so the below color values can be set.
+@function color($color, $tone: "base") {
+    @if map-has-key($color-map, $color) {
+        @return map-get(map-get($color-map, $color), $tone);
+    }
+}

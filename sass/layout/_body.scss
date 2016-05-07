@@ -1,0 +1,18 @@
+body {
+  background: white;
+  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+}
+
+[role=main] {
+  padding: 0.5rem 0.5rem 2rem;
+  overflow: hidden;
+}
+
+/* Layout Container */
+.lc, .header, [role=main] {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}

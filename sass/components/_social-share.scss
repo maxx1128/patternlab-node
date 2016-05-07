@@ -1,0 +1,17 @@
+.social-share {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.social-share li {
+  float: left;
+  margin-right: 0.25rem;
+}
+.social-share a {
+  background: #333333;
+  color: white;
+  display: block;
+  padding: 0.5rem;
+}
+.social-share a:hover {
+  background: gray;
+}
