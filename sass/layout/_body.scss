@@ -1,9 +1,4 @@
-body {
-  background: white;
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  -webkit-text-size-adjust: 100%;
-  color: #333333;
-}
+body { background: color(primary, lightest); }
 
 [role=main] {
   padding: 0.5rem 0.5rem 2rem;
@@ -11,7 +6,7 @@ body {
 }
 
 /* Layout Container */
-.lc, .header, [role=main] {
+.pl, .lc, .header, [role=main] {
   max-width: 72rem;
   margin: 0 auto;
   padding: 0.5rem;

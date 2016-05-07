@@ -1,25 +1,59 @@
+// Default typography for all elements
+body {
+  font-family: type(font-family, sans);
+
+  color: color(primary, darkest);
+}
+
+
 /* Links */
 a {
-  color: #333333;
+  color: color(action);
   text-decoration: none;
   outline: 0;
 }
 a:hover, a:focus {
-  color: gray;
+  color: color(action, hover);
+  text-decoration: underline;
 }
 
 /* Headings */
-/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+// First, any universal headings styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: type(font-family, serif); }
+
 h1, .alpha {
-  line-height: 1.2;
+  font-size: type(font-size, h1);
+  line-height: type(line-height, h1);
 }
 
 h2, .beta {
-  line-height: 1.2;
+  font-size: type(font-size, h2);
+  line-height: type(line-height, h2);
 }
 
 h3, .gamma {
-  line-height: 1.2;
+  font-size: type(font-size, h3);
+  line-height: type(line-height, h3);
+}
+
+h4 {
+  font-size: type(font-size, h4);
+  line-height: type(line-height, h4);
+}
+
+h5 {
+  font-size: type(font-size, h5);
+  line-height: type(line-height, h5);
+}
+
+h6 {
+  font-size: type(font-size, h6);
+  line-height: type(line-height, h6);
 }
 
 /* Subheadings */
@@ -31,6 +65,9 @@ h3, .gamma {
 /* Text-Related Elements */
 p {
   margin-bottom: 1rem;
+
+  font-size: type(font-size);
+  line-height: type(line-height);
 }
 
 /* Blockquote */

@@ -12,6 +12,7 @@
   "devDependencies": {
     "bourbon": "~4.2.4",
     "normalize-css": "normalize.css#~4.0.0",
-    "bootcamp": "~1.1.7"
+    "bootcamp": "~1.1.7",
+    "Synapse-Grid": "https://github.com/maxx1128/Synapse-Grid.git"
   }
 }
