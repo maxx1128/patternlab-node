@@ -58,8 +58,8 @@ h6 {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: normal;
+  font-family: type(font-family, sans);
+  font-weight: type(font-weight, bold);
 }
 
 /* Text-Related Elements */

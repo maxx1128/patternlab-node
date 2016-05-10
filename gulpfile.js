@@ -159,6 +159,9 @@ gulp.task('connect', ['lab'], function () {
   gulp.watch('sass/**/**/*.scss', ['sass'],
     function () { browserSync.reload(); } );
 
+  gulp.watch('pl-sass/**/**/*.scss', ['pl-sass'],
+    function () { browserSync.reload(); } );
+
   gulp.watch('js/**/**/*.js', ['scripts'],
     function () { browserSync.reload(); } );
 
@@ -195,7 +198,7 @@ gulp.task('sass', function () {
     };
 
   return gulp
-    .src('sass/main.scss')
+    .src('pl-sass/main.scss')
     .pipe(customPlumber('Error running Sass'))
     .pipe(sourcemaps.init())
     // Write Sass for either dev or prod
@@ -206,6 +209,33 @@ gulp.task('sass', function () {
     // Sends the Sass file to either the app or dist folder
     .pipe(gulp.dest('source/css'))
     .pipe(notify({ message: 'Sass Processed!', onLast: true }))
+    .pipe(browserSync.stream());
+});
+
+
+// Converts the Sass partials into a single CSS file
+gulp.task('pl-sass', function () {
+    
+    var sassOptions = { 
+        outputStyle: 'expanded',
+    };
+
+    var autoprefixerOptions = {
+      browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+    };
+
+  return gulp
+    .src('pl-sass/main.scss')
+    .pipe(customPlumber('Error running Sass'))
+    .pipe(sourcemaps.init())
+    // Write Sass for either dev or prod
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write())
+    .pipe(rename("styleguide-new.css"))
+    // Sends the Sass file to either the app or dist folder
+    .pipe(gulp.dest('core/styleguide/css'))
+    .pipe(notify({ message: 'PL Sass Processed!', onLast: true }))
     .pipe(browserSync.stream());
 });
 
@@ -242,7 +272,7 @@ gulp.task('lab-pipe', ['lab'], function (cb) {
   browserSync.reload();
 });
 
-gulp.task('default', ['sass', 'scripts', 'lab', 'watch']);
+gulp.task('default', ['sass', 'pl-sass', 'scripts', 'lab', 'watch']);
 
 gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
 gulp.task('prelab', ['clean', 'assets']);

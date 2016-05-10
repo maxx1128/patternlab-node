@@ -87,16 +87,17 @@
 \*------------------------------------*/
 /* Header */
 .sg-header {
-  background: #222;
-  color: #fff;
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  left: 0;
+  @include position(fixed, 0 null null 0);
   z-index: 2;
   width: 100%;
+
+  background: color(primary, darkest);
+  
+  color: color(primary, lighter);
+  font-family: type(font-family, sans);
+  text-transform: uppercase;
 }
+
 .sg-header * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -114,6 +115,8 @@
   font-size: 70%;
   color: #808080;
   text-decoration: none;
+
+  background: color(primary, darker);
   display: block;
   line-height: 1;
   padding: 1em;
@@ -841,3 +844,8 @@ div.clear {
 /* End Pattern Lab Interface code */
 
 /*# sourceMappingURL=styleguide.css.map */
+
+
+
+
+

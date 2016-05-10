@@ -1,3 +1,15 @@
+/* 
+
+1. Remove unneeded patterns from folders and any dependencies that use them, plus their related CSS
+2. Check through all remaining patterns to see their Sass is accounted for and organized properly.
+  * Make sure BEM is being used
+3. Go through all SASS files and implement
+  * Unique, scoped variables for key styles
+  * Global variable usage for related elements
+  * Implement Synapse layout, remove Expressive layout
+
+ */
+
 @import
 '_bower_components/bourbon/app/assets/stylesheets/bourbon',
 '_bower_components/Synapse-Grid/synapse-grid';
