@@ -136,10 +136,6 @@ $containers-map: (
     base: 3px
   ),
 
-  borderStyle: (
-    base: solid
-  ),
-
   dropShadow: (
     base: 1px 1px 3px #000
   ),
@@ -154,6 +150,7 @@ $containers-map: (
   ),
 
   padding: (
+    half: ($g-base-spacing / 2),
     base: $g-base-spacing,
     large: ($g-base-spacing * 2)
   )

@@ -1,0 +1,28 @@
+/* Post List */
+
+// Blocks of the most recent posts, with images
+.latest-posts {
+
+}
+
+.post-list li {
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+
+
+/* Headline List */
+// The text-only version of most recent posts
+// Includes recent tweets
+.headline-list {
+  margin-bottom: 1rem;
+  list-style-type: none;
+
+  li {
+    padding: container(padding, half) 0;
+    border-top: container(border);
+  }
+
+  &.flush { margin: 0; }
+}
