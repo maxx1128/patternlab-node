@@ -3,10 +3,9 @@ $synapse: (
   columns: 12,
   layouts: (
         xs:  0,
-        small:  breakpoint('small'),
-        medium:  breakpoint('medium'),
-        large: breakpoint('large'),
-        huge: breakpoint('huge')
+        sm:  breakpoint('small'),
+        md:  breakpoint('medium'),
+        lg: breakpoint('large')
     ),
   spaceUnits: (
     spacing('half'),

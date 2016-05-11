@@ -198,7 +198,7 @@ gulp.task('sass', function () {
     };
 
   return gulp
-    .src('pl-sass/main.scss')
+    .src('sass/main.scss')
     .pipe(customPlumber('Error running Sass'))
     .pipe(sourcemaps.init())
     // Write Sass for either dev or prod

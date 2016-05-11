@@ -7,7 +7,7 @@ body { background: color(primary, lightest); }
 
 /* Layout Container */
 .pl, .lc, .header, [role=main] {
-  max-width: 72rem;
+  max-width: breakpoint('max-width');
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: spacing();
 }

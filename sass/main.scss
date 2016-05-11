@@ -27,8 +27,10 @@
 // http://www.sitepoint.com/5-great-uses-sass-maps/
 
 @import
+'base/reset',
 'base/normalize',
 'base/typography',
+'base/buttons',
 'base/lists',
 'base/media',
 'base/tables',
@@ -48,12 +50,7 @@
 'components/article',
 'components/blocks',
 'components/brick',
-'components/buttons',
-'components/comments',
-'components/eyebrow',
-'components/grade-tile',
 'components/pagination',
 'components/search',
-'components/social-list',
 'components/social-share',
 'components/tabs';
