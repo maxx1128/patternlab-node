@@ -1,8 +1,17 @@
-ol, ul {
+ol,
+ul {
   @include margin(null null spacing() spacing(double));
   padding: 0;
 
   line-height: type(line-height);
+
+  ol,
+  ul {
+    @include margin(spacing(third) null 0 null);
+    margin-bottom: 0;
+  }
+
+  li { margin-bottom: spacing(third); }
 }
 
 /* Definition Lists */

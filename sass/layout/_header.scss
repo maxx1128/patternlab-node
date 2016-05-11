@@ -1,19 +1,22 @@
+$header-bp: medium;
+
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
+// The whole header container
 .header {
-  background: white;
   padding: 0;
-  border-bottom: 1px solid #dbdbdb;
+
+  background: color(primary, lightest);
+  border-bottom: container(border);
 }
 
 .logo {
   float: left;
   max-width: 8rem;
-  margin: 0.4rem;
-}
-@media all and (min-width: 46.8em) {
-  .logo {
+  margin: spacing(half);
+
+  @include larger-than($header-bp) {
     max-width: 9rem;
   }
 }
@@ -21,13 +24,10 @@
 .nav-toggle {
   float: right;
   display: block;
-  padding: 0.9rem 1rem 0.7rem;
-  font-size: 1.3rem;
-  line-height: 1;
+  padding: spacing() spacing() spacing();
   border-left: 1px solid #dbdbdb;
-}
-@media all and (min-width: 46.8em) {
-  .nav-toggle {
+
+  @include larger-than($header-bp) {
     display: none;
   }
 }
@@ -65,6 +65,8 @@
     max-height: none;
     float: right;
     clear: none;
+
+    ul { text-decoration: none; }
   }
   .nav li {
     float: left;

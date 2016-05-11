@@ -88,6 +88,12 @@ $color-map: (
     base: $g-primary-action-color,
     hover: shade($g-primary-action-color, 15%)
   ),
+
+  palette: (
+    red: red,
+    green: green,
+    blue: blue
+  ),
 );
 
 

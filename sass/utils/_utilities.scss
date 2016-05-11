@@ -1,18 +1,11 @@
+// See if the clearfixes can be removed
+// Need to remove the layouts' dependency on them
+
 /* Clearfix */
 .cf, .l-two-col, [role=main] {
-  *zoom: 1;
+  @include clearfix();
 }
 
-.cf:before, .l-two-col:before, [role=main]:before, .cf:after, .l-two-col:after, [role=main]:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after, .l-two-col:after, [role=main]:after {
-  clear: both;
-}
 
 /* Completely remove from the flow and screen readers. */
 .is-hidden {
@@ -20,75 +13,22 @@
   visibility: hidden !important;
 }
 
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
 
 /* Floats */
-.right {
-  float: right;
-  padding: 0 0 1rem 1rem;
-}
+.right { float: right; }
 
-.right-search {
-  float: right;
-  padding: 0 0 1rem 0;
-}
+.left { float: left; }
 
-.left {
-  float: left;
-  padding: 0 1rem 1rem 0;
-}
 
 /* Text-Align */
-.align-right {
-  text-align: right;
-}
+.align-right { text-align: right; }
 
-.align-center {
-  text-align: center;
-}
+.align-center { text-align: center; }
 
-.align-left {
-  text-align: left;
-}
+.align-left { text-align: left; }
 
-/* Display Classes */
-@media all and (max-width: 46.8em) {
-  .hide-small {
-    display: none;
-  }
-}
 
-@media all and (min-width: 46.8em) and (max-width: 50em) {
-  .hide-med {
-    display: none;
-  }
-}
+/* Colors */
+.valid { color: color(palette, green); }
 
-@media all and (min-width: 50em) {
-  .hide-large {
-    display: none;
-  }
-}
-
-@media all and (min-width: 66em) {
-  .hide-large-2 {
-    display: none;
-  }
-}
-
-.valid {
-  color: #089e00;
-}
-
-.error {
-  color: red;
-}
+.error { color: color(palette, red); }
