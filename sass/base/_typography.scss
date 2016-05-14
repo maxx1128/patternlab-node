@@ -6,7 +6,7 @@ body {
 }
 
 
-/* Links */
+// Links
 a {
   color: color(action);
   text-decoration: none;
@@ -17,7 +17,7 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* Headings */
+// Headings
 // First, any universal headings styles
 h1,
 h2,
@@ -26,85 +26,85 @@ h4,
 h5,
 h6 { font-family: type(font-family, serif); }
 
-h1, .alpha {
+h1,
+.alpha {
   font-size: type(font-size, h1);
   line-height: type(line-height, h1);
+  margin: 0 0 spacing(half);
 }
 
-h2, .beta {
+h2,
+.beta {
   font-size: type(font-size, h2);
   line-height: type(line-height, h2);
+  margin: 0 0 spacing(third);
 }
 
-h3, .gamma {
+h3,
+.gamma {
   font-size: type(font-size, h3);
   line-height: type(line-height, h3);
+  margin: 0 0 spacing(third);
 }
 
 h4 {
   font-size: type(font-size, h4);
   line-height: type(line-height, h4);
+  margin: 0 0 spacing(quarter);
 }
 
 h5 {
   font-size: type(font-size, h5);
   line-height: type(line-height, h5);
+  margin: 0 0 spacing(quarter);
 }
 
 h6 {
   font-size: type(font-size, h6);
   line-height: type(line-height, h6);
+  margin: 0 0 spacing(quarter);
 }
 
-/* Subheadings */
+// Subheadings
 .subheading {
   font-family: type(font-family, sans);
   font-weight: type(font-weight, bold);
 }
 
-/* Text-Related Elements */
+// Text-Related Elements
 p {
-  margin-bottom: 1rem;
+  margin-bottom: spacing();
 
   font-size: type(font-size);
   line-height: type(line-height);
 }
 
-/* Blockquote */
+// Blockquote
 blockquote {
+  padding: spacing();
+  padding-left: spacing(double);
+  margin: 0;
+
+  color: color(primary, darker);
   font-style: italic;
-  border-left: 1px solid gray;
-  color: gray;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  line-height: type(line-height);
+
+  border-left: container(border, thick);
 }
 
-/* Horizontal Rule */
+// Horizontal Rule
 hr {
   border: 0;
   height: 2px;
-  background: #eeeeee;
-  margin: 2rem 0;
+  margin: spacing(double) 0;
+
+  background: color(primary, lighter);
 }
 
 abbr {
-  border-bottom: 1px dotted gray;
+  border-bottom: container(border);
   cursor: help;
 }
 
-
-
-/* Global Font Classes */
-.font-secondary {
-  font-family: Georgia, Times, "Times New Roman", serif;
-}
-
-.intro {
-  font-size: 1.0625em;
-  font-weight: bold;
-}
-
-.pullquote {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 1.4375em;
-}
+// For introductory lines of text
+.intro { font-weight: type(font-weight, bold); }

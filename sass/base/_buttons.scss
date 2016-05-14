@@ -1,33 +1,86 @@
+$btn-bg: color(action);
+$btn-text: color(primary, lightest);
+$btn-pad: spacing();
+$btn-radius: container(borderRadius, large);
+$btn-hover-bg: color(action, hover);
+$btn-hover-text: $btn-text;
+$btn-trans: anim(time);
+
+$btn-alt-bg: color(primary, lightest);
+$btn-alt-border: 2px solid color(action);
+$btn-alt-text: color(action);
+$btn-alt-hover-bg: color(action);
+$btn-alt-hover-border: $btn-alt-border;
+$btn-alt-hover-text: color(primary, lightest);
+
+$btn-small-pad: spacing();
+$btn-small-font: type(font-size, tiny);
+$btn-large-pad: spacing(halfMore) spacing(double);
+$btn-large-font: type(font-size, h6);
+
+$btn-disabled-bg: color(primary, lighter);
+$btn-disabled-text: color(primary, dark);
+
+
 .btn {
+  @include transition(anim(time));
   display: inline-block;
-  background: #333333;
-  color: white;
+  padding: $btn-pad;
+
   line-height: 1;
-  font-weight: bold;
-  padding: 1rem;
-  border: 0;
+  color: $btn-text;
   text-align: center;
-}
-.btn:hover, .btn:focus {
-  color: white;
-}
-.btn.disabled {
-  background: #eeeeee;
-  color: #bbbbbb;
+
+  border: 0;
+  background: $btn-bg;
+  border-radius: $btn-radius;
+
+  @include hovers {
+    @include transition($btn-trans);
+
+    color: $btn-hover-text;
+    text-decoration: none;
+
+    background-color: $btn-hover-bg;
+  }
 }
 
-.btn-small {
-  padding: 0.5rem;
+.--btn-alt {
+  color: $btn-alt-text;
+
+  background-color: $btn-alt-bg;
+  border: $btn-alt-border;
+
+
+  @include hovers {
+    color: $btn-alt-hover-text;
+
+    background-color: $btn-alt-hover-bg;
+    border: $btn-alt-hover-border;
+  }
 }
 
-.btn-large {
-  padding: 0.5rem;
-  text-transform: uppercase;
-  background: gray;
-  font-size: 1.4rem;
-  font-weight: normal;
+.--btn-small {
+  padding: $btn-small-pad;
+
+  font-size: $btn-small-font;
 }
 
-.text-btn {
-  font-style: italic;
+.--btn-large {
+  padding: $btn-large-pad;
+
+  font-size: $btn-large-font;
+}
+
+.--btn-disabled {
+  cursor: default;
+  color: $btn-disabled-text;
+
+  background: $btn-disabled-bg;
+
+  @include hovers {
+    color: $btn-disabled-text;
+
+    background: $btn-disabled-bg;
+  }
 }

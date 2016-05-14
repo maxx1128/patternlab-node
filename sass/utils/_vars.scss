@@ -44,7 +44,9 @@ $typography-map: (
     h4: modular-scale(3),
     h5: modular-scale(2),
     h6: modular-scale(1),
-    base: modular-scale(0)
+    base: modular-scale(0),
+    small: modular-scale(-1),
+    tiny: modular-scale(-2)
   ),
 
   font-weight: (
@@ -117,6 +119,7 @@ $g-base-spacing: 1em;
 $spacing-map: (
   triple: ($g-base-spacing * 3),
   double: ($g-base-spacing * 2),
+  halfMore: ($g-base-spacing * 1.5),
 
   base: $g-base-spacing,
 
@@ -135,11 +138,13 @@ $spacing-map: (
 $containers-map: (
   border: (
     base: 1px solid $g-primary-color,
-    dark: 1px solid shade($g-primary-color, 15%)
+    dark: 1px solid shade($g-primary-color, 15%),
+    thick: 3px solid $g-primary-color
   ),
 
   borderRadius: (
-    base: 3px
+    base: 3px,
+    large: 8px
   ),
 
   dropShadow: (
@@ -159,5 +164,14 @@ $containers-map: (
     half: ($g-base-spacing / 2),
     base: $g-base-spacing,
     large: ($g-base-spacing * 2)
+  )
+);
+
+
+// ----- Animation Variables ----- //
+
+$animations-map: (
+  time: (
+    base: 0.5s
   )
 );

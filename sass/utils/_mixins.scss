@@ -15,3 +15,13 @@
     @content;
   }
 }
+
+
+// For adding styles fast to all hover states
+// Useful for buttons, links, and the like
+@mixin hovers() {
+  &:hover,
+  &:focus,
+  &:active { @content; }
+}
+

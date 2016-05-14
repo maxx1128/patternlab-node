@@ -20,6 +20,12 @@
   }
 }
 
+// For getting values related to animations
+@function anim($anim, $type: 'base') {
+  @if map-has-key($animations-map, $anim) {
+    @return map-get(map-get($animations-map, $anim), $type);
+  }
+}
 
 
 
@@ -47,3 +53,4 @@
     @return map-get($z-layers, $index);
   }
 }
+
