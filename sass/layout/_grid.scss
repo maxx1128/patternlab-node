@@ -2,10 +2,10 @@
 $synapse: (
   columns: 12,
   layouts: (
-        xs:  0,
-        sm:  breakpoint('small'),
-        md:  breakpoint('medium'),
-        lg: breakpoint('large')
+        base:  0,
+        small:  breakpoint('small'),
+        medium:  breakpoint('medium'),
+        large: breakpoint('large')
     ),
   spaceUnits: (
     spacing('half'),
