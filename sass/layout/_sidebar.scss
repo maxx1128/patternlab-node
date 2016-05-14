@@ -1,0 +1,17 @@
+// Layout classes for pages with a sidebar
+// .sidebar-layout__main for the content
+// .sidebar-layout__sidebar for the sidebar
+
+.sidebar-layout { @include row-container(); }
+
+.sidebar-layout__main,
+.sidebar-layout__sidebar { @include col-container(); }
+
+
+.sidebar-layout__main {
+  @include syn(medium, 8, 0, ('float-l'));
+}
+
+.sidebar-layout__sidebar {
+  @include syn(medium, 4, 0, ('float-r'));
+}

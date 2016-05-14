@@ -1,16 +1,19 @@
-<div class="page" id="page">
+<div id="container">
 	{{> organisms-header }}
 	<div role="main">
-		{{# emergency }}
-			{{> molecules-alert }}
-		{{/ emergency }}
-		{{# hero }}
-			{{> molecules-inset-block }}
-		{{/ hero}}
+		
+		<div class="layout-single">
+			{{# emergency }}
+				{{> molecules-alert }}
+			{{/ emergency }}
+			{{# hero }}
+				{{> molecules-inset-block }}
+			{{/ hero}}
+		</div>
 
-		<div class="g g-3up">
+		<div class="three-col-layout">
 			{{# touts}}
-				<div class="gi">
+				<div class="three-col-layout__item">
 					{{> molecules-inset-block }}
 				</div>
 			{{/ touts}}
@@ -18,8 +21,8 @@
 
 		<hr />
 
-		<div class="l-two-col">
-			<div class="l-main">
+		<div class="sidebar-layout">
+			<div class="sidebar-layout__main">
 				<section class="section latest-posts">
 					<h2 class="section-title">Latest Posts</h2>
 					<ul class="post-list">
@@ -31,7 +34,7 @@
 				</section>
 			</div><!--end .l-main-->
 
-			<div class="l-sidebar">
+			<div class="sidebar-layout__sidebar">
 				<h5>Sidebar stuff here!</h5>
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->

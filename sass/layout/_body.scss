@@ -1,13 +1,8 @@
 body { background: color(primary, lightest); }
 
-[role=main] {
-  padding: 0.5rem 0.5rem 2rem;
-  overflow: hidden;
-}
-
 /* Layout Container */
-.pl, .lc, .header, [role=main] {
+[role=main] {
   max-width: breakpoint('max-width');
   margin: 0 auto;
-  padding: spacing();
+  padding: spacing() 0;
 }

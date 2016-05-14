@@ -39,11 +39,12 @@ Elements to replace:
 'base/forms';
 
 @import
+'layout/grid',
 'layout/body',
 'layout/footer',
-'layout/grid',
 'layout/header',
-'layout/two-col';
+'layout/sidebar',
+'layout/three-col';
 
 @import
 'components/accordion',

@@ -4,11 +4,17 @@ $header-bp: medium;
     $PAGE STRUCTURE
 \*------------------------------------*/
 // The whole header container
-.header {
+header {
+  @include clearfix();
   padding: 0;
 
   background: color(primary, lightest);
   border-bottom: container(border);
+}
+
+.header__container {
+  @include row-container();
+  padding: spacing() spacing(half);
 }
 
 .logo {

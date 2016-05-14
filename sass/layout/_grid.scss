@@ -26,6 +26,26 @@ $synapse: (
 
 */
 
+// For custom layouts, apply this to the row holding all the columns
+@mixin row-container() {
+  @include clearfix();
+  max-width: size(max-width);
+  margin: 0 auto;
+  padding: spacing() 0;
+}
+
+// For any elements in their own row that still need a max width and proper alignment, use 
+.layout-single {
+  @include row-container();
+  padding: spacing();
+}
+
+// For custom layouts, apply this to the all the columns
+@mixin col-container() {
+  padding: 0 spacing();
+  box-sizing: border-box;
+}
+
 
 
 

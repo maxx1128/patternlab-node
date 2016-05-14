@@ -5,6 +5,13 @@
   }
 }
 
+// For pulling any breakpoint size values
+@function size($bp) {
+  @if map-has-key($breakpoint-map, $bp) {
+    @return map-get($breakpoint-map, $bp);
+  }
+}
+
 // For pulling any typography values
 // No base is set so it always needs two values
 @function type($type-var, $val: 'base') {
