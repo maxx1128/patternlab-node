@@ -1,12 +1,12 @@
-<ol>
+<ol class="sg-nav">
 	{{# buckets }}
-		<li class="{{ bucketNameLC }}">
+		<li class="sg-nav-{{ bucketNameLC }}">
 			<a>
 				{{ bucketNameUC }}
 			</a>
 			<ol>
 				{{# navItems }}
-					<li class="{{ sectionNameLC }}">
+					<li class="sg-nav-{{ sectionNameLC }}">
 						<a>
 							{{ sectionNameUC }}
 						</a>
@@ -14,7 +14,7 @@
 							{{# navSubItems }}
 							
 							<li>
-								<a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
+								<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
 									{{ patternName }}
 								</a>
 							</li>
@@ -25,10 +25,9 @@
 				{{/ navItems }}
 				{{# patternItems }}
 					<li>
-						<a href="patterns/{{ patternPath }}" data-patternpartial="{{ patternPartial }}">
+						<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">
 							{{ patternName }}
 						</a>
-					</li>
 				{{/ patternItems }}
 			</ol>
 		</li>
