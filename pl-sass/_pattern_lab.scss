@@ -2,22 +2,22 @@
     $PATTERN LAB STYLES
 \*------------------------------------*/
 /**
- * NOTE: These styles are specific to Pattern Lab and should not be modified. 
+ * NOTE: These styles are specific to Pattern Lab and should not be modified.
  * Edit all project styles in /source/css/
- * 
- * Second note: Any important declarations are to prevent brand styles from overriding style guide 
+ *
+ * Second note: Any important declarations are to prevent brand styles from overriding style guide
  */
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
 /**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables 
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
  * -----Font
  * -----Colors
  * -----Typography
  * -----Defaults
  * -----Breakpoints
- * MIXINS---------------------------------Sass mixins 
+ * MIXINS---------------------------------Sass mixins
  * GLOBAL ELEMENTS------------------------Establish global styles
  * -----Main
  * -----Headings
@@ -35,7 +35,7 @@
  * -----Icon Fonts
  */
 /*------------------------------------*\
-    $PATTERN LAB VARIABLES 
+    $PATTERN LAB VARIABLES
 \*------------------------------------*/
 /*Fonts*/
 /* Style Guide Interface Colors */
@@ -44,10 +44,10 @@
 /* Dimensions */
 /* Breakpoints */
 /*------------------------------------*\
-    $PATTERN LAB MIXINS 
+    $PATTERN LAB MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    $PATTERN LAB INTERFACE 
+    $PATTERN LAB INTERFACE
 \*------------------------------------*/
 #patternlab-html, #patternlab-body {
   margin: 0;
@@ -83,19 +83,19 @@
 }
 
 /*------------------------------------*\
-    $PATTERN LAB HEADER 
+    $PATTERN LAB HEADER
 \*------------------------------------*/
 /* Header */
 .sg-header {
   @include position(fixed, 0 null null 0);
+  @include size(20% 100%);
+  overflow: scroll;
   z-index: 2;
-  width: 100%;
 
-  background: color(primary, darkest);
-  
+/*   background: color(primary, darkest);
+
   color: color(primary, lighter);
-  font-family: type(font-family, sans);
-  text-transform: uppercase;
+  font-family: type(font-family, sans); */
 }
 
 .sg-header * {
@@ -111,6 +111,7 @@
   list-style: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+/*
 .sg-header a {
   font-size: 70%;
   color: #808080;
@@ -135,6 +136,7 @@
   color: #fff;
   background: rgba(255, 255, 255, 0.05);
 }
+*/
 .sg-header ol ol ol a {
   padding-left: 2em;
   text-transform: none;
@@ -443,13 +445,10 @@ span.sg-pattern-state:before {
 \*------------------------------------*/
 /* Viewport */
 #sg-vp-wrap {
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  top: 2em;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include position(fixed, 0 0 null null);
+  height: 100%;
+  width: 80% !important;
+  box-sizing: border-box;
   z-index: 0;
 }
 #sg-vp-wrap.wrap-animate {
@@ -461,16 +460,12 @@ span.sg-pattern-state:before {
 }
 
 #sg-viewport {
-  position: absolute;
+  @include position(absolute, 0 null null 0);
   height: 100%;
-  width: 100%;
-  border: 0;
-  padding: 0;
+  width: 80% !important;
+  box-sizing: border-box;
+  padding: 1em;
   margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: white;
 }
 #sg-viewport.hay-mode {
@@ -550,7 +545,7 @@ span.sg-pattern-state:before {
 }
 
 /*------------------------------------*\
-    $PATTERN LAB CONTENT 
+    $PATTERN LAB CONTENT
 \*------------------------------------*/
 /* Section Pattern */
 .sg-pattern {

@@ -1,17 +1,89 @@
+<ol>
+	{{# buckets }}
+		<li class="{{ bucketNameLC }}">
+			<a>
+				{{ bucketNameUC }}
+			</a>
+			<ol>
+				{{# navItems }}
+					<li class="{{ sectionNameLC }}">
+						<a>
+							{{ sectionNameUC }}
+						</a>
+						<ol>
+							{{# navSubItems }}
+							
+							<li>
+								<a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
+									{{ patternName }}
+								</a>
+							</li>
+							
+							{{/ navSubItems }}
+						</ol>
+					</li>
+				{{/ navItems }}
+				{{# patternItems }}
+					<li>
+						<a href="patterns/{{ patternPath }}" data-patternpartial="{{ patternPartial }}">
+							{{ patternName }}
+						</a>
+					</li>
+				{{/ patternItems }}
+			</ol>
+		</li>
+	{{/ buckets }}
+	
+	<li>
+		<a href="styleguide/html/styleguide.html" data-patternpartial="all">
+			All
+		</a>
+	</li>
+</ol>
+
+
+
+<!--  
 <ol class="sg-nav">
 	{{# buckets }}
-		<li class="sg-nav-{{ bucketNameLC }}"><a class="sg-acc-handle">{{ bucketNameUC }}</a><ol class="sg-acc-panel">
-		{{# navItems }}
-			<li class="sg-nav-{{ sectionNameLC }}"><a class="sg-acc-handle">{{ sectionNameUC }}</a><ol class="sg-acc-panel">
-			{{# navSubItems }}
-			<li><a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>
-			{{/ navSubItems }}
-			</ol></li>
-		{{/ navItems }}
-		{{# patternItems }}
-			<li><a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>
-		{{/ patternItems }}
-		</ol></li>
+		<li class="sg-nav-{{ bucketNameLC }}">
+			<a class="sg-acc-handle">
+				{{ bucketNameUC }}
+			</a>
+			<ol class="sg-acc-panel">
+				{{# navItems }}
+					<li class="sg-nav-{{ sectionNameLC }}">
+						<a class="sg-acc-handle">
+							{{ sectionNameUC }}
+						</a>
+						<ol class="sg-acc-panel">
+							{{# navSubItems }}
+							
+							<li>
+								<a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
+									{{ patternName }}
+								</a>
+							</li>
+							
+							{{/ navSubItems }}
+						</ol>
+					</li>
+				{{/ navItems }}
+				{{# patternItems }}
+					<li>
+						<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">
+							{{ patternName }}
+						</a>
+					</li>
+				{{/ patternItems }}
+			</ol>
+		</li>
 	{{/ buckets }}
-	<li><a href="styleguide/html/styleguide.html" class="sg-pop" data-patternpartial="all">All</a></li>
+	
+	<li>
+		<a href="styleguide/html/styleguide.html" class="sg-pop" data-patternpartial="all">
+			All
+		</a>
+	</li>
 </ol>
+-->

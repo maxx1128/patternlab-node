@@ -156,6 +156,9 @@ gulp.task('connect', ['lab'], function () {
     }
   });
 
+  gulp.watch('core/templates/**/*.mustache', ['banner', 'lab'],
+    function () { browserSync.reload(); } );
+
   gulp.watch('sass/**/**/*.scss', ['sass'],
     function () { browserSync.reload(); } );
 

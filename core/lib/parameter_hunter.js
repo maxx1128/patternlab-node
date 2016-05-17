@@ -1,14 +1,12 @@
-/*
+/** 
  * patternlab-node - v1.3.0 - 2016
- *
+ * 
  * Brian Muenzenmeyer, and the web community.
  * Licensed under the MIT license.
- *
+ * 
  * Many thanks to Brad Frost and Dave Olsen for inspiration, encouragement, and advice.
- *
- */
-
-"use strict";
+ * 
+ **/"use strict";
 
 var parameter_hunter = function () {
 
@@ -19,49 +17,7 @@ var parameter_hunter = function () {
     pattern_assembler = new pa(),
     style_modifier_hunter = new smh();
 
-  /**
-   * This function is really to accommodate the lax JSON-like syntax allowed by
-   * Pattern Lab PHP for parameter submissions to partials. Unfortunately, no
-   * easily searchable library was discovered for this. What we had to do was
-   * write a custom script to crawl through the parameter string, and wrap the
-   * keys and values in double-quotes as necessary.
-   * The steps on a high-level are as follows:
-   *   * Further escape all escaped quotes and colons. Use the string
-   *     representation of their unicodes for this. This has the added bonus
-   *     of being interpreted correctly by JSON5.parse() without further
-   *     modification. This will be useful later in the function.
-   *   * Once escaped quotes are out of the way, we know the remaining quotes
-   *     are either key/value wrappers or wrapped within those wrappers. We know
-   *     that remaining commas and colons are either delimiters, or wrapped
-   *     within quotes to not be recognized as such.
-   *   * A do-while loop crawls paramString to write keys to a keys array and
-   *     values to a values array.
-   *   * Start by parsing the first key. Determine the type of wrapping quote,
-   *     if any.
-   *   * By knowing the open wrapper, we know that the next quote of that kind
-   *     (if the key is wrapped in quotes), HAS to be the close wrapper.
-   *     Similarly, if the key is unwrapped, we know the next colon HAS to be
-   *     the delimiter between key and value.
-   *   * Save the key to the keys array.
-   *   * Next, search for a value. It will either be the next block wrapped in
-   *     quotes, or a string of alphanumerics, decimal points, or minus signs.
-   *   * Save the value to the values array.
-   *   * The do-while loop truncates the paramString value while parsing. Its
-   *     condition for completion is when the paramString is whittled down to an
-   *     empty string.
-   *   * After the keys and values arrays are built, a for loop iterates through
-   *     them to build the final paramStringWellFormed string.
-   *   * No quote substitution had been done prior to this loop. In this loop,
-   *     all keys are ensured to be wrapped in double-quotes. String values are
-   *     also ensured to be wrapped in double-quotes.
-   *   * Unescape escaped unicodes except for double-quotes. Everything beside
-   *     double-quotes will be wrapped in double-quotes without need for escape.
-   *   * Return paramStringWellFormed.
-   *
-   * @param {string} pString
-   * @returns {string} paramStringWellFormed
-   */
-  function paramToJson(pString) {
+    function paramToJson(pString) {
     var colonPos = -1;
     var keys = [];
     var paramString = pString; // to not reassign param
