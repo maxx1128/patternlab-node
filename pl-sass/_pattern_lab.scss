@@ -49,6 +49,14 @@
 /*------------------------------------*\
     $PATTERN LAB INTERFACE
 \*------------------------------------*/
+
+
+$sg-nav-li-padding: spacing(half) 0;
+
+
+
+
+
 #patternlab-html, #patternlab-body {
   margin: 0;
   padding: 0;
@@ -110,14 +118,13 @@
 
 // Large container around the pattern nav area
 .sg-nav-container {
-  padding: spacing(half);
-  box-sizing: border-box;
+
 }
 
 // All li elements in the side menu for components
 .sg-nav li,
 .sg-controls-list li {
-  padding-top: spacing(half);
+  padding-top: $sg-nav-li-padding;
   list-style: none;
 }
 
@@ -131,18 +138,25 @@
 // Nav lists for the top-level component categories
 // Atoms, Molecules, etc
 .sg-nav__buckets {
-  
 }
 
 // Nac lists for more specific groups within component categories
 // Global, Text, etc
 .sg-nav__sections {
-  margin-left: spacing(half);
+  // margin-left: spacing(half);
+
+  li {
+    padding: spacing() 0 spacing(half) spacing(half);
+  }
 }
 
 // Nav groups for the specific pattern items
 .sg-nav__sub-items {
-  margin-left: spacing();
+  // margin-left: spacing();
+
+  li {
+    padding: spacing() 0 spacing(half) spacing(half);
+  }
 }
 
 // For the toggling of menu items
@@ -379,7 +393,7 @@ span.sg-pattern-state:before {
 #sg-vp-wrap {
   @include position(fixed, 0 0 null null);
   height: 100%;
-  width: 80% !important;
+  width: 79.5% !important;
   box-sizing: border-box;
   z-index: 0;
 }
@@ -396,7 +410,6 @@ span.sg-pattern-state:before {
   height: 100%;
   width: 100% !important;
   box-sizing: border-box;
-  padding: 1em;
   margin: 0;
   background-color: white;
 }

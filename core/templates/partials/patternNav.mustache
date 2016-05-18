@@ -1,21 +1,17 @@
 <div class="sg-nav">
 	<ol class="sg-nav__buckets">
 		{{# buckets }}
-			<li class="sg-main-item sg-nav-{{ bucketNameLC }}">
+			<li data-a11y-toggle="toggle-{{ bucketNameLC }}" class="sg-main-item sg-nav-{{ bucketNameLC }}">
 				
-				<span data-a11y-toggle="toggle-{{ bucketNameLC }}">
-					{{ bucketNameUC }}
-				</span>
+				{{ bucketNameUC }}
 				
 				<ol id="toggle-{{ bucketNameLC }}" class="sg-nav__sections section">
 					{{# navItems }}
-						<li class="sg-nav-{{ sectionNameLC }}">
+						<li data-a11y-toggle="toggle-{{ bucketNameUC }}-sub-{{ sectionNameLC }}" class="sg-nav-{{ sectionNameLC }}">
 
-							<span data-a11y-toggle="toggle-sub-{{ sectionNameLC }}">
-								{{ sectionNameUC }}
-							</span>
+							{{ sectionNameUC }}
 
-							<ol id="toggle-sub-{{ sectionNameLC }}" class="sg-nav__sub-items">
+							<ol id="toggle-{{ bucketNameUC }}-sub-{{ sectionNameLC }}" class="sg-nav__sub-items">
 								{{# navSubItems }}
 								
 								<li>
@@ -38,7 +34,7 @@
 			</li>
 		{{/ buckets }}
 		
-		<li>
+		<li class="sg-main-item">
 			<a href="styleguide/html/styleguide.html" data-patternpartial="all">
 				All
 			</a>

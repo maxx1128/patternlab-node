@@ -352,7 +352,7 @@
 			$('#sg-gen-container,#sg-viewport').addClass("vp-animate");
 		}
 
-		$('#sg-gen-container').width(theSize+viewportResizeHandleWidth); //Resize viewport wrapper to desired size + size of drag resize handler
+		// $('#sg-gen-container').width(theSize+viewportResizeHandleWidth); //Resize viewport wrapper to desired size + size of drag resize handler
 		$sgViewport.width(theSize); //Resize viewport to desired size
 
 		updateSizeReading(theSize); //Update values in toolbar
@@ -398,8 +398,8 @@
 
 	function updateViewportWidth(size) {
 
-		$("#sg-viewport").width(size);
-		$("#sg-gen-container").width(size*1 + 14);
+		// $("#sg-viewport").width(size);
+		// $("#sg-gen-container").width(size*1 + 14);
 
 		updateSizeReading(size);
 	}
@@ -445,8 +445,8 @@
 
 	// capture the viewport width that was loaded and modify it so it fits with the pull bar
 	var origViewportWidth = $("#sg-viewport").width();
-	$("#sg-gen-container").width(origViewportWidth);
-	$("#sg-viewport").width(origViewportWidth - 14);
+	// $("#sg-gen-container").width(origViewportWidth);
+	// $("#sg-viewport").width(origViewportWidth - 14);
 	updateSizeReading($("#sg-viewport").width());
 
 	// get the request vars

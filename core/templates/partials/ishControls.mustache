@@ -1,7 +1,7 @@
 <!--sg-controls-->
 <div id="sg-controls">
 	<ol class="sg-controls-list">
-		<li>
+		<!-- <li>
 			<ul class="sg-controls-menu">
 				{{# ishControlsVisible.s }}
 					<li>
@@ -81,10 +81,10 @@
 					</li>
 				{{/ ishControlsVisible.mqs }}
 			</ul>
-		</li>
+		</li> -->
 
 		{{# ishControlsVisible.find }}
-			<li>
+			<li class="sg-main-item is-vishidden">
 				<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
 					<span>
 						Search Patterns
@@ -109,7 +109,7 @@
 				
 				<ul id="sg-view" class="sg-controls-submenu">
 					{{# ishControlsVisible.views-annotations }}
-						<li>
+						<li class="sg-main-item">
 							<a href="javascript:void(0)" id="sg-t-annotations">
 								Annotations
 							</a>
@@ -117,15 +117,16 @@
 					{{/ ishControlsVisible.views-annotations }}
 					
 					{{# ishControlsVisible.views-code }}
-						<li>
+						<li class="sg-main-item">
 							<a href="javascript:void(0)" id="sg-t-code">
 								Code
 							</a>
 						</li>
 					{{/ ishControlsVisible.views-code }}
 
+					
 					{{# ishControlsVisible.views-new }}
-						<li>
+						<li class="sg-main-item is-vishidden">
 							<a href="javascript:void(0)" target="_blank" id="sg-raw">
 								Open in new window
 							</a>
@@ -136,38 +137,20 @@
 		{{/ ishControlsVisible.views-all }}
 
 		{{# ishControlsVisible.tools-all }}
-			<li class="sg-tools">
-				<a href="javascript:void(0)" id="sg-tools-toggle" title="Tools">
-					<span>
-						Tools
-					</span>
-				</a>
-				
-				<ul class="sg-controls-submenu">
-					{{# ishControlsVisible.tools-sync }}
-						<li>
-							<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
-								BrowserSync UI
-							</a>
-						</li>
-					{{/ ishControlsVisible.tools-sync }}
-					
-					{{# ishControlsVisible.tools-shortcuts }}
-						<li>
-							<a href="http://patternlab.io/docs/advanced-keyboard-shortcuts.html" target="_blank">
-								Keyboard Shortcuts
-							</a>
-						</li>
-					{{/ ishControlsVisible.tools-shortcuts }}
-					
-					{{# ishControlsVisible.tools-docs }}
-						<li>
-							<a href="http://patternlab.io/docs/" target="_blank">Pattern Lab Docs
-							</a>
-						</li>
-					{{/ ishControlsVisible.tools-docs }}
-				</ul>
-			</li>
+			{{# ishControlsVisible.tools-sync }}
+				<li class="sg-main-item">
+					<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
+						BrowserSync UI
+					</a>
+				</li>
+			{{/ ishControlsVisible.tools-sync }}
+			
+			{{# ishControlsVisible.tools-docs }}
+				<li class="sg-main-item">
+					<a href="http://patternlab.io/docs/" target="_blank">Pattern Lab Docs
+					</a>
+				</li>
+			{{/ ishControlsVisible.tools-docs }}
 		{{/ ishControlsVisible.tools-all }}
 	</ol>
 </div>

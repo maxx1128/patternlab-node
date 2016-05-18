@@ -1,8 +1,15 @@
-body { background: color(primary, lightest); }
+body {
+  margin: 0 auto;
+  padding: spacing();
+
+  background: color(primary, lightest);
+
+  // Add responsive widths here as modifier classes
+  // And then have Javascript to trigger these classes
+  // Put these buttons on the side menu?
+}
 
 /* Layout Container */
 [role=main] {
   max-width: breakpoint('max-width');
-  margin: 0 auto;
-  padding: spacing() 0;
 }
