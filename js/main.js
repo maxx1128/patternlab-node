@@ -1,3 +1,7 @@
+//=require ../_bower_components/a11y-toggle/a11y-toggle.min.js
+
+
+
 (function(w){
   var sw = document.body.clientWidth,
     sh = document.body.clientHeight;
@@ -24,3 +28,4 @@
     $('.header .search-form').toggleClass('active');
   });
 })(this);
+

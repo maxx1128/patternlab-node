@@ -1,44 +1,50 @@
-<ol class="sg-nav">
-	{{# buckets }}
-		<li class="sg-nav-{{ bucketNameLC }}">
-			<a>
-				{{ bucketNameUC }}
+<div class="sg-nav">
+	<ol class="sg-nav__buckets">
+		{{# buckets }}
+			<li class="sg-main-item sg-nav-{{ bucketNameLC }}">
+				
+				<span data-a11y-toggle="toggle-{{ bucketNameLC }}">
+					{{ bucketNameUC }}
+				</span>
+				
+				<ol id="toggle-{{ bucketNameLC }}" class="sg-nav__sections section">
+					{{# navItems }}
+						<li class="sg-nav-{{ sectionNameLC }}">
+
+							<span data-a11y-toggle="toggle-sub-{{ sectionNameLC }}">
+								{{ sectionNameUC }}
+							</span>
+
+							<ol id="toggle-sub-{{ sectionNameLC }}" class="sg-nav__sub-items">
+								{{# navSubItems }}
+								
+								<li>
+									<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
+										{{ patternName }}
+									</a>
+								</li>
+								
+								{{/ navSubItems }}
+							</ol>
+						</li>
+					{{/ navItems }}
+					{{# patternItems }}
+						<li>
+							<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">
+								{{ patternName }}
+							</a>
+					{{/ patternItems }}
+				</ol>
+			</li>
+		{{/ buckets }}
+		
+		<li>
+			<a href="styleguide/html/styleguide.html" data-patternpartial="all">
+				All
 			</a>
-			<ol>
-				{{# navItems }}
-					<li class="sg-nav-{{ sectionNameLC }}">
-						<a>
-							{{ sectionNameUC }}
-						</a>
-						<ol>
-							{{# navSubItems }}
-							
-							<li>
-								<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
-									{{ patternName }}
-								</a>
-							</li>
-							
-							{{/ navSubItems }}
-						</ol>
-					</li>
-				{{/ navItems }}
-				{{# patternItems }}
-					<li>
-						<a href="patterns/{{ patternPath }}" class="sg-pop {{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">
-							{{ patternName }}
-						</a>
-				{{/ patternItems }}
-			</ol>
 		</li>
-	{{/ buckets }}
-	
-	<li>
-		<a href="styleguide/html/styleguide.html" data-patternpartial="all">
-			All
-		</a>
-	</li>
-</ol>
+	</ol>
+</div>
 
 
 

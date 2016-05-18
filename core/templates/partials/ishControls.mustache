@@ -1,175 +1,182 @@
 <!--sg-controls-->
 <div id="sg-controls">
-	<div>
-		<ul>
+	<ol class="sg-controls-list">
+		<li>
+			<ul class="sg-controls-menu">
+				{{# ishControlsVisible.s }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-s">
+							S
+						</a>
+					</li>
+				{{/ ishControlsVisible.s }}
+				
+				{{# ishControlsVisible.m }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-m">
+							M
+						</a>
+					</li>
+				{{/ ishControlsVisible.m }}
+				
+				{{# ishControlsVisible.l }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-l">
+							L
+						</a>
+					</li>
+				{{/ ishControlsVisible.l }}
+				
+				{{# ishControlsVisible.full }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-full">
+							Full
+						</a>
+					</li>
+				{{/ ishControlsVisible.full }}
+				
+				{{# ishControlsVisible.random }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-random">
+							Random
+						</a>
+					</li>
+				{{/ ishControlsVisible.random }}
+
+				{{# ishControlsVisible.disco }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-disco">
+							Disco
+						</a>
+					</li>
+				{{/ ishControlsVisible.disco }}
+
+				{{# ishControlsVisible.hay }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-hay">
+							Hay!
+						</a>
+					</li>
+				{{/ ishControlsVisible.hay }}
+			</ul>
+		</li>
+
+		<li>
+			<ul class="sg-controls-menu">
+				{{# ishControlsVisible.mqs }}
+					<li>
+						<a href="javascript:void(0)" id="sg-size-mq" title="Media queries in stylesheet">
+							MQ
+						</a>
+						
+						<ul id="sg-mq">
+							{{# mqs }}
+								<li>
+									<a href="javascript:void(0)">
+										{{ . }}
+									</a>
+								</li>
+							{{/ mqs }}
+						</ul>
+					</li>
+				{{/ ishControlsVisible.mqs }}
+			</ul>
+		</li>
+
+		{{# ishControlsVisible.find }}
 			<li>
-				<ul>
-					{{# ishControlsVisible.s }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-s">
-								S
-							</a>
-						</li>
-					{{/ ishControlsVisible.s }}
-					
-					{{# ishControlsVisible.m }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-m">
-								M
-							</a>
-						</li>
-					{{/ ishControlsVisible.m }}
-					
-					{{# ishControlsVisible.l }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-l">
-								L
-							</a>
-						</li>
-					{{/ ishControlsVisible.l }}
-					
-					{{# ishControlsVisible.full }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-full">
-								Full
-							</a>
-						</li>
-					{{/ ishControlsVisible.full }}
-					
-					{{# ishControlsVisible.random }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-random">
-								Random
-							</a>
-						</li>
-					{{/ ishControlsVisible.random }}
-
-					{{# ishControlsVisible.disco }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-disco">
-								Disco
-							</a>
-						</li>
-					{{/ ishControlsVisible.disco }}
-
-					{{# ishControlsVisible.hay }}
-						<li>
-							<a href="javascript:void(0)" id="sg-size-hay">
-								Hay!
-							</a>
-						</li>
-					{{/ ishControlsVisible.hay }}
+				<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
+					<span>
+						Search Patterns
+					</span>
+				</a>
+				
+				<ul id="sg-find">
+					<li>
+						<input id="typeahead" type="text" placeholder="search for a pattern...">
+					</li>
 				</ul>
 			</li>
+		{{/ ishControlsVisible.find }}
 
-			{{# ishControlsVisible.mqs }}
-				<li>
-					<a href="javascript:void(0)" id="sg-size-mq" title="Media queries in stylesheet">
-						MQ
-					</a>
-					
-					<ul id="sg-mq">
-						{{# mqs }}
-							<li>
-								<a href="javascript:void(0)">
-									{{ . }}
-								</a>
-							</li>
-						{{/ mqs }}
-					</ul>
-				</li>
-			{{/ ishControlsVisible.mqs }}
-			
-			{{# ishControlsVisible.find }}
-				<li>
-					<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
-						<span>
-							Search Patterns
-						</span>
-					</a>
-					
-					<ul id="sg-find" style="margin-top: 33px;">
+		{{# ishControlsVisible.views-all }}
+			<li>
+				<a href="javascript:void(0)" id="sg-t-toggle" title="View">
+					<span class="is-vishidden">
+						View
+					</span>
+				</a>
+				
+				<ul id="sg-view" class="sg-controls-submenu">
+					{{# ishControlsVisible.views-annotations }}
 						<li>
-							<input id="typeahead" type="text" placeholder="search for a pattern...">
+							<a href="javascript:void(0)" id="sg-t-annotations">
+								Annotations
+							</a>
 						</li>
-					</ul>
-				</li>
-			{{/ ishControlsVisible.find }}
-			
-			{{# ishControlsVisible.views-all }}
-				<li>
-					<a href="javascript:void(0)" id="sg-t-toggle" title="View">
-						<span class="is-vishidden">
-							View
-						</span>
-					</a>
+					{{/ ishControlsVisible.views-annotations }}
 					
-					<ul id="sg-view">
-						{{# ishControlsVisible.views-annotations }}
-							<li>
-								<a href="javascript:void(0)" id="sg-t-annotations">
-									Annotations
-								</a>
-							</li>
-						{{/ ishControlsVisible.views-annotations }}
-						
-						{{# ishControlsVisible.views-code }}
-							<li>
-								<a href="javascript:void(0)" id="sg-t-code">
-									Code
-								</a>
-							</li>
-						{{/ ishControlsVisible.views-code }}
+					{{# ishControlsVisible.views-code }}
+						<li>
+							<a href="javascript:void(0)" id="sg-t-code">
+								Code
+							</a>
+						</li>
+					{{/ ishControlsVisible.views-code }}
 
-						{{# ishControlsVisible.views-new }}
-							<li>
-								<a href="javascript:void(0)" target="_blank" id="sg-raw">
-									Open in new window
-								</a>
-							</li>
-						{{/ ishControlsVisible.views-new }}
-					</ul>
-				</li>
-			{{/ ishControlsVisible.views-all }}
-			
-			{{# ishControlsVisible.tools-all }}
-				<li class="sg-tools">
-					<a href="javascript:void(0)" id="sg-tools-toggle" title="Tools">
-						<span>
-							Tools
-						</span>
-					</a>
+					{{# ishControlsVisible.views-new }}
+						<li>
+							<a href="javascript:void(0)" target="_blank" id="sg-raw">
+								Open in new window
+							</a>
+						</li>
+					{{/ ishControlsVisible.views-new }}
+				</ul>
+			</li>
+		{{/ ishControlsVisible.views-all }}
+
+		{{# ishControlsVisible.tools-all }}
+			<li class="sg-tools">
+				<a href="javascript:void(0)" id="sg-tools-toggle" title="Tools">
+					<span>
+						Tools
+					</span>
+				</a>
+				
+				<ul class="sg-controls-submenu">
+					{{# ishControlsVisible.tools-sync }}
+						<li>
+							<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
+								BrowserSync UI
+							</a>
+						</li>
+					{{/ ishControlsVisible.tools-sync }}
 					
-					<ul>
-						{{# ishControlsVisible.tools-sync }}
-							<li>
-								<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
-									BrowserSync UI
-								</a>
-							</li>
-						{{/ ishControlsVisible.tools-sync }}
-						
-						{{# ishControlsVisible.tools-shortcuts }}
-							<li>
-								<a href="http://patternlab.io/docs/advanced-keyboard-shortcuts.html" target="_blank">
-									Keyboard Shortcuts
-								</a>
-							</li>
-						{{/ ishControlsVisible.tools-shortcuts }}
-						
-						{{# ishControlsVisible.tools-docs }}
-							<li>
-								<a href="http://patternlab.io/docs/" target="_blank">Pattern Lab Docs
-								</a>
-							</li>
-						{{/ ishControlsVisible.tools-docs }}
-					</ul>
-				</li>
-			{{/ ishControlsVisible.tools-all }}
-		</ul>
-	</div>
+					{{# ishControlsVisible.tools-shortcuts }}
+						<li>
+							<a href="http://patternlab.io/docs/advanced-keyboard-shortcuts.html" target="_blank">
+								Keyboard Shortcuts
+							</a>
+						</li>
+					{{/ ishControlsVisible.tools-shortcuts }}
+					
+					{{# ishControlsVisible.tools-docs }}
+						<li>
+							<a href="http://patternlab.io/docs/" target="_blank">Pattern Lab Docs
+							</a>
+						</li>
+					{{/ ishControlsVisible.tools-docs }}
+				</ul>
+			</li>
+		{{/ ishControlsVisible.tools-all }}
+	</ol>
 </div>
 <!--End #sg-controls-->
+
+
+
+
+
 
 
 <!--

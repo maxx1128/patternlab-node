@@ -134,7 +134,7 @@
 		killDisco();
 		killHay();
 		fullMode = false;
-		sizeiframe(getRandom(800,1200));
+		sizeiframe(getRandom(800,1000));
 	}
 
 	$('#sg-size-l').on("click", function(e){

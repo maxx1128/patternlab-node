@@ -104,65 +104,54 @@
   box-sizing: border-box;
 }
 .sg-header ul, .sg-header ol {
+  @include margin(0 0 0 null);
   padding: 0;
-  margin: 0;
 }
-.sg-header li {
+
+// Large container around the pattern nav area
+.sg-nav-container {
+  padding: spacing(half);
+  box-sizing: border-box;
+}
+
+// All li elements in the side menu for components
+.sg-nav li,
+.sg-controls-list li {
+  padding-top: spacing(half);
   list-style: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-/*
-.sg-header a {
-  font-size: 70%;
-  color: #808080;
-  text-decoration: none;
-
-  background: color(primary, darker);
-  display: block;
-  line-height: 1;
-  padding: 1em;
-  -webkit-transition: background 0.15s ease-out;
-  -moz-transition: background 0.15s ease-out;
-  -ms-transition: background 0.15s ease-out;
-  -o-transition: background 0.15s ease-out;
-  transition: background 0.15s ease-out;
-  -webkit-transition: color 0.15s ease-out;
-  -moz-transition: color 0.15s ease-out;
-  -ms-transition: color 0.15s ease-out;
-  -o-transition: color 0.15s ease-out;
-  transition: color 0.15s ease-out;
-}
-.sg-header a:hover, .sg-header a:focus, .sg-header a.active {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.05);
-}
-*/
-.sg-header ol ol ol a {
-  padding-left: 2em;
-  text-transform: none;
 }
 
-/* Accordion */
-.sg-acc-handle:after {
-  content: ' +';
-  float: right;
-  font-size: 70%;
+.sg-main-item {
+  @include padding(spacing() spacing(half));
+  width: 100%;
+
+  border-bottom: container(border);
 }
-@media all and (min-width: 48em) {
-  .sg-acc-handle:after {
-    float: none;
-  }
+
+// Nav lists for the top-level component categories
+// Atoms, Molecules, etc
+.sg-nav__buckets {
+  
 }
-.sg-acc-handle.active {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.05);
+
+// Nac lists for more specific groups within component categories
+// Global, Text, etc
+.sg-nav__sections {
+  margin-left: spacing(half);
 }
-.sg-acc-handle.active:after {
-  content: ' -';
+
+// Nav groups for the specific pattern items
+.sg-nav__sub-items {
+  margin-left: spacing();
 }
-.sg-acc-handle.sg-icon:after {
-  content: "";
+
+// For the toggling of menu items
+[aria-hidden='true'],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
 }
+
+
 
 .sg-header .sg-icon {
   width: auto;
@@ -405,7 +394,7 @@ span.sg-pattern-state:before {
 #sg-viewport {
   @include position(absolute, 0 null null 0);
   height: 100%;
-  width: 80% !important;
+  width: 100% !important;
   box-sizing: border-box;
   padding: 1em;
   margin: 0;
