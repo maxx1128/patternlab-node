@@ -84,9 +84,9 @@
 		</li> -->
 
 		{{# ishControlsVisible.find }}
-			<li class="sg-main-item is-vishidden">
+			<li class="is-vishidden">
 				<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
-					<span>
+					<span class="sg-main-item-text">
 						Search Patterns
 					</span>
 				</a>
@@ -109,28 +109,28 @@
 				
 				<ul id="sg-view" class="sg-controls-submenu">
 					{{# ishControlsVisible.views-annotations }}
-						<li class="sg-main-item">
-							<a href="javascript:void(0)" id="sg-t-annotations">
+						<a href="javascript:void(0)" id="sg-t-annotations">
+							<li class="sg-main-item">
 								Annotations
-							</a>
-						</li>
+							</li>
+						</a>
 					{{/ ishControlsVisible.views-annotations }}
 					
 					{{# ishControlsVisible.views-code }}
-						<li class="sg-main-item">
-							<a href="javascript:void(0)" id="sg-t-code">
+						<a href="javascript:void(0)" id="sg-t-code">
+							<li class="sg-main-item">
 								Code
-							</a>
-						</li>
+							</li>
+						</a>
 					{{/ ishControlsVisible.views-code }}
 
 					
 					{{# ishControlsVisible.views-new }}
-						<li class="sg-main-item is-vishidden">
-							<a href="javascript:void(0)" target="_blank" id="sg-raw">
+						<a href="javascript:void(0)" target="_blank" id="sg-raw">
+							<li class="sg-main-item is-vishidden">
 								Open in new window
-							</a>
-						</li>
+							</li>
+						</a>
 					{{/ ishControlsVisible.views-new }}
 				</ul>
 			</li>
@@ -138,18 +138,19 @@
 
 		{{# ishControlsVisible.tools-all }}
 			{{# ishControlsVisible.tools-sync }}
-				<li class="sg-main-item">
-					<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
+				<a href="http://localhost:3001" target="_blank" id="syncButton" data-state="off">
+					<li class="sg-main-item">
 						BrowserSync UI
-					</a>
-				</li>
+					</li>
+				</a>
 			{{/ ishControlsVisible.tools-sync }}
 			
 			{{# ishControlsVisible.tools-docs }}
-				<li class="sg-main-item">
-					<a href="http://patternlab.io/docs/" target="_blank">Pattern Lab Docs
-					</a>
-				</li>
+				<a href="http://patternlab.io/docs/" target="_blank">
+					<li class="sg-main-item">
+						Pattern Lab Docs
+					</li>
+				</a>
 			{{/ ishControlsVisible.tools-docs }}
 		{{/ ishControlsVisible.tools-all }}
 	</ol>

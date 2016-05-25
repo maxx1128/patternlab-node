@@ -64,11 +64,6 @@ $sg-nav-li-padding: spacing(half) 0;
   -webkit-text-size-adjust: 100%;
 }
 
-.sg-nav-wrapper {
-  overflow: hidden;
-  background: #ddd;
-}
-
 .is-vishidden {
   position: absolute !important;
   overflow: hidden;
@@ -79,17 +74,6 @@ $sg-nav-li-padding: spacing(half) 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.sg-cf, .sg-pattern {
-  /**zoom: 1;*/
-}
-.sg-cf:before, .sg-pattern:before, .sg-cf:after, .sg-pattern:after {
-  content: " ";
-  display: table;
-}
-.sg-cf:after, .sg-pattern:after {
-  clear: both;
-}
-
 /*------------------------------------*\
     $PATTERN LAB HEADER
 \*------------------------------------*/
@@ -97,21 +81,15 @@ $sg-nav-li-padding: spacing(half) 0;
 .sg-header {
   @include position(fixed, 0 null null 0);
   @include size(20% 100%);
+  // min-width: em(300px);
   overflow: scroll;
   z-index: 2;
 
-/*   background: color(primary, darkest);
-
-  color: color(primary, lighter);
-  font-family: type(font-family, sans); */
+  background: color(primary, lightest);
 }
 
-.sg-header * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.sg-header ul, .sg-header ol {
+.sg-header ul,
+.sg-header ol {
   @include margin(0 0 0 null);
   padding: 0;
 }
@@ -122,10 +100,10 @@ $sg-nav-li-padding: spacing(half) 0;
 }
 
 // All li elements in the side menu for components
-.sg-nav li,
-.sg-controls-list li {
-  padding-top: $sg-nav-li-padding;
+.sg-nav li {
+  padding: $sg-nav-li-padding;
   list-style: none;
+  cursor: pointer;
 }
 
 .sg-main-item {
@@ -135,19 +113,41 @@ $sg-nav-li-padding: spacing(half) 0;
   border-bottom: container(border);
 }
 
+// The text of the top-tier menu items
+.sg-main-item-text {
+  @include padding(spacing(half) null spacing(half) spacing(half));
+  display: inline-block;
+}
+
 // Nav lists for the top-level component categories
 // Atoms, Molecules, etc
 .sg-nav__buckets {
+
+  // The "view all" links for patterns
+  .sg-pop {
+    @include clearfix();
+    display: block;
+    padding-left: spacing(half);
+  }
 }
 
-// Nac lists for more specific groups within component categories
+// Nav lists for more specific groups within component categories
 // Global, Text, etc
 .sg-nav__sections {
   // margin-left: spacing(half);
 
   li {
-    padding: spacing() 0 spacing(half) spacing(half);
+    padding: spacing(half) 0;
+
+    background: color(primary, lighter);
+    border-bottom: container(border);
   }
+}
+
+// Text for the more specific groups above
+.sg-nav__section-text {
+  @include padding(spacing(half) null spacing(half) spacing(half));
+  display: inline-block;
 }
 
 // Nav groups for the specific pattern items
@@ -156,6 +156,7 @@ $sg-nav-li-padding: spacing(half) 0;
 
   li {
     padding: spacing() 0 spacing(half) spacing(half);
+    background-color: color(primary, light);
   }
 }
 
@@ -167,177 +168,6 @@ $sg-nav-li-padding: spacing(half) 0;
 
 
 
-.sg-header .sg-icon {
-  width: auto;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-}
-
-.sg-acc-panel {
-  overflow: hidden;
-  max-height: 0;
-  min-width: 10em;
-  -webkit-transition: max-height 0.1s ease-out;
-  -moz-transition: max-height 0.1s ease-out;
-  -ms-transition: max-height 0.1s ease-out;
-  -o-transition: max-height 0.1s ease-out;
-  transition: max-height 0.1s ease-out;
-}
-.sg-acc-panel li {
-  background: #222;
-}
-.sg-acc-panel.active {
-  max-height: 120em;
-  overflow: auto;
-}
-.sg-acc-panel.sg-right {
-  position: absolute;
-  left: auto;
-  right: 0;
-}
-.sg-acc-panel.sg-left {
-  position: absolute;
-  left: auto;
-}
-.sg-acc-panel [class^="sg-icon-"]:before {
-  display: inline-block;
-  margin-right: 0.4em;
-}
-
-/* Controls (sizing, view mode) */
-.sg-controls {
-  border: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.sg-control-trigger {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-@media all and (min-width: 48em) {
-  .sg-control-trigger {
-    border: 0;
-  }
-}
-@media all and (min-width: 72em) {
-  .sg-control-trigger {
-    float: left;
-    width: 6em;
-  }
-}
-
-.sg-control > li {
-  float: left;
-}
-@media all and (min-width: 48em) {
-  .sg-control > li {
-    border-bottom: 0;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-  }
-}
-.sg-control .sg-input {
-  padding: 0.1em;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.sg-control .sg-input:active, .sg-control .sg-input:focus {
-  outline: 0;
-  background: #999;
-  color: #000;
-}
-
-.sg-current-size {
-  font-size: 70%;
-  color: #808080;
-  padding: 0.85em 0.7em;
-}
-.sg-current-size:hover .sg-input {
-  background: #999;
-  color: #000;
-}
-@media all and (min-width: 72em) {
-  .sg-current-size {
-    float: left;
-  }
-}
-
-.sg-size {
-  width: 135px;
-}
-@media all and (min-width: 48em) {
-  .sg-size {
-    width: auto;
-  }
-}
-
-@media all and (min-width: 72em) {
-  .sg-size-options {
-    float: left;
-    position: static;
-    max-height: none;
-    max-width: none;
-  }
-  .sg-size-options > li {
-    float: left;
-    border: 0;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-  }
-}
-
-#sg-size-mq {
-  display: none;
-}
-@media all and (min-width: 72em) {
-  #sg-size-mq {
-    display: block;
-  }
-}
-
-#sg-form {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-
-.sg-input {
-  margin: -2px 0 0 0;
-  padding: 0;
-  border: 0;
-  background-color: #222;
-  color: gray;
-  width: 25px;
-  text-align: right;
-}
-@media all and (min-width: 48em) {
-  .sg-input {
-    width: 35px;
-  }
-}
-
-.sg-input-active {
-  background-color: #fff;
-  color: #000;
-}
-
-.sg-view {
-  position: relative;
-}
-.sg-view > ul {
-  position: absolute;
-  top: 2em;
-  left: 0;
-}
-
-.sg-checkbox:before {
-  display: inline-block;
-  margin-right: 0.4em;
-}
-
 /* basic styling */
 .sg-pattern-state:before {
   margin-right: 4px;
@@ -348,43 +178,9 @@ $sg-nav-li-padding: spacing(half) 0;
   vertical-align: bottom;
 }
 
-/* nav styling */
-.sg-nav .sg-pattern-state:before {
-  margin-top: -4px;
-  margin-bottom: 0;
-  margin-left: -4px;
-  height: 20px;
-  display: block;
-  float: left;
-}
 
-.sg-sub-nav .sg-pattern-state:before {
-  margin-left: -11px;
-  margin-right: 4px;
-}
 
-/* call out for pattern's pattern state */
-span.sg-pattern-state {
-  color: #999;
-}
 
-span.sg-pattern-state:before {
-  margin-bottom: -3px;
-  margin-left: 4px;
-}
-
-/* pattern states */
-.inprogress:before {
-  color: #FF4136 !important;
-}
-
-.inreview:before {
-  color: #FFCC00 !important;
-}
-
-.complete:before {
-  color: #2ECC40 !important;
-}
 
 /*------------------------------------*\
     $PATTERN LAB VIEWPORT
