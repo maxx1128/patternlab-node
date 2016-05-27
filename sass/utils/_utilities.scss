@@ -29,6 +29,6 @@
 
 
 /* Colors */
-.valid { color: color(palette, green); }
+.valid { color: color(success); }
 
-.error { color: color(palette, red); }
+.error { color: color(alert); }

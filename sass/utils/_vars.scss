@@ -70,32 +70,89 @@ $typography-map: (
 // ----- Color Variables ----- //
 
 // The base primary
-$g-primary-color: #999;
-$g-primary-action-color: #477dca;
+$g-primary-color: #4a9cd5;
+$g-secondary-color: #31739c;
+$g-action-color: #ee5a62;
+$g-info-color: #0074d9;
+$g-success-color: #2ecc40;
+$g-warning-color: #FFDC00;
+$g-alert-color: #ff4136;
 
 
 // Map for storing all color variables
 $color-map: (
   primary: (
-    lightest: #fff,
+    lightest: tint($g-primary-color, 85%),
     lighter: tint($g-primary-color, 60%),
     light: tint($g-primary-color, 15%),
     base: $g-primary-color,
     dark: shade($g-primary-color, 15%),
     darker: shade($g-primary-color, 60%),
-    darkest: #000
+    darkest: shade($g-primary-color, 85%)
+  ),
+
+  secondary: (
+    lightest: tint($g-secondary-color, 85%),
+    lighter: tint($g-secondary-color, 60%),
+    light: tint($g-secondary-color, 15%),
+    base: $g-secondary-color,
+    dark: shade($g-secondary-color, 15%),
+    darker: shade($g-secondary-color, 60%),
+    darkest: shade($g-secondary-color, 85%)
+  ),
+
+  mono: (
+    white: #fff,
+    lightgray: #dddddd,
+    gray: #aaa,
+    darkgray: #9897a9,
+    black: #111
   ),
 
   action: (
-    base: $g-primary-action-color,
-    hover: shade($g-primary-action-color, 15%)
+    base: $g-action-color,
+    hover: shade($g-action-color, 15%)
   ),
 
-  palette: (
-    red: red,
-    green: green,
-    blue: blue
+  info: (
+    lightest: #fff,
+    lighter: tint($g-info-color, 60%),
+    light: tint($g-info-color, 15%),
+    base: $g-info-color,
+    dark: shade($g-info-color, 15%),
+    darker: shade($g-info-color, 60%),
+    darkest: #000
   ),
+
+  success: (
+    lightest: #fff,
+    lighter: tint($g-success-color, 60%),
+    light: tint($g-success-color, 15%),
+    base: $g-success-color,
+    dark: shade($g-success-color, 15%),
+    darker: shade($g-success-color, 60%),
+    darkest: #000
+  ),
+
+  warning: (
+    lightest: #fff,
+    lighter: tint($g-warning-color, 60%),
+    light: tint($g-warning-color, 15%),
+    base: $g-warning-color,
+    dark: shade($g-warning-color, 15%),
+    darker: shade($g-warning-color, 60%),
+    darkest: #000
+  ),
+
+  alert: (
+    lightest: #fff,
+    lighter: tint($g-alert-color, 60%),
+    light: tint($g-alert-color, 15%),
+    base: $g-alert-color,
+    dark: shade($g-alert-color, 15%),
+    darker: shade($g-alert-color, 60%),
+    darkest: #000
+  )
 );
 
 
