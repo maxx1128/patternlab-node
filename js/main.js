@@ -1,6 +1,8 @@
 //=require ../_bower_components/a11y-toggle/a11y-toggle.min.js
 
 
+//=require pattern-lab/pl-nav.js
+
 
 (function(w){
   var sw = document.body.clientWidth,

@@ -1,55 +1,7 @@
-/*------------------------------------*\
-    $PATTERN LAB STYLES
-\*------------------------------------*/
-/**
- * NOTE: These styles are specific to Pattern Lab and should not be modified.
- * Edit all project styles in /source/css/
- *
- * Second note: Any important declarations are to prevent brand styles from overriding style guide
- */
-/*------------------------------------*\
-    $CONTENTS
-\*------------------------------------*/
-/**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
- * -----Font
- * -----Colors
- * -----Typography
- * -----Defaults
- * -----Breakpoints
- * MIXINS---------------------------------Sass mixins
- * GLOBAL ELEMENTS------------------------Establish global styles
- * -----Main
- * -----Headings
- * -----Text-related elements (p, blockquote, lists)
- * -----Defaults
- * -----Breakpoints
- * STYLE GUIDE INTERFACE------------------CSS for the Pattern Lab Container.
- * -----Header
- * -----Navigation
- * -----Controls
- * -----Main Container
- * -----Viewport
- * -----Section Headers
- * -----Code View
- * -----Icon Fonts
- */
-/*------------------------------------*\
-    $PATTERN LAB VARIABLES
-\*------------------------------------*/
-/*Fonts*/
-/* Style Guide Interface Colors */
-/* Typography */
-/* Defaults */
-/* Dimensions */
-/* Breakpoints */
-/*------------------------------------*\
-    $PATTERN LAB MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $PATTERN LAB INTERFACE
-\*------------------------------------*/
+$sg-menu-width: 175px;
+$sg-menu-transition: 0.5s;
 
+$sg-menu-icon-size: 44px;
 
 $sg-nav-li-padding: spacing(half) 0;
 
@@ -58,9 +10,10 @@ $sg-nav-li-padding: spacing(half) 0;
 
 
 #patternlab-html, #patternlab-body {
+  @include clearfix();
   margin: 0;
   padding: 0;
-  background: #ddd;
+  background: color(mono, lightest);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -79,13 +32,21 @@ $sg-nav-li-padding: spacing(half) 0;
 \*------------------------------------*/
 /* Header */
 .sg-header {
+  @include transition($sg-menu-transition);
   @include position(fixed, 0 null null 0);
-  @include size(20% 100%);
-  // min-width: em(300px);
+  @include size($sg-menu-width 100%);
   overflow: scroll;
   z-index: 2;
 
   background: color(mono, lightest);
+  
+
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      @include transform(translateX($sg-menu-width * -1));
+    }
+  }
 }
 
 .sg-header ul,
@@ -176,12 +137,21 @@ $sg-nav-li-padding: spacing(half) 0;
 \*------------------------------------*/
 /* Viewport */
 #sg-vp-wrap {
+  @include transition($sg-menu-transition);
   @include position(fixed, 0 0 null null);
   height: 100%;
-  width: 79.5% !important;
+  width: calc(100% - #{$sg-menu-width});
   box-sizing: border-box;
   z-index: 0;
+
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      width: 100%;
+    }
+  }
 }
+
 #sg-vp-wrap.wrap-animate {
   -webkit-transition: left 0.3s ease-out;
   -moz-transition: left 0.3s ease-out;
@@ -198,6 +168,7 @@ $sg-nav-li-padding: spacing(half) 0;
   margin: 0;
   background-color: white;
 }
+
 #sg-viewport.hay-mode {
   -webkit-transition: all 40s linear;
   -moz-transition: all 40s linear;
@@ -273,6 +244,24 @@ $sg-nav-li-padding: spacing(half) 0;
   -o-transition: width 0.8s ease-out;
   transition: width 0.8s ease-out;
 }
+
+/*------------------------------------*\
+    $PATTERN MENU BUTTON
+\*------------------------------------*/
+.sg-menu-button {
+  @include position(absolute, spacing(half) null null spacing(half));
+  @include size(44px);
+  border-radius: 100%;
+  display: block;
+  z-index: 1;
+
+  cursor: pointer;
+
+  background-color: rgba(color(secondary), 0.5);
+
+  @include larger-than(medium) { display: none; }
+}
+
 
 /*------------------------------------*\
     $PATTERN LAB CONTENT
