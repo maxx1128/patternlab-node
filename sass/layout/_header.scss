@@ -8,7 +8,7 @@ header {
   @include clearfix();
   padding: 0;
 
-  background: color(mono, white);
+  background: color(mono, lightest);
   border-bottom: container(border);
 }
 

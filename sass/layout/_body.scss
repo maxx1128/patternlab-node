@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   padding: spacing();
 
-  background: color(mono, white);
+  background: color(mono, lightest);
 
   // Add responsive widths here as modifier classes
   // And then have Javascript to trigger these classes
@@ -12,4 +12,5 @@ body {
 /* Layout Container */
 [role=main] {
   max-width: breakpoint('max-width');
+  padding: spacing(half);
 }

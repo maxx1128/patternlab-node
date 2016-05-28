@@ -71,8 +71,9 @@ $typography-map: (
 
 // The base primary
 $g-primary-color: #4a9cd5;
-$g-secondary-color: #31739c;
+$g-secondary-color: #313962;
 $g-action-color: #ee5a62;
+$g-mono-color: #aaa;
 $g-info-color: #0074d9;
 $g-success-color: #2ecc40;
 $g-warning-color: #FFDC00;
@@ -101,57 +102,64 @@ $color-map: (
     darkest: shade($g-secondary-color, 85%)
   ),
 
-  mono: (
-    white: #fff,
-    lightgray: #dddddd,
-    gray: #aaa,
-    darkgray: #9897a9,
-    black: #111
+  action: (
+    lightest: tint($g-action-color, 85%),
+    lighter: tint($g-action-color, 60%),
+    light: tint($g-action-color, 15%),
+    base: $g-action-color,
+    dark: shade($g-action-color, 15%),
+    darker: shade($g-action-color, 60%),
+    darkest: shade($g-action-color, 85%)
   ),
 
-  action: (
-    base: $g-action-color,
-    hover: shade($g-action-color, 15%)
+  mono: (
+    lightest: tint($g-mono-color, 85%),
+    lighter: tint($g-mono-color, 60%),
+    light: tint($g-mono-color, 15%),
+    base: $g-mono-color,
+    dark: shade($g-mono-color, 15%),
+    darker: shade($g-mono-color, 60%),
+    darkest: shade($g-mono-color, 85%)
   ),
 
   info: (
-    lightest: #fff,
+    lightest: tint($g-info-color, 85%),
     lighter: tint($g-info-color, 60%),
     light: tint($g-info-color, 15%),
     base: $g-info-color,
     dark: shade($g-info-color, 15%),
     darker: shade($g-info-color, 60%),
-    darkest: #000
+    darkest: shade($g-info-color, 85%)
   ),
 
   success: (
-    lightest: #fff,
+    lightest: tint($g-success-color, 85%),
     lighter: tint($g-success-color, 60%),
     light: tint($g-success-color, 15%),
     base: $g-success-color,
     dark: shade($g-success-color, 15%),
     darker: shade($g-success-color, 60%),
-    darkest: #000
+    darkest: shade($g-success-color, 85%)
   ),
 
   warning: (
-    lightest: #fff,
+    lightest: tint($g-warning-color, 85%),
     lighter: tint($g-warning-color, 60%),
     light: tint($g-warning-color, 15%),
     base: $g-warning-color,
     dark: shade($g-warning-color, 15%),
     darker: shade($g-warning-color, 60%),
-    darkest: #000
+    darkest: shade($g-warning-color, 85%)
   ),
 
   alert: (
-    lightest: #fff,
+    lightest: tint($g-alert-color, 85%),
     lighter: tint($g-alert-color, 60%),
     light: tint($g-alert-color, 15%),
     base: $g-alert-color,
     dark: shade($g-alert-color, 15%),
     darker: shade($g-alert-color, 60%),
-    darkest: #000
+    darkest: shade($g-alert-color, 85%)
   )
 );
 

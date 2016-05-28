@@ -1,0 +1,109 @@
+$color-list: 'primary', 'secondary', 'action', 'mono', 'info', 'success', 'warning', 'alert';
+
+$swatch-base-height: 225px;
+$swatch-tone-height: 100px;
+
+$swatch-hex-position: null null spacing(half) spacing(half);
+$swatch-shade-position: spacing(half) null null spacing(half);
+
+$swatch-light-text: color(mono, lightest);
+$swatch-dark-text: color(mono, darkest);
+
+$swatch-base__hex-font-size: type(font-size, h5);
+$swatch-base__shade-font-size: type(font-size, h6);
+
+$swatch-tone__hex-font-size: type(font-size);
+$swatch-tone__shade-font-size: type(font-size, small);
+
+
+// Mixin for generating the common swatch colors
+@mixin swatch__color-scheme-generator($u-color, $shade, $base: false) {
+  @include contra-color($u-color, $swatch-light-text, $swatch-dark-text);
+  position: relative;
+
+  @if ($base == true) {
+    font-size: $swatch-base__shade-font-size;
+    text-transform: uppercase;
+
+    &::after { font-size: $swatch-base__hex-font-size; }
+  } @else {
+    font-size: $swatch-tone__shade-font-size;
+
+    &::after { font-size: $swatch-tone__hex-font-size; }
+  }
+
+  &::before {
+    @include position(absolute, $swatch-shade-position);
+    content: $shade;
+  }
+
+  &::after {
+    @include position(absolute, $swatch-hex-position);
+    content: quote($u-color);
+
+    text-transform: uppercase;
+  }
+}
+
+
+
+.swatch {
+  @include syn(base, 12, 0, (marg-b-2 block));
+  @include syn(small, 6, 0, (float-l inline-b border-b pad-1));
+  @include syn(medium, 4, 0, (''));
+
+  @include clearfix();
+}
+
+// The base color for every scheme
+.swatch__base {
+  @include size(100% $swatch-base-height);
+}
+
+// Container for both light and dark tones
+.swatch__all-tones {}
+
+// The light and dark tones of a color
+.swatch__tone-group {
+  @include size(100% $swatch-tone-height);
+}
+
+// Every light and dark tone of the base color
+.swatch__tone {
+  @include size(100%);
+  display: inline-block;
+  margin: 0;
+  float: right;
+
+  ._tone-darks & { float: left; }
+
+  @include larger-than(small) {
+    width: percentage(1/3);
+  }
+}
+
+
+
+
+
+
+
+
+@each $color in $color-list {
+  .swatch._#{$color} {
+
+    .swatch__base { @include swatch__color-scheme-generator(color($color), inspect($color), $base: true); }
+
+    ._tone-light { @include swatch__color-scheme-generator(color($color, light), 'light'); }
+
+    ._tone-lighter { @include swatch__color-scheme-generator(color($color, lighter), 'lighter'); }
+
+    ._tone-lightest { @include swatch__color-scheme-generator(color($color, lightest), 'lightest'); }
+
+    ._tone-dark { @include swatch__color-scheme-generator(color($color, dark), 'dark'); }
+
+    ._tone-darker { @include swatch__color-scheme-generator(color($color, darker), 'darker'); }
+
+    ._tone-darkest { @include swatch__color-scheme-generator(color($color, darkest), 'darkest'); }
+  }
+}

@@ -18,7 +18,7 @@
   @include larger-than(small) { text-align: left; }
 }
 
-.block_excerpt { color: color(mono, black); }
+.block_excerpt { color: color(mono, darkest); }
 
 
 
@@ -51,7 +51,7 @@
     width: 100%;
     padding: spacing();
 
-    color: color(mono, white);
+    color: color(mono, lightest);
 
     background: rgba(0, 0, 0, 0.5);
   }

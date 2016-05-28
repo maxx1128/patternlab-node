@@ -85,7 +85,7 @@ $sg-nav-li-padding: spacing(half) 0;
   overflow: scroll;
   z-index: 2;
 
-  background: color(mono, white);
+  background: color(mono, lightest);
 }
 
 .sg-header ul,
@@ -166,17 +166,6 @@ $sg-nav-li-padding: spacing(half) 0;
   display: none;
 }
 
-
-
-/* basic styling */
-.sg-pattern-state:before {
-  margin-right: 4px;
-  content: "\2022";
-  display: inline-block;
-  margin-bottom: -4px;
-  font-size: 18px;
-  vertical-align: bottom;
-}
 
 
 

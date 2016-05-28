@@ -16,8 +16,8 @@ Elements to replace:
 '_bower_components/Synapse-Grid/synapse-grid';
 
 @import
-'utils/vars',
 'utils/functions',
+'utils/vars',
 'utils/mixins',
 'utils/utilities';
 
@@ -28,8 +28,17 @@ Elements to replace:
 // http://www.sitepoint.com/5-great-uses-sass-maps/
 
 @import
+'layout/grid',
+'layout/body',
+'layout/footer',
+'layout/header',
+'layout/sidebar',
+'layout/three-col';
+
+@import
 'base/reset',
 'base/normalize',
+'base/color-swatches',
 'base/typography',
 'base/buttons',
 'base/lists',
@@ -37,14 +46,6 @@ Elements to replace:
 'base/tables',
 'base/media',
 'base/forms';
-
-@import
-'layout/grid',
-'layout/body',
-'layout/footer',
-'layout/header',
-'layout/sidebar',
-'layout/three-col';
 
 @import
 'components/article',

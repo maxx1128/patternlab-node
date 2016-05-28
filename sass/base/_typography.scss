@@ -2,7 +2,7 @@
 body {
   font-family: type(font-family, sans);
 
-  color: color(mono, black);
+  color: color(mono, darkest);
 }
 
 
@@ -13,7 +13,7 @@ a {
   outline: 0;
 }
 a:hover, a:focus {
-  color: color(action, hover);
+  color: color(action, dark);
   text-decoration: underline;
 }
 
