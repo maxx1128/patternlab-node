@@ -1,17 +1,17 @@
 <div id="container">
-	{{> organisms-header }}
+	{{> patterns-header }}
 	<div role="main">
 		
 		<div class="layout-single">
 			{{# hero }}
-				{{> molecules-inset-block }}
+				{{> components-inset-block }}
 			{{/ hero}}
 		</div>
 
 		<div class="three-col-layout">
 			{{# touts}}
 				<div class="three-col-layout__item">
-					{{> molecules-inset-block }}
+					{{> components-inset-block }}
 				</div>
 			{{/ touts}}
 		</div><!--end 3up-->
@@ -24,7 +24,7 @@
 					<h2 class="section-title">Latest Posts</h2>
 					<ul class="post-list">
 						{{# latest-posts }}
-							<li>{{> molecules-thumbnail-block }}</li>
+							<li>{{> components-thumbnail-block }}</li>
 						{{/ latest-posts }}
 					</ul>
 					<a href="#" class="text-btn">View more posts</a>
@@ -36,5 +36,5 @@
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
-	{{> organisms-footer }}
+	{{> patterns-footer }}
 </div>

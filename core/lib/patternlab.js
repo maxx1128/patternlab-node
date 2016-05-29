@@ -133,21 +133,21 @@
 
     //set user defined head and foot if they exist
     try {
-      patternlab.userHead = pattern_assembler.get_pattern_by_key('atoms-head', patternlab);
+      patternlab.userHead = pattern_assembler.get_pattern_by_key('base-head', patternlab);
     }
     catch (ex) {
       if (patternlab.config.debug) {
         console.log(ex);
-        console.log('Could not find optional user-defined header, atoms-head  pattern. It was likely deleted.');
+        console.log('Could not find optional user-defined header, base-head  pattern. It was likely deleted.');
       }
     }
     try {
-      patternlab.userFoot = pattern_assembler.get_pattern_by_key('atoms-foot', patternlab);
+      patternlab.userFoot = pattern_assembler.get_pattern_by_key('base-foot', patternlab);
     }
     catch (ex) {
       if (patternlab.config.debug) {
         console.log(ex);
-        console.log('Could not find optional user-defined footer, atoms-foot pattern. It was likely deleted.');
+        console.log('Could not find optional user-defined footer, base-foot pattern. It was likely deleted.');
       }
     }
 
