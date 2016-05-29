@@ -4,8 +4,8 @@ $tone-list: 'light', 'lighter', 'lightest', 'dark', 'darker', 'darkest';
 $swatches-per-row: 3;
 $swatches-tones-per-row: 3;
 
-$swatch-base-height: 225px;
-$swatch-tone-height: 75px;
+$swatch-base-height: 110px;
+$swatch-tone-height: 50px;
 
 $swatch-hex-position: null null spacing(half) spacing(half);
 $swatch-shade-position: spacing(half) null null spacing(half);
@@ -13,11 +13,11 @@ $swatch-shade-position: spacing(half) null null spacing(half);
 $swatch-light-text: color(mono, lightest);
 $swatch-dark-text: color(mono, darkest);
 
-$swatch-base__hex-font-size: type(font-size, h5);
-$swatch-base__shade-font-size: type(font-size, h6);
+$swatch-base__shade-font-size: type(font-size, h5);
+$swatch-base__hex-font-size: type(font-size);
 
-$swatch-tone__hex-font-size: type(font-size);
 $swatch-tone__shade-font-size: type(font-size, small);
+$swatch-tone__hex-font-size: type(font-size, tiny);
 
 
 // Mixin for generating the common swatch colors

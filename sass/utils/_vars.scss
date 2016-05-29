@@ -20,6 +20,39 @@ $breakpoint-map: (
   max-width: em(1200px)
 );
 
+
+
+// ----- Layout Variables ----- //
+
+// Lays out the different z-index values to help keep them organized. Based off what commom elements they'd be used for.
+$z-layers: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);
+
+$g-base-spacing: 1em;
+
+// Spacing units for padding, margin, etc
+$spacing-map: (
+  triple: ($g-base-spacing * 3),
+  double: ($g-base-spacing * 2),
+  halfMore: ($g-base-spacing * 1.5),
+
+  base: $g-base-spacing,
+
+  half: ($g-base-spacing / 2),
+  third: ($g-base-spacing / 3),
+  quarter: ($g-base-spacing / 4),
+  fifth: ($g-base-spacing / 5),
+  sixth: ($g-base-spacing / 6),
+  eigth: ($g-base-spacing / 8)
+);
+
+
+
 // ----- Typography Variables ----- //
 
 // Bourbon var to determine the modular scale
@@ -28,7 +61,7 @@ $modular-scale-ratio: $minor-third;
 
 // Bourbon var to set the starting font size
 // in the modular scale functions
-$modular-scale-base: em(16px);
+$modular-scale-base: rem(16px);
 
 $typography-map: (
   font-family: (
@@ -62,26 +95,40 @@ $typography-map: (
     h4: modular-scale(3),
     h5: modular-scale(2),
     h6: modular-scale(2),
-    base: modular-scale(2)
+    base: modular-scale(2),
+    small: modular-scale(1),
+    tiny: modular-scale(1)
   ),
+
+  margin: (
+    h1: spacing(half) 0,
+    h2: spacing(third) 0,
+    h3: spacing(third) 0,
+    h4: spacing(quarter) 0,
+    h5: spacing(quarter) 0,
+    h6: spacing(quarter) 0,
+    base: spacing() 0,
+    small: spacing() 0,
+    tiny: spacing() 0
+  )
 );
 
 
 // ----- Color Variables ----- //
 
 // The base primary
-$g-primary-color: #4a9cd5;
-$g-secondary-color: #313962;
-$g-action-color: #ee5a62;
-$g-mono-color: #aaa;
-$g-info-color: #0074d9;
-$g-success-color: #2ecc40;
-$g-warning-color: #feee88;
-$g-alert-color: #ff4136;
+$g-primary-color: #d59c4a;
+$g-secondary-color: #734a4a;
+$g-action-color: #529cde;
+$g-mono-color: #62627b;
+$g-info-color: #5ac5e6;
+$g-success-color: #319c73;
+$g-warning-color: #eed552;
+$g-alert-color: #d54152;
 
 $g-shade-1: 15%;
 $g-shade-2: 40%;
-$g-shade-3: 65%;
+$g-shade-3: 60%;
 
 
 // Map for storing all color variables
@@ -123,7 +170,7 @@ $color-map: (
     base: $g-mono-color,
     dark: shade($g-mono-color, $g-shade-1),
     darker: shade($g-mono-color, $g-shade-2),
-    darkest: #111
+    darkest: shade($g-mono-color, $g-shade-3)
   ),
 
   info: (
@@ -167,38 +214,6 @@ $color-map: (
   )
 );
 
-
-
-
-// ----- Layout Variables ----- //
-
-// Lays out the different z-index values to help keep them organized. Based off what commom elements they'd be used for.
-$z-layers: (
-  bottomless-pit: -9999,
-  default: 1,
-  dropdown: 3000,
-  overlay: 4000,
-  modal: 4001
-);
-
-
-$g-base-spacing: 1em;
-
-// Spacing units for padding, margin, etc
-$spacing-map: (
-  triple: ($g-base-spacing * 3),
-  double: ($g-base-spacing * 2),
-  halfMore: ($g-base-spacing * 1.5),
-
-  base: $g-base-spacing,
-
-  half: ($g-base-spacing / 2),
-  third: ($g-base-spacing / 3),
-  quarter: ($g-base-spacing / 4),
-  fifth: ($g-base-spacing / 5),
-  sixth: ($g-base-spacing / 6),
-  eigth: ($g-base-spacing / 8)
-);
 
 
 // ----- Container Variables ----- //

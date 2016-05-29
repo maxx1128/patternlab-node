@@ -1,0 +1,35 @@
+{
+  "type-elements": [
+    { 
+      "element": "h1",
+      "label": "Heading 1"
+    },{ 
+      "element": "h2",
+      "label": "Heading 2"
+    },{ 
+      "element": "h3",
+      "label": "Heading 3"
+    },{ 
+      "element": "h4",
+      "label": "Heading 4"
+    },{ 
+      "element": "h5",
+      "label": "Heading 5"
+    },{ 
+      "element": "h6",
+      "label": "Heading 6"
+    },{ 
+      "element": "small",
+      "label": "Small"
+    },{ 
+      "element": "tiny",
+      "label": "Tiny"
+    }
+  ],
+
+  "type-properties": [
+    { "property": "font-size" },
+    { "property": "line-height" },
+    { "property": "margin" }
+  ]
+}
