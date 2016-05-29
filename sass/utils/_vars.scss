@@ -213,7 +213,7 @@ $containers-map: (
   ),
 
   dropShadow: (
-    base: 1px 1px 3px #000
+    base: 1px 1px spacing() color(mono, darkest)
   ),
 
   fill: (

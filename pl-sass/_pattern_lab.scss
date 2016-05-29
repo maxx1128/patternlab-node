@@ -153,11 +153,7 @@ $sg-annot-height: 45%;
 }
 
 #sg-vp-wrap.wrap-animate {
-  -webkit-transition: left 0.3s ease-out;
-  -moz-transition: left 0.3s ease-out;
-  -ms-transition: left 0.3s ease-out;
-  -o-transition: left 0.3s ease-out;
-  transition: left 0.3s ease-out;
+  @include transition(left 0.3s ease-out);
 }
 
 #sg-viewport {
@@ -166,7 +162,10 @@ $sg-annot-height: 45%;
   width: 100% !important;
   box-sizing: border-box;
   margin: 0;
-  background-color: white;
+  padding: spacing();
+  
+
+  background-color: color(mono, lightest);
 }
 
 #sg-viewport.hay-mode {
@@ -262,34 +261,9 @@ $sg-annot-height: 45%;
   @include larger-than(medium) { display: none; }
 }
 
-
 /*------------------------------------*\
     $PATTERN LAB CONTENT
 \*------------------------------------*/
-/* Section Pattern */
-.sg-pattern {
-  margin-bottom: 2em;
-  position: relative;
-}
-
-/* Section Head */
-.sg-pattern-head {
-  margin: 2em 0;
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-size: 70%;
-  font-weight: normal;
-  padding: 1em 0;
-  border-bottom: 1px solid #808080;
-}
-.sg-pattern-head a {
-  display: block;
-  color: #808080;
-  text-decoration: none;
-  cursor: pointer;
-}
-.sg-pattern-head a:hover {
-  color: #222;
-}
 
 // Container for the annotation and code views
 .sg-view-container {
@@ -316,20 +290,12 @@ $sg-annot-height: 45%;
   }
 }
 
+.sg-view-container a { color: color(action, light); }
 
-.sg-view-container a {
-  color: #999;
-}
-.sg-view-container pre {
-  padding: 0 1em;
-}
+.sg-view-container pre { padding: 0 spacing(); }
+
 .sg-view-container.anim-ready {
-  -webkit-transition: bottom 0.3s ease-out;
-  -moz-transition: bottom 0.3s ease-out;
-  -webkit-transition: bottom 0.3s ease-out;
-  -ms-transition: bottom 0.3s ease-out;
-  -o-transition: bottom 0.3s ease-out;
-  transition: bottom 0.3s ease-out;
+  @include transition(bottom 0.3s ease-out);
 }
 
 .sg-view-close {
@@ -338,45 +304,11 @@ $sg-annot-height: 45%;
 }
 
 .sg-view-close-btn {
-  color: #fff;
+  display: block;
+
   text-transform: uppercase;
   text-decoration: none;
   text-align: right;
-  display: block;
-}
-
-#sg-annotation-container {
-  
-}
-
-.has-annotation {
-  cursor: help !important;
-  box-shadow: 0 0 10px #808080;
-}
-.has-annotation a, .has-annotation input {
-  cursor: help !important;
-}
-.has-annotation:hover {
-  box-shadow: 0 0 10px #222;
-}
-.has-annotation.active {
-  box-shadow: inset 0 0 20px #808080;
-}
-
-.annotation-tip {
-  display: block;
-  position: absolute;
-  margin-top: -10px !important;
-  margin-left: -10px !important;
-  width: 25px !important;
-  height: 25px !important;
-  border-radius: 13px !important;
-  text-align: center !important;
-  background: #444 !important;
-  color: #fff !important;
-  font-weight: bold !important;
-  font-size: 16px !important;
-  z-index: 100;
 }
 
 #sg-comments-container {

@@ -1,0 +1,39 @@
+.sg-pattern-body {
+  @include clearfix();
+}
+
+.sg-annotations {
+  margin-top: 2em;
+  @include clearfix();
+  display: block;
+  padding: spacing();
+
+  color: color(mono, lightest);
+
+  background-color: color(mono, darkest);
+}
+
+.has-annotation {
+  cursor: help !important;
+  box-shadow: container(dropShadow);
+
+  a,
+  input { cursor: help; }
+}
+
+.annotation-tip {
+  @include position(absolute, spacing(double) null null spacing());
+  @include margin(-10px null null -10px);
+  @include size(25px);
+  padding-top: 3px;
+  display: block;
+  z-index: 100;
+
+  text-align: center;
+  color: color(mono, lightest);
+  font-weight: type(font-weight, bold);
+
+  border-radius: 100%;
+  background-color: color(mono, darker);
+
+}

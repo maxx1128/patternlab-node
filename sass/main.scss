@@ -21,11 +21,9 @@ Elements to replace:
 'utils/mixins',
 'utils/utilities';
 
-
-// Use Sass maps like below for global variables
-// Regular vars for styling + editing components only?
-// http://www.bigeng.io/how-we-use-sass-maps-for-design-tokens-and-developer-happiness/?goal=0_80382bf8aa-090a0ff0d1-452075313&mc_cid=090a0ff0d1&mc_eid=d17d1ac6b9
-// http://www.sitepoint.com/5-great-uses-sass-maps/
+@import
+'styleguide/pattern-headers',
+'styleguide/inline_annotation';
 
 @import
 'layout/grid',
