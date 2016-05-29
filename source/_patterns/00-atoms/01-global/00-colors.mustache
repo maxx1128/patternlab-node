@@ -1,20 +1,14 @@
 {{#color-schemes}}
 <div class="swatch _{{scheme}}">
+	
 	<div class="swatch__base"></div>
 
 	<div class="swatch__all-tones">
-		<div class="swatch__tone-group _tone-lights">
-			<div class="swatch__tone _tone-light"></div>
-			<div class="swatch__tone _tone-lighter"></div>
-			<div class="swatch__tone _tone-lightest"></div>
-		</div>
-		
-		<div class="swatch__tone-group _tone-darks">
-			<div class="swatch__tone _tone-dark"></div>
-			<div class="swatch__tone _tone-darker"></div>
-			<div class="swatch__tone _tone-darkest"></div>
-		</div>
+		{{#color-tones}}
+			<div class="swatch__tone _tone-{{tone}}"></div>
+		{{/color-tones}}
 	</div>
+
 </div>
 {{/color-schemes}}
 

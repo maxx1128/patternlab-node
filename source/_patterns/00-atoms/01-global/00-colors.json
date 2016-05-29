@@ -8,5 +8,14 @@
     { "scheme": "success" },
     { "scheme": "warning" },
     { "scheme": "alert" }
+  ],
+
+  "color-tones": [
+    { "tone": "lightest" },
+    { "tone": "lighter" },
+    { "tone": "light" },
+    { "tone": "dark" },
+    { "tone": "darker" },
+    { "tone": "darkest" }
   ]
 }
