@@ -104,6 +104,11 @@ var comments = {
 		"el": ".top",
 	 	"title" : "Back to Top Link",
 	 	"comment": "<p>Back to top links are simple yet underrated. They provide users with an easy way back up to the top of the page with minimum effort. This is especially helpful on mobile devices, which tend to have long scrolling pages.</p><p>We're using an HTML character for the back to top arrow in order to reduce image elements and keep things looking crisp on high res displays.</p>"
+	},
+	{
+		"el": ".block.block--thumb",
+	 	"title" : "Block Thumbnail",
+	 	"comment": "<h4>The awesome block thumbnail is here!</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, illum reiciendis dolore blanditiis tenetur voluptates unde ex pariatur laboriosam odit assumenda, iste, sapiente, cum molestias iusto. Doloremque, rerum, eum. Eius?</p>"
 	}
 ]
 };

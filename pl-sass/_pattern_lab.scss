@@ -5,7 +5,7 @@ $sg-menu-icon-size: 44px;
 
 $sg-nav-li-padding: spacing(half) 0;
 
-
+$sg-annot-height: 45%;
 
 
 
@@ -291,26 +291,32 @@ $sg-nav-li-padding: spacing(half) 0;
   color: #222;
 }
 
+// Container for the annotation and code views
 .sg-view-container {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  line-height: 1.4;
-  font-size: 90%;
-  background: #222;
-  color: #808080;
-  position: fixed;
-  top: auto;
-  padding: 1em;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 50%;
+  @include transition($sg-menu-transition);
+  @include position(fixed, auto 0 0 null);
+  @include size(calc(100% - #{$sg-menu-width}) $sg-annot-height);
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
+  z-index: 2;
+  padding: spacing();
+  
+  font-family: type(font-family, sans);
+  line-height: type(line-height);
+  
+  background: rgba(color(mono, darkest), 0.9);
+  color: color(mono, lightest);
+
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      width: 100%;
+    }
+  }
 }
+
+
 .sg-view-container a {
   color: #999;
 }
@@ -337,6 +343,10 @@ $sg-nav-li-padding: spacing(half) 0;
   text-decoration: none;
   text-align: right;
   display: block;
+}
+
+#sg-annotation-container {
+  
 }
 
 .has-annotation {
