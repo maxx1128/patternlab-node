@@ -4,7 +4,7 @@ $swatches-per-row: 3;
 $swatches-shades-per-row: 3;
 
 $swatch-base-height: 225px;
-$swatch-tone-height: 100px;
+$swatch-tone-height: 75px;
 
 $swatch-hex-position: null null spacing(half) spacing(half);
 $swatch-shade-position: spacing(half) null null spacing(half);
@@ -52,12 +52,8 @@ $swatch-tone__shade-font-size: type(font-size, small);
 
 .swatch {
   @include syn(base, 12, 0, (marg-b-1 block));
-  @include syn(small, 6, 0, (float-l inline-b border-b pad-r-1));
+  @include syn(small, 6, 0, (float-l inline-b border-b pad-sides-1));
   @include syn(medium, (12 / $swatches-per-row), 0, (''));
-
-  &:nth-of-type(#{$swatches-per-row}n) {
-    padding-right: 0;
-  }
 
   @include clearfix();
 }

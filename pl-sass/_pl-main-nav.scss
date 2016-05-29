@@ -1,0 +1,101 @@
+$sg-menu-width: 175px;
+$sg-menu-transition: 0.5s;
+$sg-nav-li-padding: spacing(half) 0;
+
+
+/* Header */
+.sg-header {
+  @include transition($sg-menu-transition);
+  @include position(fixed, 0 null null 0);
+  @include size($sg-menu-width 100%);
+  overflow: scroll;
+  z-index: 2;
+
+  background: color(mono, lightest);
+  
+
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      @include transform(translateX($sg-menu-width * -1));
+    }
+  }
+}
+
+.sg-header ul,
+.sg-header ol {
+  @include margin(0 0 0 null);
+  padding: 0;
+}
+
+// Large container around the pattern nav area
+.sg-nav-container {
+
+}
+
+// All li elements in the side menu for components
+.sg-nav li {
+  padding: $sg-nav-li-padding;
+  list-style: none;
+  cursor: pointer;
+}
+
+.sg-main-item {
+  @include padding(spacing() spacing(half));
+  width: 100%;
+
+  border-bottom: container(border);
+}
+
+// The text of the top-tier menu items
+.sg-main-item-text {
+  @include padding(spacing(half) null spacing(half) spacing(half));
+  display: inline-block;
+}
+
+// Nav lists for the top-level component categories
+// Atoms, Molecules, etc
+.sg-nav__buckets {
+
+  // The "view all" links for patterns
+  .sg-pop {
+    @include clearfix();
+    display: block;
+    padding-left: spacing(half);
+  }
+}
+
+// Nav lists for more specific groups within component categories
+// Global, Text, etc
+.sg-nav__sections {
+  // margin-left: spacing(half);
+
+  li {
+    padding: spacing(half) 0;
+
+    background: color(primary, lighter);
+    border-bottom: container(border);
+  }
+}
+
+// Text for the more specific groups above
+.sg-nav__section-text {
+  @include padding(spacing(half) null spacing(half) spacing(half));
+  display: inline-block;
+}
+
+// Nav groups for the specific pattern items
+.sg-nav__sub-items {
+  // margin-left: spacing();
+
+  li {
+    padding: spacing() 0 spacing(half) spacing(half);
+    background-color: color(primary, light);
+  }
+}
+
+// For the toggling of menu items
+[aria-hidden='true'],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}

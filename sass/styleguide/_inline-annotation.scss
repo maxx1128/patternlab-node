@@ -35,5 +35,35 @@
 
   border-radius: 100%;
   background-color: color(mono, darker);
-
 }
+
+
+// For the inline code sections
+.sg-code a, .sg-annotations a { text-decoration: underline; }
+
+.sg-code pre {
+  padding: spacing(half);
+  overflow: scroll;
+  white-space: -moz-pre-line;
+  white-space: -pre-line;
+  white-space: -o-pre-line;
+  white-space: pre-line;
+
+  font-family: type(font-family, mono);
+
+  border: container(border, thick);
+}
+
+.clear { @include clearfix(); }
+
+.sg-code-contains {
+  margin-bottom: 1rem;
+  font-size: 85%;
+  color: #808080;
+}
+
+.sg-code-head {
+  color: #808080;
+  font-size: 1em;
+}
+

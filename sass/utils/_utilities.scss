@@ -19,6 +19,7 @@
 
 .left { float: left; }
 
+.clear { @include clearfix(); }
 
 /* Text-Align */
 .align-right { text-align: right; }
@@ -32,3 +33,14 @@
 .valid { color: color(success); }
 
 .error { color: color(alert); }
+
+
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}

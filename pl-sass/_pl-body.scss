@@ -1,0 +1,51 @@
+#patternlab-html, #patternlab-body {
+  @include clearfix();
+  margin: 0;
+  padding: 0;
+  background: color(mono, lightest);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Viewport */
+#sg-vp-wrap {
+  @include transition($sg-menu-transition);
+  @include position(fixed, 0 0 null null);
+  height: 100%;
+  width: calc(100% - #{$sg-menu-width});
+  box-sizing: border-box;
+  z-index: 0;
+
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      width: 100%;
+    }
+  }
+}
+
+#sg-viewport {
+  @include position(absolute, 0 null null 0);
+  height: 100%;
+  width: 100% !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: spacing();
+  
+  background-color: color(mono, lightest);
+
+  @include smaller-than(medium) {
+    padding-top: spacing(triple);
+  }
+}
+
+// Where all generated elements go
+// Apply viewport width changes here
+#sg-gen-container {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

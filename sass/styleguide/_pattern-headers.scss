@@ -6,10 +6,10 @@
 
 .sg-pattern-head {
   padding: spacing() 0;
-  margin: spacing(double) 0;
+  margin: 0 0 spacing(double) 0;
 
   font-family: type(font-family, serif);
-  font-size: type(font-size, small);
+  font-size: type(font-size);
 
   border-bottom: container(border);
 

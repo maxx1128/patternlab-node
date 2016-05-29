@@ -1,0 +1,21 @@
+$sg-menu-icon-size: 44px;
+
+.sg-menu-button {
+  @include position(absolute, spacing(half) null null spacing(half));
+  @include size(44px);
+  border-radius: 100%;
+  box-sizing: border-box;
+  padding: ($sg-menu-icon-size / 4);
+  display: block;
+  z-index: 1;
+
+  font-size: type(font-size, h6);
+  text-align: center;
+  cursor: pointer;
+
+  background-color: rgba(color(primary, light), 0.5);
+
+  @include larger-than(medium) { display: none; }
+}
+
+.sg-menu-button-icon {}
