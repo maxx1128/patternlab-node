@@ -15,11 +15,11 @@ $btn-alt-hover-text: color(mono, lightest);
 
 $btn-small-pad: spacing();
 $btn-small-font: type(font-size, tiny);
-$btn-large-pad: spacing(halfMore) spacing(double);
-$btn-large-font: type(font-size, h6);
+$btn-large-pad: spacing();
+$btn-large-font: type(font-size, h5);
 
 $btn-disabled-bg: color(mono, light);
-$btn-disabled-text: color(mono);
+$btn-disabled-text: color(mono, dark);
 
 
 .btn {
