@@ -101,15 +101,15 @@ $typography-map: (
   ),
 
   margin: (
-    h1: spacing(half) 0,
-    h2: spacing(third) 0,
-    h3: spacing(third) 0,
-    h4: spacing(quarter) 0,
-    h5: spacing(quarter) 0,
-    h6: spacing(quarter) 0,
-    base: spacing() 0,
-    small: spacing() 0,
-    tiny: spacing() 0
+    h1: spacing() 0,
+    h2: spacing() 0,
+    h3: spacing() 0,
+    h4: spacing(half) 0,
+    h5: spacing(half) 0,
+    h6: spacing(half) 0,
+    base: spacing(third) 0,
+    small: spacing(third) 0,
+    tiny: spacing(third) 0
   )
 );
 

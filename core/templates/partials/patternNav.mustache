@@ -7,6 +7,8 @@
 					{{ bucketNameUC }}
 				</span>
 
+				<i class="sg-item-arrow fa fa-angle-down"></i>
+
 				<ol id="toggle-{{ bucketNameLC }}" class="sg-nav__sections section">
 					{{# navItems }}
 						<li data-a11y-toggle="toggle-{{ bucketNameUC }}-sub-{{ sectionNameLC }}" class="sg-nav-{{ sectionNameLC }}">
@@ -15,12 +17,16 @@
 								{{ sectionNameUC }}
 							</span>
 
+							<i class="sg-item-arrow fa fa-angle-down"></i>
+
 							<ol id="toggle-{{ bucketNameUC }}-sub-{{ sectionNameLC }}" class="sg-nav__sub-items">
 								{{# navSubItems }}
 
 								<a href="patterns/{{ patternPath }}" class="{{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">
-									<li class="sg-pop">
-										{{ patternName }}
+									<li>
+										<span class="sg-nav__section-text">
+											{{ patternName }}
+										</span>
 									</li>
 								</a>
 
@@ -31,7 +37,9 @@
 					{{# patternItems }}
 						<li class="sg-pop">
 							<a href="patterns/{{ patternPath }}" class="{{# patternState }}sg-pattern-state {{ patternState }}{{/ patternState }}"" data-patternpartial="{{ patternPartial }}">
-								{{ patternName }}
+								<span class="sg-nav__section-text">
+									{{ patternName }}
+								</span>
 							</a>
 					{{/ patternItems }}
 				</ol>

@@ -1,6 +1,18 @@
 $sg-menu-width: 175px;
 $sg-menu-transition: 0.5s;
-$sg-nav-li-padding: spacing(half) 0;
+
+$sg-menu-item-border: container(border);
+$sg-menu-item-height: 50px;
+
+
+$sg-tier-1-bg: color(primary, lightest);
+$sg-tier-1-padding: spacing() null spacing() spacing(half);
+
+$sg-tier-2-bg: color(primary, lighter);
+$sg-tier-2-padding: spacing() null spacing() spacing();
+
+$sg-tier-3-bg: color(primary, light);
+$sg-tier-3-padding: 0 0 0 spacing(half);
 
 
 /* Header */
@@ -11,8 +23,11 @@ $sg-nav-li-padding: spacing(half) 0;
   overflow: scroll;
   z-index: 2;
 
-  background: color(mono, lightest);
-  
+  background: $sg-tier-1-bg;
+
+  a,
+  li,
+  span { font-family: type(font-family, sans); }
 
   #patternlab-html:not(.show-menu) & {
     @include smaller-than(medium) {
@@ -28,70 +43,82 @@ $sg-nav-li-padding: spacing(half) 0;
   padding: 0;
 }
 
+
 // Large container around the pattern nav area
 .sg-nav-container {
 
+  // All link items in the side nav
+  a {
+    @include clearfix();
+    display: block;
+
+    text-decoration: none;
+    color: color(action, dark);
+    font-weight: type(font-weight, bold);
+  }
 }
 
-// All li elements in the side menu for components
+
+// All li elements in the side menu for components, not what's below them
 .sg-nav li {
-  padding: $sg-nav-li-padding;
-  list-style: none;
+  position: relative;
   cursor: pointer;
+  padding: 0;
+
+  list-style: none;
 }
 
+.sg-item-arrow {
+  @include transition($sg-menu-transition);
+  @include position(absolute, spacing(third) spacing(third) null null);
+  font-size: type(font-size, h4) !important;
+
+  [aria-expanded=true] > & {
+    @include transition($sg-menu-transition);
+    @include transform(rotate(180deg));
+  }
+}
+
+// Top-level pattern items that hold all their sub-menu items
 .sg-main-item {
   @include padding(spacing() spacing(half));
   width: 100%;
 
-  border-bottom: container(border);
+  border-bottom: $sg-menu-item-border;
 }
 
-// The text of the top-tier menu items
+// The isolated text of the top-tier menu items
 .sg-main-item-text {
-  @include padding(spacing(half) null spacing(half) spacing(half));
-  display: inline-block;
+  @include padding($sg-tier-1-padding);
+  display: block;
 }
 
-// Nav lists for the top-level component categories
-// Atoms, Molecules, etc
-.sg-nav__buckets {
-
-  // The "view all" links for patterns
-  .sg-pop {
-    @include clearfix();
-    display: block;
-    padding-left: spacing(half);
-  }
-}
-
-// Nav lists for more specific groups within component categories
-// Global, Text, etc
+// Menus for the different sections in each main category
+// e.g. second tier lists 
+// Global, Text, etc in Atoms, etc
 .sg-nav__sections {
-  // margin-left: spacing(half);
+  background: $sg-tier-2-bg;
 
   li {
-    padding: spacing(half) 0;
+    padding: 0;
 
-    background: color(primary, lighter);
     border-bottom: container(border);
   }
 }
 
-// Text for the more specific groups above
+// Specific text in each item for the sub-menus
 .sg-nav__section-text {
-  @include padding(spacing(half) null spacing(half) spacing(half));
-  display: inline-block;
+  @include padding($sg-tier-2-padding);
+  display: block;
 }
 
-// Nav groups for the specific pattern items
+// The sub-menus in the main sections
+// e.g. third tier lists
+// Headings, Subheadings, etc in the Text section
 .sg-nav__sub-items {
-  // margin-left: spacing();
+  background: $sg-tier-3-bg;
 
-  li {
-    padding: spacing() 0 spacing(half) spacing(half);
-    background-color: color(primary, light);
-  }
+  li { padding: $sg-tier-3-padding; }
 }
 
 // For the toggling of menu items
