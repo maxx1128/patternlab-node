@@ -1,4 +1,4 @@
-$sg-menu-width: 175px;
+$sg-menu-width: em(225px);
 $sg-menu-transition: 0.5s;
 
 $sg-menu-item-border: container(border);
@@ -14,6 +14,15 @@ $sg-tier-2-padding: spacing() null spacing() spacing();
 $sg-tier-3-bg: color(primary, lighter);
 $sg-tier-3-padding: 0 0 0 spacing(half);
 
+.sg-nav-intro {
+  padding: spacing(half) spacing();
+
+  border-bottom: $sg-menu-item-border;
+}
+
+.sg-nav-title {
+  margin: spacing(third) 0 spacing(half) 0;
+}
 
 /* Header */
 .sg-header {

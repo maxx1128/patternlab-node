@@ -9,6 +9,11 @@
 '../sass/utils/utilities';
 
 @import
+'../sass/base/normalize',
+'../sass/base/typography',
+'../sass/layout/grid';
+
+@import
 'pl-main-nav',
 'pl-body',
 'pl-menu',
