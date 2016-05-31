@@ -46,19 +46,6 @@ h6 { font-family: type(font-family, serif); }
   font-weight: type(font-weight, bold);
 }
 
-// Blockquote
-blockquote {
-  padding: spacing();
-  padding-left: spacing(double);
-  margin: 0;
-
-  color: color(primary, darker);
-  font-style: italic;
-  line-height: type(line-height);
-
-  border-left: container(border, thick);
-}
-
 // Horizontal Rule
 hr {
   border: 0;

@@ -159,10 +159,10 @@ gulp.task('connect', ['lab'], function () {
   gulp.watch('core/templates/**/*.mustache', ['banner', 'lab'],
     function () { browserSync.reload(); } );
 
-  gulp.watch('sass/**/**/*.scss', ['sass'],
+  gulp.watch('sass/**/**/*.scss', ['sass', 'pl-sass'],
     function () { browserSync.reload(); } );
 
-  gulp.watch('pl-sass/**/**/*.scss', ['pl-sass'],
+  gulp.watch('pl-sass/**/**/*.scss', ['sass', 'pl-sass'],
     function () { browserSync.reload(); } );
 
   gulp.watch('js/**/**/*.js', ['scripts'],

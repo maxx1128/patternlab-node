@@ -48,70 +48,9 @@ $spacing-map: (
   quarter: decimal-round(($g-base-spacing / 4), 2),
   fifth: decimal-round(($g-base-spacing / 5), 2),
   sixth: decimal-round(($g-base-spacing / 6), 2),
-  eigth: decimal-round(($g-base-spacing / 8, 2))
+  eigth: decimal-round(($g-base-spacing / 8), 2)
 );
 
-
-
-// ----- Typography Variables ----- //
-
-// Bourbon var to determine the modular scale
-// in their function to return consistent, scaled values
-$modular-scale-ratio: $minor-third;
-
-// Bourbon var to set the starting font size
-// in the modular scale functions
-$modular-scale-base: rem(14px);
-
-$typography-map: (
-  font-family: (
-    sans: $lucida-grande,
-    serif: $verdana,
-    mono: $monospace
-  ),
-
-  font-size: (
-    h1: decimal-round(modular-scale(6), 2),
-    h2: decimal-round(modular-scale(5), 2),
-    h3: decimal-round(modular-scale(4), 2),
-    h4: decimal-round(modular-scale(3), 2),
-    h5: decimal-round(modular-scale(2), 2),
-    h6: decimal-round(modular-scale(1), 2),
-    p: decimal-round(modular-scale(0), 2),
-    small: decimal-round(modular-scale(-1), 2),
-    tiny: decimal-round(modular-scale(-2), 2)
-  ),
-
-  font-weight: (
-    bold: 700,
-    base: 400,
-    light: 100
-  ),
-
-  line-height: (
-    h1: decimal-round(modular-scale(3), 2),
-    h2: decimal-round(modular-scale(3), 2),
-    h3: decimal-round(modular-scale(3), 2),
-    h4: decimal-round(modular-scale(3), 2),
-    h5: decimal-round(modular-scale(2), 2),
-    h6: decimal-round(modular-scale(2), 2),
-    p: decimal-round(modular-scale(2), 2),
-    small: decimal-round(modular-scale(1), 2),
-    tiny: decimal-round(modular-scale(1), 2)
-  ),
-
-  margin: (
-    h1: spacing() 0,
-    h2: spacing() 0,
-    h3: spacing() 0,
-    h4: spacing(half) 0,
-    h5: spacing(half) 0,
-    h6: spacing(half) 0,
-    p: spacing(half) 0 spacing() 0,
-    small: spacing(third) 0,
-    tiny: spacing(third) 0
-  )
-);
 
 
 // ----- Color Variables ----- //
@@ -119,8 +58,8 @@ $typography-map: (
 // The base primary
 $g-primary-color: #f6bd20;
 $g-secondary-color: #9c5200;
-$g-action-color: #c52018;
-$g-mono-color: #bbbbc4;
+$g-action-color: #e65a41;
+$g-mono-color: #adadb8;
 $g-info-color: #8bc5cd;
 $g-success-color: #73ac31;
 $g-warning-color: #ff9441;
@@ -216,13 +155,78 @@ $color-map: (
 
 
 
+
+
+// ----- Typography Variables ----- //
+
+// Bourbon var to determine the modular scale
+// in their function to return consistent, scaled values
+$modular-scale-ratio: $minor-third;
+
+// Bourbon var to set the starting font size
+// in the modular scale functions
+$modular-scale-base: rem(15px);
+
+$typography-map: (
+  font-family: (
+    sans: $verdana,
+    serif: $georgia,
+    mono: $monospace
+  ),
+
+  font-size: (
+    h1: decimal-round(modular-scale(6), 2),
+    h2: decimal-round(modular-scale(5), 2),
+    h3: decimal-round(modular-scale(4), 2),
+    h4: decimal-round(modular-scale(3), 2),
+    h5: decimal-round(modular-scale(2), 2),
+    h6: decimal-round(modular-scale(1), 2),
+    p: decimal-round(modular-scale(0), 2),
+    small: decimal-round(modular-scale(-1), 2),
+    tiny: decimal-round(modular-scale(-2), 2)
+  ),
+
+  font-weight: (
+    bold: 700,
+    base: 400,
+    light: 100
+  ),
+
+  line-height: (
+    h1: decimal-round(modular-scale(6), 2),
+    h2: decimal-round(modular-scale(5), 2),
+    h3: decimal-round(modular-scale(4), 2),
+    h4: decimal-round(modular-scale(3), 2),
+    h5: decimal-round(modular-scale(2), 2),
+    h6: decimal-round(modular-scale(2), 2),
+    p: decimal-round(modular-scale(2.5), 2),
+    small: decimal-round(modular-scale(1), 2),
+    tiny: decimal-round(modular-scale(1), 2)
+  ),
+
+  margin: (
+    h1: spacing() 0,
+    h2: spacing() 0,
+    h3: spacing() 0,
+    h4: spacing(half) 0,
+    h5: spacing(half) 0,
+    h6: spacing(half) 0,
+    p: 0 0 spacing() 0,
+    small: spacing(third) 0,
+    tiny: spacing(third) 0
+  )
+);
+
+
+
+
 // ----- Container Variables ----- //
 
 
 $containers-map: (
   border: (
     base: 1px solid color(primary),
-    dark: 1px solid color(primary, dark),
+    dark: 1px solid color(primary, darker),
     thick: 3px solid color(primary),
     alert: 3px solid color(alert)
   ),

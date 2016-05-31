@@ -1,0 +1,13 @@
+// Blockquote
+blockquote {
+  padding: spacing();
+  padding-left: spacing(double);
+  margin: 0;
+
+  color: color(primary, darker);
+  font-style: italic;
+  font-size: type(font-size, h5);
+  line-height: type(line-height);
+
+  border-left: container(border, thick);
+}
