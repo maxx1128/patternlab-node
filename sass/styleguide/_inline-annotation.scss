@@ -15,7 +15,7 @@
 
 .has-annotation {
   cursor: help !important;
-  box-shadow: container(dropShadow);
+  box-shadow: container(box-shadow);
 
   a,
   input { cursor: help; }

@@ -1,7 +1,7 @@
 $btn-bg: color(action);
 $btn-text: color(mono, lightest);
 $btn-pad: spacing();
-$btn-radius: container(borderRadius, large);
+$btn-radius: container(border-radius, large);
 $btn-hover-bg: color(action, dark);
 $btn-hover-text: $btn-text;
 $btn-trans: anim(time);

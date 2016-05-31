@@ -117,14 +117,14 @@ $typography-map: (
 // ----- Color Variables ----- //
 
 // The base primary
-$g-primary-color: #d59c4a;
-$g-secondary-color: #734a4a;
-$g-action-color: #529cde;
-$g-mono-color: #62627b;
-$g-info-color: #5ac5e6;
-$g-success-color: #319c73;
-$g-warning-color: #eed552;
-$g-alert-color: #d54152;
+$g-primary-color: #f6bd20;
+$g-secondary-color: #9c5200;
+$g-action-color: #c52018;
+$g-mono-color: #bbbbc4;
+$g-info-color: #8bc5cd;
+$g-success-color: #73ac31;
+$g-warning-color: #ff9441;
+$g-alert-color: #e63900;
 
 $g-shade-1: 15%;
 $g-shade-2: 40%;
@@ -221,33 +221,31 @@ $color-map: (
 
 $containers-map: (
   border: (
-    base: 1px solid $g-primary-color,
-    dark: 1px solid shade($g-primary-color, 15%),
-    thick: 3px solid $g-primary-color
+    base: 1px solid color(primary),
+    dark: 1px solid color(primary, dark),
+    thick: 3px solid color(primary),
+    alert: 3px solid color(alert)
   ),
 
-  borderRadius: (
-    base: 3px,
-    large: 8px
+  border-radius: (
+    base: spacing(third),
+    large: spacing()
   ),
 
-  dropShadow: (
-    base: 1px 1px spacing() color(mono, darkest)
+  box-shadow: (
+    base: 1px 1px spacing() color(mono, darker)
   ),
 
-  fill: (
-    base: tint($g-primary-color, 50%),
-    dark: tint($g-primary-color, 15%)
-  ),
-
-  margin: (
-    base: $g-base-spacing
+  background-color: (
+    light: color(mono, lighter),
+    base: color(primary, lightest),
+    dark: color(primary, lighter)
   ),
 
   padding: (
-    half: ($g-base-spacing / 2),
-    base: $g-base-spacing,
-    large: ($g-base-spacing * 2)
+    half: spacing(half),
+    base: spacing(),
+    large: spacing(double)
   )
 );
 
