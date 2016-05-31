@@ -16,6 +16,7 @@ Elements to replace:
 '_bower_components/Synapse-Grid/synapse-grid';
 
 @import
+'utils/map-functions',
 'utils/functions',
 'utils/vars',
 'utils/mixins',
@@ -30,6 +31,7 @@ Elements to replace:
 'layout/three-col';
 
 @import
+'styleguide/type-table',
 'styleguide/color-swatches',
 'styleguide/pattern-headers',
 'styleguide/inline-annotation';

@@ -37,18 +37,18 @@ $g-base-spacing: 1em;
 
 // Spacing units for padding, margin, etc
 $spacing-map: (
-  triple: ($g-base-spacing * 3),
-  double: ($g-base-spacing * 2),
-  halfMore: ($g-base-spacing * 1.5),
+  triple: decimal-round(($g-base-spacing * 3), 2),
+  double: decimal-round(($g-base-spacing * 2), 2),
+  halfMore: decimal-round(($g-base-spacing * 1.5), 2),
 
-  base: $g-base-spacing,
+  base: decimal-round($g-base-spacing, 2),
 
-  half: ($g-base-spacing / 2),
-  third: ($g-base-spacing / 3),
-  quarter: ($g-base-spacing / 4),
-  fifth: ($g-base-spacing / 5),
-  sixth: ($g-base-spacing / 6),
-  eigth: ($g-base-spacing / 8)
+  half: decimal-round(($g-base-spacing / 2), 2),
+  third: decimal-round(($g-base-spacing / 3), 2),
+  quarter: decimal-round(($g-base-spacing / 4), 2),
+  fifth: decimal-round(($g-base-spacing / 5), 2),
+  sixth: decimal-round(($g-base-spacing / 6), 2),
+  eigth: decimal-round(($g-base-spacing / 8, 2))
 );
 
 
@@ -61,7 +61,7 @@ $modular-scale-ratio: $minor-third;
 
 // Bourbon var to set the starting font size
 // in the modular scale functions
-$modular-scale-base: rem(16px);
+$modular-scale-base: rem(14px);
 
 $typography-map: (
   font-family: (
@@ -71,15 +71,15 @@ $typography-map: (
   ),
 
   font-size: (
-    h1: modular-scale(6),
-    h2: modular-scale(5),
-    h3: modular-scale(4),
-    h4: modular-scale(3),
-    h5: modular-scale(2),
-    h6: modular-scale(1),
-    base: modular-scale(0),
-    small: modular-scale(-1),
-    tiny: modular-scale(-2)
+    h1: decimal-round(modular-scale(6), 2),
+    h2: decimal-round(modular-scale(5), 2),
+    h3: decimal-round(modular-scale(4), 2),
+    h4: decimal-round(modular-scale(3), 2),
+    h5: decimal-round(modular-scale(2), 2),
+    h6: decimal-round(modular-scale(1), 2),
+    p: decimal-round(modular-scale(0), 2),
+    small: decimal-round(modular-scale(-1), 2),
+    tiny: decimal-round(modular-scale(-2), 2)
   ),
 
   font-weight: (
@@ -89,15 +89,15 @@ $typography-map: (
   ),
 
   line-height: (
-    h1: modular-scale(3),
-    h2: modular-scale(3),
-    h3: modular-scale(3),
-    h4: modular-scale(3),
-    h5: modular-scale(2),
-    h6: modular-scale(2),
-    base: modular-scale(2),
-    small: modular-scale(1),
-    tiny: modular-scale(1)
+    h1: decimal-round(modular-scale(3), 2),
+    h2: decimal-round(modular-scale(3), 2),
+    h3: decimal-round(modular-scale(3), 2),
+    h4: decimal-round(modular-scale(3), 2),
+    h5: decimal-round(modular-scale(2), 2),
+    h6: decimal-round(modular-scale(2), 2),
+    p: decimal-round(modular-scale(2), 2),
+    small: decimal-round(modular-scale(1), 2),
+    tiny: decimal-round(modular-scale(1), 2)
   ),
 
   margin: (
@@ -107,7 +107,7 @@ $typography-map: (
     h4: spacing(half) 0,
     h5: spacing(half) 0,
     h6: spacing(half) 0,
-    base: spacing(third) 0,
+    p: spacing(half) 0 spacing() 0,
     small: spacing(third) 0,
     tiny: spacing(third) 0
   )

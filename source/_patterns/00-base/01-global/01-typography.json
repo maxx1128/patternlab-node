@@ -19,6 +19,9 @@
       "element": "h6",
       "label": "Heading 6"
     },{ 
+      "element": "p",
+      "label": "Paragraph"
+    },{ 
       "element": "small",
       "label": "Small"
     },{ 
@@ -28,8 +31,14 @@
   ],
 
   "type-properties": [
-    { "property": "font-size" },
-    { "property": "line-height" },
-    { "property": "margin" }
+    { "name": "Font Size",
+      "property": "font-size"
+    }, { 
+      "name": "Line Height",
+      "property": "line-height"
+    }, { 
+      "name": "Vertical Margins",
+      "property": "margin"
+    }
   ]
 }

@@ -33,7 +33,6 @@ a {
 }
 
 // Headings
-// First, any universal headings styles
 h1,
 h2,
 h3,
@@ -45,14 +44,6 @@ h6 { font-family: type(font-family, serif); }
 .subheading {
   font-family: type(font-family, sans);
   font-weight: type(font-weight, bold);
-}
-
-// Text-Related Elements
-p {
-  margin-bottom: spacing();
-
-  font-size: type(font-size);
-  line-height: type(line-height);
 }
 
 // Blockquote
