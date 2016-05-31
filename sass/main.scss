@@ -22,10 +22,6 @@ Elements to replace:
 'utils/utilities';
 
 @import
-'styleguide/pattern-headers',
-'styleguide/inline-annotation';
-
-@import
 'layout/grid',
 'layout/body',
 'layout/footer',
@@ -34,9 +30,13 @@ Elements to replace:
 'layout/three-col';
 
 @import
+'styleguide/color-swatches',
+'styleguide/pattern-headers',
+'styleguide/inline-annotation';
+
+@import
 'base/reset',
 'base/normalize',
-'base/color-swatches',
 'base/typography',
 'base/buttons',
 'base/lists',

@@ -1,11 +1,8 @@
-$color-list: 'primary', 'secondary', 'action', 'mono', 'info', 'success', 'warning', 'alert';
-$tone-list: 'light', 'lighter', 'lightest', 'dark', 'darker', 'darkest';
-
 $swatches-per-row: 3;
 $swatches-tones-per-row: 3;
 
-$swatch-base-height: 110px;
-$swatch-tone-height: 50px;
+$swatch-base-height: 120px;
+$swatch-tone-height: 60px;
 
 $swatch-hex-position: null null spacing(half) spacing(half);
 $swatch-shade-position: spacing(half) null null spacing(half);
@@ -32,18 +29,19 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
     &::after { font-size: $swatch-base__hex-font-size; }
   } @else {
     font-size: $swatch-tone__shade-font-size;
+    text-transform: capitalize;
 
     &::after { font-size: $swatch-tone__hex-font-size; }
   }
 
   &::before {
     @include position(absolute, $swatch-shade-position);
-    content: $shade;
+    content: quote(inspect($shade));
   }
 
   &::after {
     @include position(absolute, $swatch-hex-position);
-    content: quote($u-color);
+    content: quote(inspect($u-color));
 
     text-transform: uppercase;
   }
@@ -82,13 +80,15 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
   }
 }
 
-@each $color in $color-list {
-  .swatch._#{$color} {
 
-    .swatch__base { @include swatch__color-scheme-generator(color($color), inspect($color), $base: true); }
-
-    @each $tone in $tone-list {
-      ._tone-#{$tone} { @include swatch__color-scheme-generator(color($color, $tone), quote($tone)); }
+@each $palette, $tones in $color-map {
+  $base-color: map-get($tones, base);
+  
+  .swatch._#{$palette} {
+    .swatch__base { @include swatch__color-scheme-generator($base-color, $palette, $base: true); }
+    
+    @each $tone-name, $tone-value in $tones {
+      ._tone-#{$tone-name} { @include swatch__color-scheme-generator($tone-value, $tone-name); }
     }
   }
 }
