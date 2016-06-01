@@ -22,15 +22,15 @@
     }, { 
       "property": "background-color",
       "values": [
-        { "name": "light" },
         { "name": "base" },
+        { "name": "light" },
         { "name": "dark" }
       ]
     }, { 
       "property": "padding",
       "values": [
-        { "name": "half" },
         { "name": "base" },
+        { "name": "half" },
         { "name": "large" }
       ]
     }

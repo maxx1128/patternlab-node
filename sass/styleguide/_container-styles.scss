@@ -1,4 +1,4 @@
-$cont-item-bg: color(mono, lighter);
+$cont-item-bg: container(background-color);
 $cont-item-width: 85%;
 $cont-item-minheight: 100px;
 $cont-item-marg-bottom: spacing(halfMore);
@@ -51,7 +51,7 @@ $cont-item-marg-bottom: spacing(halfMore);
             content: '';
             display: block;
 
-            background-color: color(primary, lighter);
+            background-color: color(primary, light);
           }
 
         } @else {

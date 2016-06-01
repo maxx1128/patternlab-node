@@ -63,7 +63,7 @@ $g-mono-color: #adadb8;
 $g-info-color: #8bc5cd;
 $g-success-color: #73ac31;
 $g-warning-color: #ff9441;
-$g-alert-color: #e63900;
+$g-alert-color: #cd3939;
 
 $g-shade-1: 15%;
 $g-shade-2: 40%;
@@ -169,8 +169,8 @@ $modular-scale-base: rem(15px);
 
 $typography-map: (
   font-family: (
-    sans: $verdana,
-    serif: $georgia,
+    base: $lucida-grande,
+    header: $helvetica,
     mono: $monospace
   ),
 

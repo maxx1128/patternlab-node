@@ -13,7 +13,7 @@ $sg-annot-height: 45%;
   z-index: 2;
   padding: spacing();
   
-  font-family: type(font-family, sans);
+  font-family: type(font-family, base);
   line-height: type(line-height);
   
   background: rgba(color(mono, darkest), 0.9);

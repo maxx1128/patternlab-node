@@ -36,7 +36,7 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
 
   a,
   li,
-  span { font-family: type(font-family, sans); }
+  span { font-family: type(font-family, base); }
 
   #patternlab-html:not(.show-menu) & {
     @include smaller-than(medium) {

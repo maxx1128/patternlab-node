@@ -1,13 +1,14 @@
 // Blockquote
 blockquote {
+  @include margin(0 0 spacing() 0);
   padding: spacing();
   padding-left: spacing(double);
-  margin: 0;
 
-  color: color(primary, darker);
+  color: color(primary, darkest);
   font-style: italic;
   font-size: type(font-size, h6);
   line-height: type(line-height, h3);
 
   border-left: container(border, thick);
+  background-color: color(primary, lightest);
 }

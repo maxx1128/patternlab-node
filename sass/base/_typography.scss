@@ -14,7 +14,7 @@ $type-properties: 'font-size', 'line-height', 'margin';
 
 // Default typography for all elements
 body {
-  font-family: type(font-family, sans);
+  font-family: type(font-family, base);
 
   color: color(mono, darkest);
 }
@@ -38,11 +38,11 @@ h2,
 h3,
 h4,
 h5,
-h6 { font-family: type(font-family, serif); }
+h6 { font-family: type(font-family, header); }
 
 // Subheadings
 .subheading {
-  font-family: type(font-family, sans);
+  font-family: type(font-family, base);
   font-weight: type(font-weight, bold);
 }
 
