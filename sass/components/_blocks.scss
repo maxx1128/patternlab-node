@@ -6,11 +6,17 @@
  */
 
 // Any universal block styles for all variations
-.block { overflow: hidden; }
+.block {
+  overflow: hidden;
+  margin-bottom: spacing(halfMore);
+}
 
 .block p:last-child { margin-bottom: 0; }
 
-.block__headline {}
+.block__headline {
+
+  @include larger-than(small) { margin-top: 0; }
+}
 
 .block__text {
   text-align: center;
@@ -18,7 +24,7 @@
   @include larger-than(small) { text-align: left; }
 }
 
-.block_excerpt { color: color(mono, darkest); }
+.block__excerpt { color: color(mono, darkest); }
 
 
 
@@ -36,7 +42,7 @@
   .block__text {
     @include syn(small, 7, 0, (border-b pad-sides-2 float-r));
     @include syn(medium, 8, 0, (''));
-    @include syn(medium, 9, 0, (pad-vert-1));
+    @include syn(medium, 9, 0, (''));
   }
 }
 

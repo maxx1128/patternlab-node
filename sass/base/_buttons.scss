@@ -21,6 +21,25 @@ $btn-large-font: type(font-size, h5);
 $btn-disabled-bg: color(mono, light);
 $btn-disabled-text: color(mono, dark);
 
+$btn-colors: (
+  success: (
+    base: color(success),
+    hover: color(success, dark)
+  ),
+  info: (
+    base: color(info),
+    hover: color(info, dark)
+  ),
+  warning: (
+    base: color(warning),
+    hover: color(warning, dark)
+  ),
+  alert: (
+    base: color(alert),
+    hover: color(alert, dark)
+  ),
+);
+
 
 .btn {
   @include transition(anim(time));
@@ -35,7 +54,7 @@ $btn-disabled-text: color(mono, dark);
   background: $btn-bg;
   border-radius: $btn-radius;
 
-  @include hovers {
+  @include hovers() {
     @include transition($btn-trans);
 
     color: $btn-hover-text;
@@ -45,7 +64,21 @@ $btn-disabled-text: color(mono, dark);
   }
 }
 
-.--btn-alt {
+// For creating the different button color classes
+@each $name, $colors in $btn-colors {
+  $base-color: map-get($colors, base);
+  $hover-color: map-get($colors, hover);
+
+  .__btn-#{$name} {
+    background-color: $base-color;
+
+    @include hovers() {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.__btn-alt {
   color: $btn-alt-text;
 
   background-color: $btn-alt-bg;
@@ -60,19 +93,19 @@ $btn-disabled-text: color(mono, dark);
   }
 }
 
-.--btn-small {
+.__btn-small {
   padding: $btn-small-pad;
 
   font-size: $btn-small-font;
 }
 
-.--btn-large {
+.__btn-large {
   padding: $btn-large-pad;
 
   font-size: $btn-large-font;
 }
 
-.--btn-disabled {
+.__btn-disabled {
   cursor: default;
   color: $btn-disabled-text;
 

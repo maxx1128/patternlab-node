@@ -3,7 +3,7 @@ ul {
   @include margin(null null spacing() spacing(double));
   padding: 0;
 
-  line-height: type(line-height);
+  line-height: type(line-height, h6);
   font-size: type(font-size, p);
 
   ol,

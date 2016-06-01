@@ -29,10 +29,11 @@
 .align-left { text-align: left; }
 
 
-/* Colors */
+/* Emphasis Colors */
 .valid { color: color(success); }
-
 .error { color: color(alert); }
+.warn { color: color(warning); }
+.info { color: color(info); }
 
 
 .is-vishidden {

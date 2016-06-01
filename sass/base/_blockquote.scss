@@ -6,8 +6,8 @@ blockquote {
 
   color: color(primary, darker);
   font-style: italic;
-  font-size: type(font-size, h5);
-  line-height: type(line-height);
+  font-size: type(font-size, h6);
+  line-height: type(line-height, h3);
 
   border-left: container(border, thick);
 }
