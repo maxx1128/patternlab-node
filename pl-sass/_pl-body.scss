@@ -24,13 +24,15 @@
 }
 
 #sg-viewport {
-  @include position(absolute, 0 null null 0);
-  height: 100%;
-  width: 100% !important;
+  @include transition(anim(time));
+  @include size(100%);
+  display: block;
   box-sizing: border-box;
-  margin: 0;
-  padding: spacing();
-  
+  margin: 0 auto;
+
+  border: container(border, dark);
+  @include border-width(0 null);
+
   background-color: color(mono, lightest);
 
   @include smaller-than(medium) {
@@ -44,7 +46,7 @@
   height: 100%;
   margin: 0 auto;
   position: relative;
-  
+
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overflow-x: hidden;

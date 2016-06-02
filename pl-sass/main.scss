@@ -7,7 +7,7 @@
 '../sass/utils/functions',
 '../sass/utils/vars',
 '../sass/utils/mixins',
-'../sass/utils/utilities';
+'../sass/utils/helpers';
 
 @import
 '../sass/base/normalize',
@@ -18,4 +18,5 @@
 'pl-main-nav',
 'pl-body',
 'pl-menu',
-'pl-view-container';
+'pl-view-container',
+'pl-screen-sizes';

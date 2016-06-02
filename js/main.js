@@ -2,6 +2,7 @@
 
 
 //=require pattern-lab/pl-nav.js
+//=require pattern-lab/pl-screen-sizes.js
 
 
 (function(w){

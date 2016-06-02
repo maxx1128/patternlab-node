@@ -26,6 +26,17 @@
 }
 
 
+// For BEM elements, have their base styles apply to modifier classes too
+// This way, modifier classes can be used instead of main ones to get the same basic styles.
+@mixin bem-mods($class) {
+  .#{$class},
+  [class^=#{$class}--],
+  [class*=#{$class}--] {
+    @content;
+  }
+}
+
+
 
 // The fix-cell and flex-cell mixins included components of the fix-flex mixin, which is used for items with a fixed width on one side and flexible on the other.
 // $fix-direction - If the fixed element is on the left or right side
