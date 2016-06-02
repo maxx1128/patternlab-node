@@ -18,23 +18,6 @@
   color: #f9f9f9;
 }
 
-.nav-footer {
-  margin: -1rem -1rem 1rem;
-}
-.nav-footer li {
-  border-bottom: 1px solid #333333;
-}
-@media all and (min-width: 46.8em) {
-  .nav-footer li {
-    border: 0;
-    float: left;
-  }
-}
-.nav-footer a {
-  display: block;
-  padding: 1rem;
-}
-
 @media all and (min-width: 46.8em) {
   .copyright {
     float: right;
