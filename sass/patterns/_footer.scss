@@ -1,25 +1,27 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-.footer {
+.p-footer {
   clear: both;
   overflow: hidden;
-  background: #131313;
-  color: white;
-  line-height: 1.2;
-}
+  box-sizing: border-b;
+  padding: spacing(double) spacing() spacing() spacing();
 
-.footer__container {
-  @include row-container();
-  padding: spacing() spacing(half);
-}
+  color: color(mono, lightest);
 
-.footer a {
-  color: #f9f9f9;
-}
+  background: color(secondary, darkest);
 
-@media all and (min-width: 46.8em) {
-  .copyright {
-    float: right;
+  a {
+    color: color(mono, lightest);
   }
+}
+
+.p-footer__links {
+  @include syn(base, 12, 0, (marg-b-2));
+  @include syn(medium, 7, 0, (inline-b marg-b-0));
+}
+
+.p-footer__copyright {
+  @include syn(base, 12, 0, (''));
+  @include syn(medium, 5, 0, (inline-b float-r align-r));
 }

@@ -1,17 +1,33 @@
-.social-share {
+$social-share-bg: color(secondary, dark);
+$social-share-bg-hover: color(secondary, darker);
+
+.c-social-share {
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0 0 spacing() 0;
+
+  list-style-type: none;
 }
-.social-share li {
-  float: left;
-  margin-right: 0.25rem;
+
+.c-social-share__item {
+  display: inline-block;
+  margin-right: spacing(third);
+
+  a {
+    @include transition(anim(time));
+    display: block;
+    padding: spacing(half) spacing();
+
+    color: color(mono, lightest);
+
+    border-radius: container(border-radius);
+    background: $social-share-bg;
+
+    @include hovers() {
+      @include transition(anim(time));
+      text-decoration: none;
+
+      background: $social-share-bg-hover;
+    }
+  }
 }
-.social-share a {
-  background: #333333;
-  color: white;
-  display: block;
-  padding: 0.5rem;
-}
-.social-share a:hover {
-  background: gray;
-}
+

@@ -1,13 +1,20 @@
-.pagination {
+.c-pagination {
   overflow: hidden;
+  margin: 0;
+
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+
+    border-right: container(border);
+
+    &:last-child { border: 0; }
+  }
+
+  a { padding: spacing(half) spacing(); }
 }
-.pagination li {
-  float: left;
-  border-right: 1px solid #eeeeee;
-}
-.pagination li:last-child {
-  border: 0;
-}
-.pagination a {
-  padding: 1rem;
+
+.c-pagination__current {
+  font-weight: type(font-weight, bold);
 }
