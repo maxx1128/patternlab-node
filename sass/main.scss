@@ -25,17 +25,8 @@ Elements to replace:
 @import
 'layout/grid',
 'layout/body',
-'layout/footer',
-'layout/header',
 'layout/sidebar',
 'layout/three-col';
-
-@import
-'styleguide/type-table',
-'styleguide/color-swatches',
-'styleguide/pattern-headers',
-'styleguide/container-styles',
-'styleguide/inline-annotation';
 
 @import
 'base/reset',
@@ -47,14 +38,26 @@ Elements to replace:
 'base/media',
 'base/tables',
 'base/media',
+'base/logo',
 'base/forms';
 
 @import
-'components/article',
 'components/blocks',
 'components/brick',
-'components/latest-posts',
 'components/pagination',
+'components/primary-nav',
 'components/search',
 'components/social-share';
 
+@import
+'patterns/article',
+'patterns/latest-posts',
+'patterns/header',
+'patterns/footer';
+
+@import
+'styleguide/type-table',
+'styleguide/color-swatches',
+'styleguide/pattern-headers',
+'styleguide/container-styles',
+'styleguide/inline-annotation';

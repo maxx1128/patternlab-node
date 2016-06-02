@@ -1,0 +1,9 @@
+$logo-min-width: 150px;
+$logo-max-width: 200px;
+
+.logo {
+  margin: 0 auto;
+  max-width: $logo-max-width;
+  min-width: $logo-min-width;
+  width: 100%;
+}

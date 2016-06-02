@@ -1,0 +1,28 @@
+$header-bp: medium;
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+// The whole header container
+header {
+  @include clearfix();
+  padding: 0;
+
+  background: color(mono, lightest);
+  border-bottom: container(border);
+}
+
+.header__container {
+  @include row-container();
+  padding: spacing() spacing(half);
+}
+
+.header__logo {
+  @include syn(base, 12, 0, (''));
+  @include syn(small, 2, 0, (float-l));
+}
+
+.header__nav {
+  @include syn(base, 12, 0, (''));
+  @include syn(small, 10, 0, (float-r));
+}

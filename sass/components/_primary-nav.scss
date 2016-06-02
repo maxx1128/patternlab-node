@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+.nav {
+  clear: both;
+  overflow: hidden;
+
+  a {
+    display: block;
+    padding: spacing();
+    border-bottom: container(border);
+  }
+
+  ul,
+  li {
+    margin: 0;
+
+    list-style-type: none;
+  }
+
+  @include larger-than(small) {
+    width: 100%;
+    max-height: none;
+    clear: none;
+
+    ul {
+      float: right;
+
+      text-decoration: none;
+    }
+
+    li { float: left; }
+
+    a { border-bottom: none; }
+  }
+}
