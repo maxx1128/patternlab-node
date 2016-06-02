@@ -1,0 +1,40 @@
+&lt;div id=&quot;container&quot;&gt;
+&Tab;{{&gt; patterns-header }}
+&Tab;&lt;div role=&quot;main&quot;&gt;
+&Tab;&Tab;
+&Tab;&Tab;&lt;div class=&quot;layout-single&quot;&gt;
+&Tab;&Tab;&Tab;{{# hero }}
+&Tab;&Tab;&Tab;&Tab;{{&gt; components-inset-block }}
+&Tab;&Tab;&Tab;{{/ hero}}
+&Tab;&Tab;&lt;/div&gt;
+
+&Tab;&Tab;&lt;div class=&quot;three-col-layout&quot;&gt;
+&Tab;&Tab;&Tab;{{# touts}}
+&Tab;&Tab;&Tab;&Tab;&lt;div class=&quot;three-col-layout__item&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;{{&gt; components-inset-block }}
+&Tab;&Tab;&Tab;&Tab;&lt;/div&gt;
+&Tab;&Tab;&Tab;{{/ touts}}
+&Tab;&Tab;&lt;/div&gt;&lt;!--end 3up--&gt;
+
+&Tab;&Tab;&lt;hr /&gt;
+
+&Tab;&Tab;&lt;div class=&quot;sidebar-layout&quot;&gt;
+&Tab;&Tab;&Tab;&lt;div class=&quot;sidebar-layout__main&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;section class=&quot;section latest-posts&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h2 class=&quot;section-title&quot;&gt;Latest Posts&lt;/h2&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;ul class=&quot;post-list&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;{{# latest-posts }}
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;{{/ latest-posts }}
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;/ul&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;a href=&quot;#&quot; class=&quot;text-btn&quot;&gt;View more posts&lt;/a&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;/section&gt;
+&Tab;&Tab;&Tab;&lt;/div&gt;&lt;!--end .l-main--&gt;
+
+&Tab;&Tab;&Tab;&lt;div class=&quot;sidebar-layout__sidebar&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h5&gt;Sidebar stuff here!&lt;/h5&gt;
+&Tab;&Tab;&Tab;&lt;/div&gt;&lt;!--end .l-sidebar--&gt;
+&Tab;&Tab;&lt;/div&gt;&lt;!--end .l-two-col--&gt;
+&Tab;&lt;/div&gt;&lt;!--End role=main--&gt;
+&Tab;{{&gt; patterns-footer }}
+&lt;/div&gt;

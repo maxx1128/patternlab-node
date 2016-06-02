@@ -1,0 +1,18 @@
+{{# container-elements }}
+  &lt;h4 class=&quot;container-el__title&quot;&gt;
+    {{ property }}
+  &lt;/h4&gt;
+
+  &lt;br&gt;
+
+  &lt;div class=&quot;container-el __{{ property }}&quot;&gt;
+    {{# values }}
+      &lt;div class=&quot;container-el__item&quot;&gt;
+        &lt;div class=&quot;container-el__inner-item __{{ property }}_{{name}}&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    {{/ values }}
+  &lt;/div&gt;
+
+  &lt;hr&gt;
+{{/ container-elements }}
