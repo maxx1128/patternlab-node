@@ -17,7 +17,8 @@ var pkg = require('./package.json'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    ghPages = require('gulp-gh-pages');
 
 
 // Function for plumber to handle errors
@@ -266,6 +267,11 @@ gulp.task('eslint', function () {
 gulp.task('nodeunit', function () {
   return gulp.src('./test/**/*_tests.js')
     .pipe(nodeunit());
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/**/*')
+    .pipe(ghPages());
 });
 
 
