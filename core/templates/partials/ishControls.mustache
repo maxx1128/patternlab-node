@@ -2,16 +2,10 @@
 <div id="sg-controls">
 	<ol class="sg-controls-list">
 		{{# ishControlsVisible.find }}
-			<li class="is-vishidden">
-				<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
-					<span class="sg-main-item-text">
-						Search Patterns
-					</span>
-				</a>
-				
-				<ul id="sg-find">
+			<li class="sg-find">
+				<ul class="sg-view sg-acc-panel sg-right sg-checklist" id="sg-find">
 					<li>
-						<input id="typeahead" type="text" placeholder="search for a pattern...">
+						<input class="typeahead" id="typeahead" type="text" placeholder="Search for a pattern...">
 					</li>
 				</ul>
 			</li>

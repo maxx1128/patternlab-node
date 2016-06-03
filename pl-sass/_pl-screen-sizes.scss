@@ -14,11 +14,9 @@ $pl-smallest-screen: em(320px);
 
 
 #sg-viewport[data-screen="smallest"] {
-  @include transition(anim(time));
   max-width: $pl-smallest-screen;
 }
 
 #sg-viewport[data-screen="full"] {
-  @include transition(anim(time));
   max-width: none;
 }
