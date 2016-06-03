@@ -3,6 +3,7 @@
 \*------------------------------------*/
 .p-footer {
   @include row-container();
+  max-width: none;
 
   color: color(mono, lightest);
 

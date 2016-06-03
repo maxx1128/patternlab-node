@@ -16,10 +16,8 @@
   z-index: 0;
 
   #patternlab-html:not(.show-menu) & {
-    @include smaller-than(medium) {
       @include transition($sg-menu-transition);
       width: 100%;
-    }
   }
 }
 
@@ -34,10 +32,6 @@
   @include border-width(0 null);
 
   background-color: color(mono, lightest);
-
-  @include smaller-than(medium) {
-    padding-top: spacing(triple);
-  }
 }
 
 // Where all generated elements go

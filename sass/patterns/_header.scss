@@ -1,6 +1,7 @@
 .p-header {
   @include row-container();
   @include clearfix();
+  max-width: none;
 
   background: color(primary, lightest);
   border-bottom: container(border, thick);
