@@ -44,7 +44,7 @@ var annotationsPattern = {
 									e.stopPropagation();
 									
 									// if an element was clicked on while the overlay was already on swap it
-									var obj = JSON.stringify({ "displaynumber": item.displaynumber, "el": item.el, "title": item.title, "comment": item.comment });
+									var obj = JSON.stringify({ "displaynumber": item.displaynumber, "el": item.el, "title": item.title, "comment": item.comment, "comment_2": item.comment_2 });
 									parent.postMessage(obj,annotationsPattern.targetOrigin);
 									
 								}
@@ -72,7 +72,7 @@ var annotationsPattern = {
 	* @param  {String}      the title of the comment
 	* @param  {String}      the comment HTML
 	*/
-	embedComments: function (el,title,comment) {
+	embedComments: function (el,title,comment, comment2) {
 		
 		// build the annotation div and add the content to it
 		var annotationDiv = document.createElement("div");
@@ -80,6 +80,7 @@ var annotationsPattern = {
 		
 		var h3       = document.createElement("h3");
 		var p        = document.createElement("p");
+
 		h3.innerHTML = title;
 		p.innerHTML  = comment;
 		
@@ -260,7 +261,7 @@ var annotationsPattern = {
 					item = comments.comments[i];
 					els  = document.querySelectorAll(item.el);
 					if (els.length > 0) {
-						annotationsPattern.embedComments(els[0],item.title,item.comment); //Embed the comment
+						annotationsPattern.embedComments(els[0],item.title,item.comment, item.comment_2); //Embed the comment
 					}
 					annotationsPattern.commentsEmbedded = true;
 				}

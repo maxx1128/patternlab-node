@@ -12,9 +12,9 @@
   <meta http-equiv="pragma" content="no-cache" />
 
 	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" href="styleguide/css/vendor/typeahead.css?1464902042230" media="all" />
-	<link rel="stylesheet" href="styleguide/css/vendor/prism.css?1464902042230" media="all" />
-	<link rel="stylesheet" href="styleguide/css/styleguide-new.css?1464902042230" media="all" />
+	<link rel="stylesheet" href="styleguide/css/vendor/typeahead.css?1464988146957" media="all" />
+	<link rel="stylesheet" href="styleguide/css/vendor/prism.css?1464988146957" media="all" />
+	<link rel="stylesheet" href="styleguide/css/styleguide-new.css?1464988146957" media="all" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="styleguide/js/vendor/jquery.js"><\/script>')</script>
@@ -1605,16 +1605,10 @@
 --><!--sg-controls-->
 <div id="sg-controls">
 	<ol class="sg-controls-list">
-			<li class="is-vishidden">
-				<a href="javascript:void(0)" id="sg-f-toggle" title="Search Patterns">
-					<span class="sg-main-item-text">
-						Search Patterns
-					</span>
-				</a>
-				
-				<ul id="sg-find">
+			<li class="sg-find">
+				<ul class="sg-view sg-acc-panel sg-right sg-checklist" id="sg-find">
 					<li>
-						<input id="typeahead" type="text" placeholder="search for a pattern...">
+						<input class="typeahead" id="typeahead" type="text" placeholder="Search for a pattern...">
 					</li>
 				</ul>
 			</li>
@@ -1882,20 +1876,20 @@
 		<div id="sg-comments-container"></div>
 	</script>
 
-	<script src="js/init.js?1464902042230"></script>
-	<script src="styleguide/js/vendor/prism.js?1464902042230"></script>
-	<script src="styleguide/js/vendor/jwerty.js?1464902042230"></script>
-	<script src="styleguide/js/vendor/typeahead.bundle.min.js?1464902042230"></script>
-	<script src="styleguide/js/data-saver.js?1464902042230"></script>
+	<script src="js/init.js?1464988146957"></script>
+	<script src="styleguide/js/vendor/prism.js?1464988146957"></script>
+	<script src="styleguide/js/vendor/jwerty.js?1464988146957"></script>
+	<script src="styleguide/js/vendor/typeahead.bundle.min.js?1464988146957"></script>
+	<script src="styleguide/js/data-saver.js?1464988146957"></script>
 <script>
 	var patternPaths = {base:{colors:"00-base/01-global/00-colors",typography:"00-base/01-global/01-typography",containers:"00-base/01-global/02-containers",sidebar:"00-base/02-layouts/00-sidebar","three-column":"00-base/02-layouts/01-three-column",headings:"00-base/03-text/00-headings",subheadings:"00-base/03-text/01-subheadings",paragraph:"00-base/03-text/02-paragraph",blockquote:"00-base/03-text/03-blockquote","inline-elements":"00-base/03-text/04-inline-elements","emphasis-colors":"00-base/03-text/05-emphasis-colors",unordered:"00-base/04-lists/00-unordered",ordered:"00-base/04-lists/01-ordered",definition:"00-base/04-lists/02-definition",logo:"00-base/05-images/00-logo","landscape-4x3":"00-base/05-images/01-landscape-4x3","landscape-16x9":"00-base/05-images/02-landscape-16x9",square:"00-base/05-images/03-square","text-fields":"00-base/06-forms/00-text-fields","select-menu":"00-base/06-forms/01-select-menu",checkbox:"00-base/06-forms/02-checkbox","radio-buttons":"00-base/06-forms/03-radio-buttons",buttons:"00-base/07-buttons/00-buttons","button-styles":"00-base/07-buttons/01-button-styles",table:"00-base/08-tables/00-table",video:"00-base/09-media/00-video",audio:"00-base/09-media/01-audio"},components:{"byline-author-time":"01-components/00-text/01-byline-author-time","blockquote-with-citation":"01-components/00-text/04-blockquote-with-citation","intro-text":"01-components/00-text/05-intro-text","thumbnail-block":"01-components/01-blocks/00-thumbnail-block","inset-block":"01-components/01-blocks/05-inset-block","figure-with-caption":"01-components/02-media/00-figure-with-caption",_map:"01-components/02-media/_map",search:"01-components/03-forms/00-search","primary-nav":"01-components/04-navigation/00-primary-nav","footer-nav":"01-components/04-navigation/01-footer-nav",breadcrumbs:"01-components/04-navigation/02-breadcrumbs",pagination:"01-components/04-navigation/03-pagination","social-share":"01-components/05-sharing/00-social-share"},patterns:{header:"02-patterns/00-global/00-header",footer:"02-patterns/00-global/01-footer","article-body":"02-patterns/01-article/00-article-body","latest-posts":"02-patterns/04-sections/00-latest-posts","related-posts":"02-patterns/04-sections/02-related-posts"},templates:{homepage:"03-templates/00-homepage",blog:"03-templates/01-blog",article:"03-templates/02-article"},pages:{homepage:"04-pages/00-homepage",blog:"04-pages/01-blog",article:"04-pages/02-article"}}
 </script><script>
 	var viewAllPaths = {base:{viewall:"00-base",global:"00-base-01-global",layouts:"00-base-02-layouts",text:"00-base-03-text",lists:"00-base-04-lists",images:"00-base-05-images",forms:"00-base-06-forms",buttons:"00-base-07-buttons",tables:"00-base-08-tables",media:"00-base-09-media"},components:{viewall:"01-components",text:"01-components-00-text",blocks:"01-components-01-blocks",media:"01-components-02-media",forms:"01-components-03-forms",navigation:"01-components-04-navigation",sharing:"01-components-05-sharing"},patterns:{viewall:"02-patterns",global:"02-patterns-00-global",article:"02-patterns-01-article",sections:"02-patterns-04-sections"},templates:{templates:"03-templates"},pages:{pages:"04-pages"}}
-</script>	<script src="styleguide/js/url-handler.js?1464902042230"></script>
-	<script src="styleguide/js/styleguide.js?1464902042230"></script>
-	<script src="styleguide/js/annotations-viewer.js?1464902042230"></script>
-	<script src="styleguide/js/code-viewer.js?1464902042230"></script>
-	<script src="styleguide/js/pattern-finder.js?1464902042230"></script>
+</script>	<script src="styleguide/js/url-handler.js?1464988146957"></script>
+	<script src="styleguide/js/styleguide.js?1464988146957"></script>
+	<script src="styleguide/js/annotations-viewer.js?1464988146957"></script>
+	<script src="styleguide/js/code-viewer.js?1464988146957"></script>
+	<script src="styleguide/js/pattern-finder.js?1464988146957"></script>
 
 </body>
 </html>
