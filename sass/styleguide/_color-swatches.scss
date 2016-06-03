@@ -47,9 +47,10 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
   }
 }
 
-
-
-.swatch {
+// Base styles for all palettes
+// Mainly the palettes and their layout
+// The BEM mod makes it apply to each modified version
+@include bem-mods(b-swatch) {
   @include syn(base, 12, 0, (marg-b-1 block));
   @include syn(small, 6, 0, (float-l inline-b border-b pad-sides-1));
   @include syn(medium, (12 / $swatches-per-row), 0, (''));
@@ -57,19 +58,20 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
   @include clearfix();
 }
 
+
 // The base color for every scheme
-.swatch__base {
+.b-swatch__base {
   @include size(100% $swatch-base-height);
 }
 
 // Container for both light and dark tones
-.swatch__all-tones {
+.b-swatch__all-tones {
   @include size(100% $swatch-tone-height);
   @include clearfix();
 }
 
 // Every light and dark tone of the base color
-.swatch__tone {
+.b-swatch__tone {
   @include size(100%);
   display: inline-block;
   margin: 0;
@@ -84,8 +86,8 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
 @each $palette, $tones in $color-map {
   $base-color: map-get($tones, base);
   
-  .swatch._#{$palette} {
-    .swatch__base { @include swatch__color-scheme-generator($base-color, $palette, $base: true); }
+  .b-swatch--#{$palette} {
+    .b-swatch__base { @include swatch__color-scheme-generator($base-color, $palette, $base: true); }
     
     @each $tone-name, $tone-value in $tones {
       ._tone-#{$tone-name} { @include swatch__color-scheme-generator($tone-value, $tone-name); }

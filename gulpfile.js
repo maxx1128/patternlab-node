@@ -18,8 +18,10 @@ var pkg = require('./package.json'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    markdown = require('patternlab-markdown-annotations');
 
+var Converter = require('patternlab-markdown-annotations/converter.js');
 
 // Function for plumber to handle errors
 function customPlumber(errTitle) {
@@ -169,6 +171,9 @@ gulp.task('connect', ['lab'], function () {
   gulp.watch('js/**/**/*.js', ['scripts'],
     function () { browserSync.reload(); } );
 
+  gulp.watch('annotations/**/**/*.md', ['convert', 'lab'],
+    function () { browserSync.reload(); } );
+
   gulp.watch(path.resolve(paths().source.css, '**/*.css'), ['cp:css']);
 
   gulp.watch(path.resolve(paths().source.js, '**/*.js'), ['cp:js']);
@@ -274,6 +279,14 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
+gulp.task('convert', function() {
+  var convert = new Converter('./annotations', './source/_data');
+  convert.convert();
+});
+
+
+
+
 
 
 gulp.task('lab-pipe', ['lab'], function (cb) {
@@ -281,7 +294,7 @@ gulp.task('lab-pipe', ['lab'], function (cb) {
   browserSync.reload();
 });
 
-gulp.task('default', ['sass', 'pl-sass', 'scripts', 'lab', 'watch']);
+gulp.task('default', ['sass', 'pl-sass', 'scripts', 'convert', 'lab', 'watch']);
 
 gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
 gulp.task('prelab', ['clean', 'assets']);

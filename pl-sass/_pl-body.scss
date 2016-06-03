@@ -28,6 +28,7 @@
   @include size(100%);
   display: block;
   box-sizing: border-box;
+  padding: spacing();
   margin: 0 auto;
 
   border: container(border, dark);

@@ -7,11 +7,18 @@ $pl-smallest-screen: em(320px);
 
 @each $label, $width in $breakpoint-map {
   #sg-viewport[data-screen="#{$label}"] {
+    @include transition(anim(time));
     max-width: $width;
   }
 }
 
 
-#sg-viewport[data-screen="smallest"] { max-width: $pl-smallest-screen; }
+#sg-viewport[data-screen="smallest"] {
+  @include transition(anim(time));
+  max-width: $pl-smallest-screen;
+}
 
-#sg-viewport[data-screen="full"] { max-width: none; }
+#sg-viewport[data-screen="full"] {
+  @include transition(anim(time));
+  max-width: none;
+}
