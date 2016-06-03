@@ -2,15 +2,15 @@
 	{{> patterns-header }}
 	<div role="main">
 		
-		<div class="layout-single">
+		<div class="l-col__single">
 			{{# hero }}
 				{{> components-inset-block }}
 			{{/ hero}}
 		</div>
 
-		<div class="three-col-layout">
+		<div class="l-three-col">
 			{{# touts}}
-				<div class="three-col-layout__item">
+				<div class="l-three-col__item">
 					{{> components-inset-block }}
 				</div>
 			{{/ touts}}
@@ -18,8 +18,8 @@
 
 		<hr />
 
-		<div class="sidebar-layout">
-			<div class="sidebar-layout__main">
+		<div class="l-sidebar">
+			<div class="l-sidebar__main">
 				<section class="section latest-posts">
 					<h2 class="section-title">Latest Posts</h2>
 					<ul class="post-list">
@@ -31,7 +31,7 @@
 				</section>
 			</div><!--end .l-main-->
 
-			<div class="sidebar-layout__sidebar">
+			<div class="l-sidebar__sidebar">
 				<h5>Sidebar stuff here!</h5>
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->

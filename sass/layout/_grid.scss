@@ -30,23 +30,23 @@ $synapse: (
 */
 
 // For custom layouts, apply this to the row holding all the columns
-@mixin row-container() {
+@mixin row-container($padding: spacing()) {
   @include clearfix();
   max-width: size(max-width);
   margin: 0 auto;
-  padding: spacing() 0;
-}
-
-// For any elements in their own row that still need a max width and proper alignment, use 
-.layout-single {
-  @include row-container();
-  padding: spacing();
+  box-sizing: border-box;
+  padding: $padding;
 }
 
 // For custom layouts, apply this to the all the columns
 @mixin col-container() {
-  padding: 0 spacing();
-  box-sizing: border-box;
+  @include row-container(0 spacing());
+}
+
+// For any elements in their own row that still need a max width and proper alignment, use this
+// Make sure it has twice the padding as the above col mixin
+.l-col__single {
+  @include row-container(spacing() spacing(double));
 }
 
 .__col-example {

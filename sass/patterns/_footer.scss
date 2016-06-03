@@ -2,26 +2,25 @@
     $FOOTER
 \*------------------------------------*/
 .p-footer {
-  clear: both;
-  overflow: hidden;
-  box-sizing: border-b;
-  padding: spacing(double) spacing() spacing() spacing();
+  @include row-container();
 
   color: color(mono, lightest);
 
   background: color(secondary, darkest);
 
-  a {
-    color: color(mono, lightest);
-  }
+  a { color: color(mono, lightest); }
+}
+
+.p-footer__container {
+  @include col-container();
 }
 
 .p-footer__links {
   @include syn(base, 12, 0, (marg-b-2));
-  @include syn(medium, 7, 0, (inline-b marg-b-0));
+  @include syn(small, 7, 0, (inline-b marg-b-0));
 }
 
 .p-footer__copyright {
   @include syn(base, 12, 0, (''));
-  @include syn(medium, 5, 0, (inline-b float-r align-r));
+  @include syn(small, 5, 0, (inline-b float-r align-r));
 }

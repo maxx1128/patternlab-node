@@ -1,28 +1,23 @@
-$header-bp: medium;
-
-/*------------------------------------*\
-    $PAGE STRUCTURE
-\*------------------------------------*/
-// The whole header container
-header {
-  @include clearfix();
-  padding: 0;
-
-  background: color(mono, lightest);
-  border-bottom: container(border);
-}
-
-.header__container {
+.p-header {
   @include row-container();
-  padding: spacing() spacing(half);
+  @include clearfix();
+
+  background: color(primary, lightest);
+  border-bottom: container(border, thick);
 }
 
-.header__logo {
+.p-header__container {
+  @include col-container();
+}
+
+.p-header__logo {
+  @include clearfix();
   @include syn(base, 12, 0, (''));
-  @include syn(small, 2, 0, (float-l));
+  @include syn(small, 2, 0, (float-l inline-b));
 }
 
-.header__nav {
+.p-header__nav {
+  @include clearfix();
   @include syn(base, 12, 0, (''));
   @include syn(small, 10, 0, (float-r));
 }
