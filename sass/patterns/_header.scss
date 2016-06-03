@@ -1,24 +1,22 @@
 .p-header {
-  @include row-container();
   @include clearfix();
-  max-width: none;
 
   background: color(primary, lightest);
   border-bottom: container(border, thick);
 }
 
 .p-header__container {
-  @include col-container();
+  @include row-container();
 }
 
 .p-header__logo {
-  @include clearfix();
+  @include col-container();
   @include syn(base, 12, 0, (''));
   @include syn(small, 2, 0, (float-l inline-b));
 }
 
 .p-header__nav {
-  @include clearfix();
+  @include col-container();
   @include syn(base, 12, 0, (''));
   @include syn(small, 10, 0, (float-r));
 }
