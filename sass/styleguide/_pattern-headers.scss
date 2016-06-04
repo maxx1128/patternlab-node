@@ -1,7 +1,7 @@
 .sg-pattern {
   @include clearfix();
   position: relative;
-  padding: spacing(half) spacing(halfMore);
+  padding: spacing(half);
   margin-bottom: spacing();
 }
 

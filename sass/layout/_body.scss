@@ -1,4 +1,6 @@
-body {
+.body {
   @include clearfix();
+  padding: spacing();
+
   background: color(mono, lightest);
 }

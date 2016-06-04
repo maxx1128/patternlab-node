@@ -1,42 +1,33 @@
-// See if the clearfixes can be removed
-// Need to remove the layouts' dependency on them
-
-/* Clearfix */
-.cf, .l-two-col, [role=main] {
-  @include clearfix();
-}
 
 
 /* Completely remove from the flow and screen readers. */
-.is-hidden {
+.h-is-hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
 
 /* Floats */
-.right { float: right; }
+.h-right { float: right; }
 
-.left { float: left; }
+.h-left { float: left; }
 
-.clear { @include clearfix(); }
+.h-clear { @include clearfix(); }
 
 /* Text-Align */
-.align-right { text-align: right; }
-
-.align-center { text-align: center; }
-
-.align-left { text-align: left; }
+.h-align-right { text-align: right; }
+.h-align-center { text-align: center; }
+.h-align-left { text-align: left; }
 
 
 /* Emphasis Colors */
-.valid { color: color(success); }
-.error { color: color(alert); }
-.warn { color: color(warning); }
-.info { color: color(info); }
+.h-valid { color: color(success); }
+.h-error { color: color(alert); }
+.h-warn { color: color(warning); }
+.h-info { color: color(info); }
 
 
-.is-vishidden {
+.h-is-vishidden {
   position: absolute !important;
   overflow: hidden;
   width: 1px;

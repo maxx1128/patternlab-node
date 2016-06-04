@@ -14,14 +14,14 @@
 		{{# ishControlsVisible.views-all }}
 			<li>
 				<a href="javascript:void(0)" id="sg-t-toggle" title="View">
-					<span class="is-vishidden">
+					<span class="h-is-vishidden">
 						View
 					</span>
 				</a>
 				
 				<ul id="sg-view" class="sg-controls-submenu">
 					{{# ishControlsVisible.views-annotations }}
-						<a href="javascript:void(0)" id="sg-t-annotations">
+						<a href="javascript:void(0)" id="sg-t-annotations" class="sg-menu-toggle">
 							<li class="sg-main-item">
 								Annotations
 							</li>
@@ -29,7 +29,7 @@
 					{{/ ishControlsVisible.views-annotations }}
 					
 					{{# ishControlsVisible.views-code }}
-						<a href="javascript:void(0)" id="sg-t-code">
+						<a href="javascript:void(0)" id="sg-t-code" class="sg-menu-toggle">
 							<li class="sg-main-item">
 								Code
 							</li>
@@ -39,7 +39,7 @@
 					
 					{{# ishControlsVisible.views-new }}
 						<a href="javascript:void(0)" target="_blank" id="sg-raw">
-							<li class="sg-main-item is-vishidden">
+							<li class="sg-main-item h-is-vishidden">
 								Open in new window
 							</li>
 						</a>
@@ -166,7 +166,7 @@
 			{{# ishControlsVisible.find }}
 				<li class="sg-find">
 					<a href="javascript:void(0)" class="sg-acc-handle sg-control-trigger sg-icon sg-icon-search" id="sg-f-toggle" title="Search Patterns">
-						<span class="is-vishidden">
+						<span class="h-is-vishidden">
 							Search Patterns
 						</span>
 					</a>
@@ -182,7 +182,7 @@
 			{{# ishControlsVisible.views-all }}
 				<li class="sg-view">
 					<a href="javascript:void(0)" class="sg-acc-handle sg-control-trigger sg-icon sg-icon-eye" id="sg-t-toggle" title="View">
-						<span class="is-vishidden">
+						<span class="h-is-vishidden">
 							View
 						</span>
 					</a>
@@ -218,7 +218,7 @@
 			{{# ishControlsVisible.tools-all }}
 				<li class="sg-tools">
 					<a href="javascript:void(0)" class="sg-acc-handle sg-tools-toggle sg-icon sg-icon-cog" id="sg-tools-toggle" title="Tools">
-						<span class="is-vishidden">
+						<span class="h-is-vishidden">
 							Tools
 						</span>
 					</a>

@@ -19,3 +19,8 @@ $sg-menu-icon-size: 44px;
 }
 
 .sg-menu-button-icon {}
+
+// The menu section for controls, like annotations and code
+#sg-controls {
+  border-top: container(border, thick);
+}

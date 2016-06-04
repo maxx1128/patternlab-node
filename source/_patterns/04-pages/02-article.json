@@ -1,4 +1,6 @@
 {
+	"title" : "Article",
+	"bodyClass": "article",
 	"author" : {
 		"first-name" : "Julianne",
 		"last-name" : "McCormick"

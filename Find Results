@@ -1,0 +1,134 @@
+Searching 33546 files for "is-vishidden"
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/css/style.css:
+   82: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/index.html:
+ 1618: 					<span class="is-vishidden">
+ 1638: 							<li class="sg-main-item is-vishidden">
+ 1748: 						<span class="is-vishidden">
+ 1762: 						<span class="is-vishidden">
+ 1790: 						<span class="is-vishidden">
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.escaped.html:
+    3:     &lt;legend class=&quot;is-vishidden&quot;&gt;Search&lt;/legend&gt;
+    4:     &lt;label for=&quot;search-field&quot; class=&quot;is-vishidden&quot;&gt;Search&lt;/label&gt;
+   12:   &lt;span class=&quot;is-vishidden&quot;&gt;Search&lt;/span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.html:
+   27:     <legend class="is-vishidden">Search</legend>
+   28:     <label for="search-field" class="is-vishidden">Search</label>
+   36:   <span class="is-vishidden">Search</span>
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.mustache:
+    3:     &lt;legend class=&quot;is-vishidden&quot;&gt;Search&lt;/legend&gt;
+    4:     &lt;label for=&quot;search-field&quot; class=&quot;is-vishidden&quot;&gt;Search&lt;/label&gt;
+   12:   &lt;span class=&quot;is-vishidden&quot;&gt;Search&lt;/span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/patterns/01-components-03-forms/index.html:
+   36:     <legend class="is-vishidden">Search</legend>
+   37:     <label for="search-field" class="is-vishidden">Search</label>
+   45:   <span class="is-vishidden">Search</span>
+   54:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+   55:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+   63:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/patterns/01-components/index.html:
+  170:     <legend class="is-vishidden">Search</legend>
+  171:     <label for="search-field" class="is-vishidden">Search</label>
+  179:   <span class="is-vishidden">Search</span>
+  188:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+  189:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+  197:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/styleguide/css/styleguide-new.css:
+   70: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/.publish/styleguide/html/styleguide.html:
+ 1981:     <legend class="is-vishidden">Search</legend>
+ 1982:     <label for="search-field" class="is-vishidden">Search</label>
+ 1990:   <span class="is-vishidden">Search</span>
+ 1999:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+ 2000:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+ 2008:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/core/styleguide/css/styleguide-new.css:
+   71: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/core/templates/partials/ishControls.mustache:
+   17: 					<span class="is-vishidden">
+   42: 							<li class="sg-main-item is-vishidden">
+  169: 						<span class="is-vishidden">
+  185: 						<span class="is-vishidden">
+  221: 						<span class="is-vishidden">
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/css/style.css:
+   82: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/index.html:
+ 1618: 					<span class="is-vishidden">
+ 1638: 							<li class="sg-main-item is-vishidden">
+ 1748: 						<span class="is-vishidden">
+ 1762: 						<span class="is-vishidden">
+ 1790: 						<span class="is-vishidden">
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.escaped.html:
+    3:     &lt;legend class=&quot;is-vishidden&quot;&gt;Search&lt;/legend&gt;
+    4:     &lt;label for=&quot;search-field&quot; class=&quot;is-vishidden&quot;&gt;Search&lt;/label&gt;
+   12:   &lt;span class=&quot;is-vishidden&quot;&gt;Search&lt;/span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.html:
+   27:     <legend class="is-vishidden">Search</legend>
+   28:     <label for="search-field" class="is-vishidden">Search</label>
+   36:   <span class="is-vishidden">Search</span>
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/patterns/01-components-03-forms-00-search/01-components-03-forms-00-search.mustache:
+    3:     &lt;legend class=&quot;is-vishidden&quot;&gt;Search&lt;/legend&gt;
+    4:     &lt;label for=&quot;search-field&quot; class=&quot;is-vishidden&quot;&gt;Search&lt;/label&gt;
+   12:   &lt;span class=&quot;is-vishidden&quot;&gt;Search&lt;/span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/patterns/01-components-03-forms/index.html:
+   36:     <legend class="is-vishidden">Search</legend>
+   37:     <label for="search-field" class="is-vishidden">Search</label>
+   45:   <span class="is-vishidden">Search</span>
+   54:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+   55:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+   63:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/patterns/01-components/index.html:
+  170:     <legend class="is-vishidden">Search</legend>
+  171:     <label for="search-field" class="is-vishidden">Search</label>
+  179:   <span class="is-vishidden">Search</span>
+  188:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+  189:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+  197:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/styleguide/css/styleguide-new.css:
+   71: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/public/styleguide/html/styleguide.html:
+ 1987:     <legend class="is-vishidden">Search</legend>
+ 1988:     <label for="search-field" class="is-vishidden">Search</label>
+ 1996:   <span class="is-vishidden">Search</span>
+ 2005:     &lt;legend class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;legend&gt;
+ 2006:     &lt;label for&#x3D;&quot;search-field&quot; class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;label&gt;
+ 2014:   &lt;span class&#x3D;&quot;is-vishidden&quot;&gt;Search&lt;&#x2F;span&gt;
+
+/Users/maxwellantonucci/Documents/Pattern Lab/sass/utils/_helpers.scss:
+   39: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/source/_patterns/01-components/03-forms/00-search.mustache:
+    3:     <legend class="is-vishidden">Search</legend>
+    4:     <label for="search-field" class="is-vishidden">Search</label>
+   12:   <span class="is-vishidden">Search</span>
+
+/Users/maxwellantonucci/Documents/Pattern Lab/source/css/style.css:
+   82: .is-vishidden {
+
+/Users/maxwellantonucci/Documents/Pattern Lab/test/lineage_hunter_tests.js:
+   40:         "template": "<!-- Begin .header -->\r\n<header class=\"header cf\" role=\"banner\">\r\n\t{{> atoms-logo }}\r\n\t<a href=\"#\" class=\"nav-toggle nav-toggle-search icon-search\"><span class=\"is-vishidden\">Search</span></a>\r\n\t<a href=\"#\" class=\"nav-toggle nav-toggle-menu icon-menu\"><span class=\"is-vishidden\">Menu</span></a>\r\n\t{{> molecules-primary-nav }}\r\n\t{{> molecules-search }}\r\n</header>\r\n<!-- End .header -->\r\n",
+   41:         "patternPartial": "<!-- Begin .header -->\r\n<header class=\"header cf\" role=\"banner\">\r\n<a href=\"/\"><img src=\"../../images/logo.png\" class=\"logo\" alt=\"Logo Alt Text\" /></a>\t<a href=\"#\" class=\"nav-toggle nav-toggle-search icon-search\"><span class=\"is-vishidden\">Search</span></a>\r\n\t<a href=\"#\" class=\"nav-toggle nav-toggle-menu icon-menu\"><span class=\"is-vishidden\">Menu</span></a>\r\n<nav id=\"nav\" class=\"nav\">\r\n\t<ul>\r\n\t\t<li><a href=\"#\">Home</a></li>\r\n\t\t<li><a href=\"#\">About</a></li>\r\n\t\t<li><a href=\"#\">Blog</a></li>\r\n\t\t<li><a href=\"#\">Contact</a></li>\r\n\t</ul>\r\n</nav><!--end .nav-->\r\n<form action=\"#\" method=\"post\" class=\"inline-form search-form\">           \r\n    <fieldset>\r\n\t    <legend class=\"is-vishidden\">Search</legend>\r\n\t    <label for=\"search-field\" class=\"is-vishidden\">Search</label>\r\n\t    <input type=\"search\" placeholder=\"Search\" id=\"search-field\" class=\"search-field\" />\r\n\t    <button class=\"search-submit\">\r\n\t    \t<span class=\"icon-search\" aria-hidden=\"true\"></span>\r\n\t    \t<span class=\"is-vishidden\">Search</span>\r\n\t    </button>\r\n    </fieldset>\r\n</form></header>\r\n<!-- End .header -->\r\n",
+   99:           "template": "<form action=\"#\" method=\"post\" class=\"inline-form search-form\">           \r\n    <fieldset>\r\n\t    <legend class=\"is-vishidden\">Search</legend>\r\n\t    <label for=\"search-field\" class=\"is-vishidden\">Search</label>\r\n\t    <input type=\"search\" placeholder=\"Search\" id=\"search-field\" class=\"search-field\" />\r\n\t    <button class=\"search-submit\">\r\n\t    \t<span class=\"icon-search\" aria-hidden=\"true\"></span>\r\n\t    \t<span class=\"is-vishidden\">Search</span>\r\n\t    </button>\r\n    </fieldset>\r\n</form>",
+  100:           "patternPartial": "<form action=\"#\" method=\"post\" class=\"inline-form search-form\">           \r\n    <fieldset>\r\n\t    <legend class=\"is-vishidden\">Search</legend>\r\n\t    <label for=\"search-field\" class=\"is-vishidden\">Search</label>\r\n\t    <input type=\"search\" placeholder=\"Search\" id=\"search-field\" class=\"search-field\" />\r\n\t    <button class=\"search-submit\">\r\n\t    \t<span class=\"icon-search\" aria-hidden=\"true\"></span>\r\n\t    \t<span class=\"is-vishidden\">Search</span>\r\n\t    </button>\r\n    </fieldset>\r\n</form>",
+
+92 matches across 24 files

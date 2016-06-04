@@ -55,7 +55,7 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
 // Mainly the palettes and their layout
 // The BEM mod makes it apply to each modified version
 @include bem-mods(b-swatch) {
-  @include syn(base, 12, 0, (marg-b-1 block));
+  @include syn(base, 12, 0, (block marg-b-1));
   @include syn(small, 6, 0, (float-l inline-b border-b pad-sides-1));
   @include syn(medium, (12 / $swatches-per-row), 0, (''));
 

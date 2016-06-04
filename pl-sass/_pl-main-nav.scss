@@ -86,7 +86,7 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
 
 .sg-item-arrow {
   @include transition($sg-menu-transition);
-  @include position(absolute, spacing(third) spacing(third) null null);
+  @include position(absolute, spacing(half) spacing(half) null null);
   font-size: type(font-size, h4) !important;
 
   [aria-expanded=true] > &,
@@ -144,6 +144,19 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
 [aria-hidden='true'],
 [data-a11y-toggle]:not([aria-controls]) {
   display: none;
+}
+
+
+// If certain main nav items are "active"
+.sg-menu-toggle.active {
+  position: relative;
+
+  .sg-main-item { padding-left: spacing(); }
+
+  &:after {
+    @include position(absolute, spacing() spacing() null null);
+    content: '★';
+  }
 }
 
 

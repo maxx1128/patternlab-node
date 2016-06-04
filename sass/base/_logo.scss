@@ -1,7 +1,11 @@
 $logo-min-width: 150px;
 $logo-max-width: 200px;
 
-.logo {
+.b-logo {
+  @include clearfix();
+}
+
+.b-logo__img {
   margin: 0 auto;
   max-width: $logo-max-width;
   min-width: $logo-min-width;
