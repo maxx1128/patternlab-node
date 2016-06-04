@@ -3,14 +3,9 @@
 }
 
 .sg-annotations {
-  margin-top: 2em;
   @include clearfix();
   display: block;
-  padding: spacing();
-
-  color: color(mono, lightest);
-
-  background-color: color(mono, darkest);
+  margin: spacing() 0;
 }
 
 .has-annotation {

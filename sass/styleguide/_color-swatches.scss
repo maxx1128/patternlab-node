@@ -47,6 +47,10 @@ $swatch-tone__hex-font-size: type(font-size, tiny);
   }
 }
 
+.b-swatches {
+  @include clearfix();
+}
+
 // Base styles for all palettes
 // Mainly the palettes and their layout
 // The BEM mod makes it apply to each modified version

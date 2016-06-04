@@ -15,9 +15,11 @@
   box-sizing: border-box;
   z-index: 0;
 
-  #patternlab-html.show-menu & {
-    @include transition($sg-menu-transition);
-    width: 100%;
+  #patternlab-html:not(.show-menu) & {
+    @include smaller-than(medium) {
+      @include transition($sg-menu-transition);
+      width: 100%;
+    }
   }
 }
 
