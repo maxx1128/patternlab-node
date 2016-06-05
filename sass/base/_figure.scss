@@ -1,0 +1,13 @@
+figure {
+  margin-bottom: spacing();
+
+  img {
+    display: block;
+    margin: 0 auto spacing(third);
+  }
+}
+
+figcaption {
+  font-size: type(font-size, small);
+  font-style: italic;
+}

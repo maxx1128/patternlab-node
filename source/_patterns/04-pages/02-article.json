@@ -1,6 +1,9 @@
 {
 	"title" : "Article",
 	"bodyClass": "article",
+	"headline" : {
+		"short" : "This is an article headline!"
+	},
 	"author" : {
 		"first-name" : "Julianne",
 		"last-name" : "McCormick"
@@ -23,6 +26,30 @@
 	"latest-block" : [
 		{
 			"headline" : "This is the headline for the latest block"
+		}
+	],
+	"latest-posts" : [
+		{
+			"headline" : {
+				"medium" : "This is a fake related article!"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Hey, this is another fake article title!"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Yep, another related article title here."
+			}
+		},
+		{
+			"headline" : {
+				"medium" : "This article title is bored and wants a pizza"
+			}
+		}, {
+			"headline" : {
+				"medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+			}
 		}
 	]
 }

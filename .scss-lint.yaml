@@ -31,7 +31,7 @@ linters:
     enabled: true
 
   DeclarationOrder:
-    enabled: true
+    enabled: false
 
   DisableLinterReason:
     enabled: true
@@ -94,7 +94,7 @@ linters:
     force_nesting: false
 
   NameFormat:
-    enabled: true
+    enabled: false
     convention: hyphenated_lowercase
     allow_leading_underscore: true
 

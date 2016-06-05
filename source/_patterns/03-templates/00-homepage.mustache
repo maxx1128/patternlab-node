@@ -4,7 +4,7 @@
 		
 		<div class="l-col__single">
 			{{# hero }}
-				{{> components-inset-block }}
+				{{> components-hero-block }}
 			{{/ hero}}
 		</div>
 
@@ -20,15 +20,7 @@
 
 		<div class="l-sidebar">
 			<div class="l-sidebar__main">
-				<section class="section latest-posts">
-					<h2 class="section-title">Latest Posts</h2>
-					<ul class="post-list">
-						{{# latest-posts }}
-							<li>{{> components-thumbnail-block }}</li>
-						{{/ latest-posts }}
-					</ul>
-					<a href="#" class="text-btn">View more posts</a>
-				</section>
+				{{> patterns-latest-posts }}
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar__sidebar">

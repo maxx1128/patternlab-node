@@ -34,6 +34,7 @@ Elements to replace:
 'base/typography',
 'base/blockquote',
 'base/buttons',
+'base/figure',
 'base/lists',
 'base/media',
 'base/tables',
@@ -42,9 +43,13 @@ Elements to replace:
 'base/forms';
 
 @import
+'components/article-title',
 'components/blocks',
 'components/breadcrumbs',
 'components/brick',
+'components/byline',
+'components/citation',
+'components/intro',
 'components/pagination',
 'components/primary-nav',
 'components/footer-nav',
@@ -52,10 +57,11 @@ Elements to replace:
 'components/social-share';
 
 @import
-'patterns/article',
-'patterns/latest-posts',
+'patterns/article-header',
 'patterns/header',
-'patterns/footer';
+'patterns/footer',
+'patterns/latest-posts',
+'patterns/related-posts';
 
 @import
 'styleguide/type-table',

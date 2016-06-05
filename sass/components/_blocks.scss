@@ -6,40 +6,41 @@
  */
 
 // Any universal block styles for all variations
-.block {
+@include bem-mods(c-block) {
   overflow: hidden;
   margin-bottom: spacing(halfMore);
 }
 
-.block p:last-child { margin-bottom: 0; }
+.c-block__text {
+  @include syn(base, 0, 0, (align-c));
+  @include syn(small, 0, 0, (align-l));
+}
 
-.block__headline {
+.c-block__headline {
 
   @include larger-than(small) { margin-top: 0; }
 }
 
-.block__text {
-  text-align: center;
+.c-block__excerpt {
+  margin-bottom: 0;
 
-  @include larger-than(small) { text-align: left; }
+  color: color(mono, darkest);
 }
-
-.block__excerpt { color: color(mono, darkest); }
 
 
 
 
 
 // Block Thumbnail with Headline
-.block--thumb {
+.c-block--thumb {
 
-  .block__thumb {
+  .c-block__thumb {
     @include syn(small, 5, 0, (float-l));
     @include syn(medium, 4, 0, (''));
     @include syn(medium, 3, 0, (''));
   }
 
-  .block__text {
+  .c-block__text {
     @include syn(small, 7, 0, (border-b pad-sides-2 float-r));
     @include syn(medium, 8, 0, (''));
     @include syn(medium, 9, 0, (''));
@@ -47,18 +48,34 @@
 }
 
 
-// Inset Block
-.block--inset {
-  margin-bottom: spacing(half);
+// Inset and Hero Block
+.c-block--hero,
+.c-block--inset {
   position: relative;
 
-  .block__text {
+  .c-block__thumb {
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .c-block__headline { margin: 0; }
+
+  .c-block__text {
     @include position(absolute, null null 0 0);
     width: 100%;
-    padding: spacing();
+    padding: spacing(halfMore) spacing();
 
     color: color(mono, lightest);
 
     background: rgba(0, 0, 0, 0.5);
   }
+}
+
+// Hero Block specific styles
+.c-block--hero {
+
+  .c-block__text { padding: spacing(double) spacing(); }
 }

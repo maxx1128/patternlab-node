@@ -3,20 +3,13 @@
 	<div role="main">
 		
 		<div class="l-col__single">
-			<h1 class="section-title">Our Outdoor Blog</h1>
+			<h2 class="section-title">Our Outdoor Blog</h2>
 		</div>
 		
 		<div class="l-sidebar">
 			<div class="l-sidebar__main">
-				<section class="section latest-posts">
-					
-					<ul class="post-list">
-						<li>{{> components-thumbnail-block }}</li>
-						<li>{{> components-thumbnail-block }}</li>
-						<li>{{> components-thumbnail-block }}</li>
-					</ul>
-					<a href="javascript:void(0)" class="text-btn">View more posts</a>
-				</section>
+				{{> patterns-latest-posts }}
+				
 				{{> components-pagination }}
 			</div><!--end l-main-->
 
