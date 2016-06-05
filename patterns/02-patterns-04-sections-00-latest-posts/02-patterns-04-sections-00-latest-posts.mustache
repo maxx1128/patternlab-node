@@ -1,11 +1,13 @@
-&lt;section class=&quot;section latest-posts&quot;&gt;
-&Tab;&lt;h2 class=&quot;section-title&quot;&gt;Latest Posts&lt;/h2&gt;
-&Tab;&lt;ul class=&quot;post-list&quot;&gt;
-&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
-&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
-&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
-&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
-&Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
+&lt;section class=&quot;p-latest-posts&quot;&gt;
+&Tab;&lt;h4 class=&quot;p-latest-posts__title&quot;&gt;
+    Latest Posts
+  &lt;/h4&gt;
+&Tab;
+  &lt;ul class=&quot;p-latest-posts__list&quot;&gt;
+    {{# latest-posts }}
+  &Tab;&Tab;&lt;li&gt;{{&gt; components-thumbnail-block }}&lt;/li&gt;
+    {{/ latest-posts }}
 &Tab;&lt;/ul&gt;
-&Tab;&lt;a href=&quot;#&quot; class=&quot;text-btn&quot;&gt;View more posts&lt;/a&gt;
+
+&Tab;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;p-latest-posts__view-more&quot;&gt;View more posts&lt;/a&gt;
 &lt;/section&gt;

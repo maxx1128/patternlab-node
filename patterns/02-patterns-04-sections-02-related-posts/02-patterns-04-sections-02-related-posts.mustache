@@ -1,28 +1,13 @@
-&lt;section class=&quot;section related-posts&quot;&gt;
-&Tab;&lt;h3 class=&quot;section-title&quot;&gt;Related Posts&lt;/h3&gt;
-&Tab;&lt;ul class=&quot;headline-list&quot;&gt;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;Headline Lorem ipsum dolor sit amet&lt;/a&gt;
-    &lt;/li&gt;
-&Tab;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;Laborum, molestiae, rerum, dolores eveniet &lt;/a&gt;
-    &lt;/li&gt;
-&Tab;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;quae est fugit distinctio iure odit minus non ipsum &lt;/a&gt;
-    &lt;/li&gt;
-&Tab;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;dolorum deserunt omnis voluptates voluptatum&lt;/a&gt;
-    &lt;/li&gt;
-&Tab;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;nventore dignissimos vel molestiae, rerum, dolore&lt;/a&gt;
-    &lt;/li&gt;
-&Tab;&Tab;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;/a&gt;
-    &lt;/li&gt;
+&lt;section class=&quot;p-related-posts&quot;&gt;
+&Tab;&lt;h4 class=&quot;p-related-posts__title&quot;&gt;
+    Related Posts
+  &lt;/h4&gt;
+&Tab;
+  &lt;ul class=&quot;p-related-posts__list&quot;&gt;&Tab;
+    {{# latest-posts }}
+      &lt;li&gt;
+        &lt;a href=&quot;javascript:void(0)&quot;&gt;{{ headline.medium }}&lt;/a&gt;
+      &lt;/li&gt;
+    {{/ latest-posts }}
 &Tab;&lt;/ul&gt;
 &lt;/section&gt;

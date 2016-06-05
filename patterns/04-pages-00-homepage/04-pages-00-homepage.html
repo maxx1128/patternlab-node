@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/style.css?1464989878182" media="all" />
+    <link rel="stylesheet" href="../../css/style.css?1465146653688" media="all" />
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     <!-- never cache patterns -->
@@ -15,8 +15,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1464989878182" media="all">
-<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1464989878182" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1465146653688" media="all">
+<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1465146653688" media="all" />
 
     <!-- End Pattern Lab -->
 
@@ -27,18 +27,32 @@
 <header class="p-header" role="banner">
 	<div class="p-header__container">
     <div class="p-header__logo">
-      <a href="&#x2F;patterns&#x2F;04-pages-00-homepage&#x2F;04-pages-00-homepage.html">
-  <img src="../../images/logo.png" class="logo" alt="Logo Alt Text" />
-</a>
+      <div class="b-logo">
+  <a href="&#x2F;patterns&#x2F;04-pages-00-homepage&#x2F;04-pages-00-homepage.html">
+    <img src="../../images/logo.png" class="b-logo__img" alt="Logo Alt Text" />
+  </a>
+</div>
+
     </div>
     
     <div class="p-header__nav">
-      <nav id="nav" class="nav">
-	<ul>
-		<li><a href="&#x2F;patterns&#x2F;04-pages-00-homepage&#x2F;04-pages-00-homepage.html">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="&#x2F;patterns&#x2F;04-pages-01-blog&#x2F;04-pages-01-blog.html">Blog</a></li>
-		<li><a href="#">Contact</a></li>
+      <nav class="c-nav">
+	<ul class="c-nav__menu">
+		<li class="c-nav__menu-item">
+      <a href="&#x2F;patterns&#x2F;04-pages-00-homepage&#x2F;04-pages-00-homepage.html">Home</a>
+    </li>
+		
+    <li class="c-nav__menu-item">
+      <a href="javascript:void(0)">About</a>
+    </li>
+		
+    <li class="c-nav__menu-item">
+      <a href="&#x2F;patterns&#x2F;04-pages-01-blog&#x2F;04-pages-01-blog.html">Blog</a>
+    </li>
+		
+    <li class="c-nav__menu-item">
+      <a href="javascript:void(0)">Contact</a>
+    </li>
 	</ul>
 </nav><!--end .nav-->
 
@@ -50,51 +64,53 @@
 	<div role="main">
 		
 		<div class="l-col__single">
-				<div class="block block--inset">
+				<div class="c-block--hero">
     <a href="javascript:void(0)" class="inner">
-		<div class="block__thumb">
-			<img src="..&#x2F;..&#x2F;images&#x2F;fpo_4x3.png" alt="4x3 Image" /> 
-		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Lorem ipsum dolor sit (37 characters)</h4>
-		</div>
-	</a>
+    <div class="c-block__thumb">
+      <img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;landscape-4x3-mountains.jpg" alt="Mountains" /> 
+    </div>
+    <div class="c-block__text">
+      <h2 class="c-block__headline">
+        Top 10 mountain ranges for hiking
+      </h2>
+    </div>
+  </a>
 </div>
 		</div>
 
 		<div class="l-three-col">
 				<div class="l-three-col__item">
-					<div class="block block--inset">
+					<div class="c-block--inset">
     <a href="javascript:void(0)" class="inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;tout-4x3-climber.jpg" alt="Climber" /> 
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Extreme climbing tips</h4>
+		<div class="c-block__text">
+			<h5 class="c-block__headline">Extreme climbing tips</h5>
 		</div>
 	</a>
 </div>
 				</div>
 				<div class="l-three-col__item">
-					<div class="block block--inset">
+					<div class="c-block--inset">
     <a href="javascript:void(0)" class="inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;tout-4x3-stream.jpg" alt="Stream hiking" /> 
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Stream hiking</h4>
+		<div class="c-block__text">
+			<h5 class="c-block__headline">Stream hiking</h5>
 		</div>
 	</a>
 </div>
 				</div>
 				<div class="l-three-col__item">
-					<div class="block block--inset">
+					<div class="c-block--inset">
     <a href="javascript:void(0)" class="inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;tout-4x3-climbers.jpg" alt="Explore hiking trails" /> 
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Explore hiking trails</h4>
+		<div class="c-block__text">
+			<h5 class="c-block__headline">Explore hiking trails</h5>
 		</div>
 	</a>
 </div>
@@ -105,67 +121,71 @@
 
 		<div class="l-sidebar">
 			<div class="l-sidebar__main">
-				<section class="section latest-posts">
-					<h2 class="section-title">Latest Posts</h2>
-					<ul class="post-list">
-							<li><div class="block block--thumb">
+				<section class="p-latest-posts">
+	<h4 class="p-latest-posts__title">
+    Latest Posts
+  </h4>
+	
+  <ul class="p-latest-posts__list">
+  		<li><div class="c-block--thumb">
   <a href="javascript:void(0)" class="b-inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;thumb-square-river.jpg" alt="Post Thumbnail" />
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Navigate the Allegheny River</h4>
-			<p class="block__excerpt">The lowest of the low. (Their debut single was just 2 minutes and 15 seconds long? What a rip-off!) Every time you do it, I have a mini-heart attack. It&#39;s like you&#39;re trying to kill me, pal. So see!? I&#39;ve got nothing to do with this trial! At all! I expect all of your faces to be red when you realize this mistake!</p>
+		<div class="c-block__text">
+			<h4 class="c-block__headline">Navigate the Allegheny River</h4>
+			<p class="c-block__excerpt">The Allegheny River is a principal tributary of the Ohio River; it is located in the Eastern United States. The Allegheny River joins with the Monongahela River to form the Ohio River at the Point of Point State Park in Downtown Pittsburgh, Pennsylvania.</p>
 		</div>
 	</a>
 </div></li>
-							<li><div class="block block--thumb">
+  		<li><div class="c-block--thumb">
   <a href="javascript:void(0)" class="b-inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;thumb-square-ivy.jpg" alt="Ivy" />
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">How to detect and avoid poison ivy</h4>
-			<p class="block__excerpt">The lowest of the low. (Their debut single was just 2 minutes and 15 seconds long? What a rip-off!) Every time you do it, I have a mini-heart attack. It&#39;s like you&#39;re trying to kill me, pal. So see!? I&#39;ve got nothing to do with this trial! At all! I expect all of your faces to be red when you realize this mistake!</p>
+		<div class="c-block__text">
+			<h4 class="c-block__headline">How to detect and avoid poison ivy</h4>
+			<p class="c-block__excerpt">Toxicodendron radicans, commonly known as poison ivy is a poisonous North American plant that is well known for its production of urushiol</p>
 		</div>
 	</a>
 </div></li>
-							<li><div class="block block--thumb">
+  		<li><div class="c-block--thumb">
   <a href="javascript:void(0)" class="b-inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;thumb-square-yosemite.jpg" alt="Yosemite" />
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Top 10 hiking mountains</h4>
-			<p class="block__excerpt">The lowest of the low. (Their debut single was just 2 minutes and 15 seconds long? What a rip-off!) Every time you do it, I have a mini-heart attack. It&#39;s like you&#39;re trying to kill me, pal. So see!? I&#39;ve got nothing to do with this trial! At all! I expect all of your faces to be red when you realize this mistake!</p>
+		<div class="c-block__text">
+			<h4 class="c-block__headline">Top 10 hiking mountains</h4>
+			<p class="c-block__excerpt">Yosemite National Park is a United States National Park spanning eastern portions of Tuolumne, Mariposa and Madera counties in the central eastern portion of the U.S. state of California.</p>
 		</div>
 	</a>
 </div></li>
-							<li><div class="block block--thumb">
+  		<li><div class="c-block--thumb">
   <a href="javascript:void(0)" class="b-inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;thumb-square-fire.jpg" alt="Fire" />
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">How to build a campfire</h4>
-			<p class="block__excerpt">The lowest of the low. (Their debut single was just 2 minutes and 15 seconds long? What a rip-off!) Every time you do it, I have a mini-heart attack. It&#39;s like you&#39;re trying to kill me, pal. So see!? I&#39;ve got nothing to do with this trial! At all! I expect all of your faces to be red when you realize this mistake!</p>
+		<div class="c-block__text">
+			<h4 class="c-block__headline">How to build a campfire</h4>
+			<p class="c-block__excerpt">A campfire is a fire lit at a campsite, to serve the following functions: light, warmth, a beacon, an insect and&#x2F;or apex predator deterrent, to cook, and for a psychological sense of security. </p>
 		</div>
 	</a>
 </div></li>
-							<li><div class="block block--thumb">
+  		<li><div class="c-block--thumb">
   <a href="javascript:void(0)" class="b-inner">
-		<div class="block__thumb">
+		<div class="c-block__thumb">
 			<img src="..&#x2F;..&#x2F;images&#x2F;sample&#x2F;thumb-square-gear.jpg" alt="Camping Gear" />
 		</div>
-		<div class="block__text">
-			<h4 class="block__headline">Pick the right camping gear</h4>
-			<p class="block__excerpt">The lowest of the low. (Their debut single was just 2 minutes and 15 seconds long? What a rip-off!) Every time you do it, I have a mini-heart attack. It&#39;s like you&#39;re trying to kill me, pal. So see!? I&#39;ve got nothing to do with this trial! At all! I expect all of your faces to be red when you realize this mistake!</p>
+		<div class="c-block__text">
+			<h4 class="c-block__headline">Pick the right camping gear</h4>
+			<p class="c-block__excerpt">The equipment used in camping varies with the particular type of camping. For instance, in survival camping the equipment consists of small items which have the purpose of helping the camper in providing food, heat and safety.</p>
 		</div>
 	</a>
 </div></li>
-					</ul>
-					<a href="#" class="text-btn">View more posts</a>
-				</section>
+	</ul>
+
+	<a href="javascript:void(0)" class="p-latest-posts__view-more">View more posts</a>
+</section>
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar__sidebar">
@@ -220,11 +240,11 @@
   {% patternCSS %}
 </script>
 
-  <script src="../../styleguide/js/vendor/jwerty.js?1464989878182"></script>
-	<script src="../../styleguide/js/postmessage.js?1464989878182"></script>
-	<script src="../../data/annotations.js?1464989878182"></script>
-	<script src="../../styleguide/js/annotations-pattern.js?1464989878182"></script>
-	<script src="../../styleguide/js/code-pattern.js?1464989878182"></script>
+  <script src="../../styleguide/js/vendor/jwerty.js?1465146653688"></script>
+	<script src="../../styleguide/js/postmessage.js?1465146653688"></script>
+	<script src="../../data/annotations.js?1465146653688"></script>
+	<script src="../../styleguide/js/annotations-pattern.js?1465146653688"></script>
+	<script src="../../styleguide/js/code-pattern.js?1465146653688"></script>
 
 
 </body>

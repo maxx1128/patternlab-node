@@ -84,11 +84,13 @@ var annotationsPattern = {
 		h3.innerHTML = title;
 		p.innerHTML  = comment;
 		
-		annotationDiv.appendChild(h3);
+		// annotationDiv.appendChild(h3);
 		annotationDiv.appendChild(p);
 		
 		// find the parent element to attach things to
 		var parentEl = annotationsPattern.findParent(el);
+		
+		var elementTitle = parentEl.childNodes;
 		
 		// see if a child with the class annotations exists
 		var els = parentEl.getElementsByClassName("sg-annotations");
@@ -98,7 +100,9 @@ var annotationsPattern = {
 			var annotationsDiv = document.createElement("div");
 			annotationsDiv.classList.add("sg-annotations");
 			annotationsDiv.appendChild(annotationDiv);
-			parentEl.appendChild(annotationsDiv);
+			// parentEl.appendChild(annotationsDiv);
+
+			parentEl.insertBefore(annotationsDiv, elementTitle[3]);
 		}
 		
 	},
