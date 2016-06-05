@@ -1,0 +1,32 @@
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;th width=&quot;30%&quot;&gt;
+      Element
+    &lt;/th&gt;
+
+    {{# type-properties }}
+      &lt;th&gt;
+        {{ name }}
+      &lt;/th&gt;
+    {{/ type-properties }}
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    {{# type-elements }}
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;{{ element }}&gt;
+            {{ label }}
+          &lt;/{{ element }}&gt;
+        &lt;/td&gt;
+
+        {{# type-properties }}
+          &lt;td&gt;
+            &lt;{{ element }} class=&quot;type-cell__{{ element }}-{{ property }}&quot;&gt;
+            &lt;/{{ element }}&gt;
+          &lt;/td&gt;
+        {{/ type-properties }}
+      &lt;/tr&gt;
+    {{/ type-elements }}
+  &lt;/tbody&gt;
+&lt;/table&gt;

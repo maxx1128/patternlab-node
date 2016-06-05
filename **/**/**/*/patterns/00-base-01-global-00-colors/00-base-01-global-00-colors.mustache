@@ -1,0 +1,15 @@
+&lt;div class=&quot;b-swatches&quot;&gt; 
+  {{#color-schemes}}
+  &lt;div class=&quot;b-swatch--{{scheme}}&quot;&gt;
+  &Tab;
+  &Tab;&lt;div class=&quot;b-swatch__base&quot;&gt;&lt;/div&gt;
+
+  &Tab;&lt;div class=&quot;b-swatch__all-tones&quot;&gt;
+  &Tab;&Tab;{{#color-tones}}
+  &Tab;&Tab;&Tab;&lt;div class=&quot;b-swatch__tone _tone-{{tone}}&quot;&gt;&lt;/div&gt;
+  &Tab;&Tab;{{/color-tones}}
+  &Tab;&lt;/div&gt;
+
+  &lt;/div&gt;
+  {{/color-schemes}}
+&lt;/div&gt;
