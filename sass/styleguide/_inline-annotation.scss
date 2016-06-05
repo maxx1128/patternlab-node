@@ -4,8 +4,22 @@
 
 .sg-annotations {
   @include clearfix();
+  position: relative;
   display: block;
-  margin: spacing() 0;
+  box-sizing: border-box;
+  margin: spacing() 0 spacing() spacing();
+  padding-left: spacing();
+
+  border-left: container(border);
+
+  &:after {
+    @include position(absolute, spacing(double) null null (spacing(double) * -1));
+    @include transform(rotate(270deg));
+    content: 'Notes';
+    padding-bottom: spacing(half);
+
+    font-style: italic;
+  }
 }
 
 .has-annotation {
