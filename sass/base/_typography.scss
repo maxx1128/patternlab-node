@@ -59,3 +59,10 @@ abbr {
   border-bottom: container(border);
   cursor: help;
 }
+
+mark {
+  padding: spacing(eigth) spacing(quarter);
+
+  background-color: color(warning);
+}
+

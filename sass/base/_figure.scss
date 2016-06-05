@@ -1,9 +1,11 @@
 figure {
-  margin-bottom: spacing();
+  margin: 0 0 spacing() 0;
 
   img {
     display: block;
     margin: 0 auto spacing(third);
+    max-width: none;
+    width: 100%;
   }
 }
 

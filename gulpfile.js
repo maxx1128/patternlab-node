@@ -275,8 +275,11 @@ gulp.task('nodeunit', function () {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./public/**/**/*')
-    .pipe(ghPages());
+  return gulp.src('./public/**/**/**/*')
+    .pipe(ghPages({
+      force: true,
+      cacheDir: './public/**/**/**/*'
+    }));
 });
 
 gulp.task('convert', function() {

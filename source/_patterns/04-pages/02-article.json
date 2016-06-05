@@ -2,7 +2,7 @@
 	"title" : "Article",
 	"bodyClass": "article",
 	"headline" : {
-		"short" : "This is an article headline!"
+		"short" : "Peru votes in election shaped by ex-leader’s legacy"
 	},
 	"author" : {
 		"first-name" : "Julianne",
@@ -10,11 +10,11 @@
 	},
 	"img": {
 		"landscape-4x3": {
-			"src": "../../images/sample/landscape-16x9-mountains.jpg",
+			"src": "../../images/sample/landscape-4x3-mountains.jpg",
 			"alt": "Mountains"
 		},
 		"landscape-16x9": {
-			"src": "../../images/sample/landscape-16x9-mountains.jpg",
+			"src": "../../images/sample/landscape-4x3-mountains.jpg",
 			"alt": "Mountains"	
 		}
 	},
@@ -51,5 +51,18 @@
 				"medium" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 			}
 		}
-	]
+	],
+
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit fuga est ullam animi eos nobis fugit aspernatur maiores, error iusto dolorum cupiditate ab, laboriosam distinctio incidunt autem itaque harum qui.",
+
+	"blockquote": "'Peru is on the threshold of becoming a narco-state,' he told supporters at his closing campaign rally in Lima.",
+
+	"article-content" : {
+		"intro": "Peruvians were choosing between two conservative candidates in a tight presidential election on Sunday that has become a referendum on the legacy of imprisoned ex-President Alberto Fujimori’s iron-handed rule in the 1990s.",
+		"p1": "Recent polls showed former World Bank economist Pedro Pablo Kuczynski having erased the lead held by his better-organized and politically sharper opponent, Keiko Fujimori, the daughter of Peru’s former strongman.",
+		"p2": "A mock voting exercise Saturday by Lima-based Gfk put support for Kuczynski at 51 percent compared with 49 percent for Fujimori. With a margin for error in the survey of plus or minus 1.6 percentage points, it was still a statistical tie but a far better standing for Kuczynski than a week ago, when he was trailing by more than 4 points. Fujimori topped him in the first round of voting by almost 20 points.",
+		"p3": "A potential swing vote in a close race could be the 885,000 Peruvians eligible to vote abroad — about 3.8 percent of the electorate.",
+		"p4": "The reference wasn’t just to her father’s well-known ties to corruption, organized crime and death squads, for which he’s serving a 25-year jail sentence, but an attempt to draw attention to a string of scandals that have hobbled Fujimori in the final stretch, most notably a report that one of her big fundraisers and the secretary general of her party is the target of a U.S. Drug Enforcement Administration investigation. Peru is the world’s largest producer of cocaine.",
+		"p5": "PPK, as Kuczynski is almost universally known in Peru, is also benefiting from a last-minute endorsement by the third-place finisher in the first round of voting, leftist congresswoman Veronika Mendoza, the protagonist of a massive anti-Fujimori demonstration this week the likes of which Peru hasn’t seen since the turbulent end of Fujimori’s rule 16 years ago."
+	}
 }
