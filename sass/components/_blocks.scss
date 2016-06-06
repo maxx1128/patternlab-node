@@ -21,6 +21,24 @@
   @include larger-than(small) { margin-top: 0; }
 }
 
+/*
+
+@element '.c-block__headline' and (min-lines: 2) {
+  eq_this {
+    text-align: center;
+  }
+
+  eq_parent.c-block__text {
+    padding: spacing(double) spacing(half);
+    top: 0;
+  }
+}
+
+*/
+
+
+
+
 .c-block__excerpt {
   margin-bottom: 0;
 
