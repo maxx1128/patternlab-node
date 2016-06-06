@@ -14,13 +14,15 @@
                   <div class="sg-code-contains">
                     This pattern contains:
                     {{# patternLineages }}
-                      <a href="{{ lineagePath }}"><code>{{ lineagePattern }}</code></a>
+                      <a href="{{ lineagePath }}">
+                        <code>{{ lineagePattern }}</code>
+                      </a>
                     {{/ patternLineages }}
                   </div>
                 {{/ patternLineageExists }}
                 <h3 class="sg-code-head">HTML</h3>
                 <pre class="sg-code-html">
-                  <code>
+                  <code class="language-markup">
                     {{ patternPartial }}
                   </code>
                 </pre>

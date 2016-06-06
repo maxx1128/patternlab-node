@@ -56,14 +56,14 @@
 .sg-code pre {
   padding: spacing(half);
   overflow: scroll;
+  max-height: 22em;
   white-space: -moz-pre-line;
   white-space: -pre-line;
   white-space: -o-pre-line;
   white-space: pre-line;
+  border-radius: container(border-radius);
 
   font-family: type(font-family, mono);
-
-  border: container(border, thick);
 }
 
 .clear { @include clearfix(); }
