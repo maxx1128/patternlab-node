@@ -16,4 +16,39 @@
   }
 }
 
-// type-cell__h2-font-size
+
+
+
+.b-font-family__example {
+  margin-bottom: spacing(double);
+}
+
+@each $property, $elements in $typography-map {
+
+  @if ($property == 'font-family') {
+    @each $family, $value in $elements {
+
+      .b-font-family__example-#{$family} {
+        position: relative;
+
+        text-transform: capitalize;
+        font-family: $value;
+        font-weight: type(font-weight, bold);
+
+        &:after {
+          @include position(absolute, 0 null null calc(100% + 5px));
+          content: quote(inspect($value));
+          width: em(225px);
+
+          font-weight: type(font-weight);
+
+          @include larger-than(small) { width: em(350px); }
+
+          @include larger-than(medium) { width: em(700px); }
+        }
+      }
+
+    }
+  }
+}
+

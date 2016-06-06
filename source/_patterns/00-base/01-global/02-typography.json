@@ -40,5 +40,15 @@
       "name": "Vertical Margins",
       "property": "margin"
     }
+  ],
+
+  "font-families": [
+    {
+      "name": "base"
+    }, { 
+      "name": "header"
+    }, { 
+      "name": "mono"
+    }
   ]
 }
