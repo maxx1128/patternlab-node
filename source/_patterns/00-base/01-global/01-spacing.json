@@ -1,0 +1,14 @@
+{
+  "spacing": [
+    { "distance": "triple" },
+    { "distance": "double" },
+    { "distance": "halfMore" },
+    { "distance": "base" },
+    { "distance": "half" },
+    { "distance": "third" },
+    { "distance": "quarter" },
+    { "distance": "fifth" },
+    { "distance": "sixth" },
+    { "distance": "eighth" }
+  ]
+}

@@ -33,7 +33,7 @@ $z-layers: (
   modal: 4001
 );
 
-$g-base-spacing: 1em;
+$g-base-spacing: em(16px);
 
 // Spacing units for padding, margin, etc
 $spacing-map: (
@@ -48,7 +48,7 @@ $spacing-map: (
   quarter: decimal-round(($g-base-spacing / 4), 2),
   fifth: decimal-round(($g-base-spacing / 5), 2),
   sixth: decimal-round(($g-base-spacing / 6), 2),
-  eigth: decimal-round(($g-base-spacing / 8), 2)
+  eighth: decimal-round(($g-base-spacing / 8), 2)
 );
 
 
@@ -67,7 +67,7 @@ $g-alert-color: #e65239;
 
 $g-shade-1: 15%;
 $g-shade-2: 40%;
-$g-shade-3: 70%;
+$g-shade-3: 65%;
 
 
 // Map for storing all color variables
