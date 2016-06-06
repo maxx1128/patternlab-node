@@ -1,9 +1,12 @@
+//=require ../_bower_components/jquery/dist/jquery.min.js
 //=require ../_bower_components/a11y-toggle/a11y-toggle.min.js
+//=require ../_bower_components/eqcss/EQCSS-polyfills.min.js
+//=require ../_bower_components/eqcss/EQCSS.min.js
+
 
 
 //=require pattern-lab/pl-nav.js
 //=require pattern-lab/pl-screen-sizes.js
-
 
 (function(w){
   var sw = document.body.clientWidth,
