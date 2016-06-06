@@ -1,0 +1,12 @@
+@include describe("Decimal Round") {
+  @include it("should round numbers with long decimal places to a set amount") {
+    @include should(expect(decimal-round(1/3, 2)), to(be(0.833)));
+  }
+}
+
+
+@include describe("A suite") {
+  @include it("contains spec with an expectation") {
+    @include should(expect(true), to(be(false)));
+  }
+}

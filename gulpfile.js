@@ -171,6 +171,9 @@ gulp.task('connect', ['lab'], function () {
   gulp.watch('js/**/**/*.js', ['scripts'],
     function () { browserSync.reload(); } );
 
+  gulp.watch('pl-js/**/**/*.js', ['pl-scripts'],
+    function () { browserSync.reload(); } );
+
   gulp.watch('annotations/**/**/*.md', ['convert', 'lab'],
     function () { browserSync.reload(); } );
 
@@ -258,6 +261,15 @@ gulp.task("scripts", function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task("pl-scripts", function() { 
+  gulp.src("pl-js/main.js")
+    .pipe(include())
+      .on('error', console.log)
+    .pipe(rename("pl-init.js"))
+    .pipe(gulp.dest("source/js"))
+    .pipe(notify({ message: 'JS Scripted!', onLast: true }))
+    .pipe(browserSync.stream());
+});
 
 
 //lint
@@ -297,7 +309,7 @@ gulp.task('lab-pipe', ['lab'], function (cb) {
   browserSync.reload();
 });
 
-gulp.task('default', ['sass', 'pl-sass', 'scripts', 'convert', 'lab', 'watch']);
+gulp.task('default', ['sass', 'pl-sass', 'scripts', 'pl-scripts', 'convert', 'lab', 'watch']);
 
 gulp.task('assets', ['cp:js', 'cp:img', 'cp:font', 'cp:data', 'cp:css', 'cp:styleguide' ]);
 gulp.task('prelab', ['clean', 'assets']);
