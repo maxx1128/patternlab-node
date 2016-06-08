@@ -10,7 +10,7 @@ $social-share-bg-hover: color(secondary, dark);
 
 .c-social-share__item {
   display: inline-block;
-  margin-right: spacing(third);
+  margin-right: spacing(half);
 
   a {
     @include transition(anim(time));

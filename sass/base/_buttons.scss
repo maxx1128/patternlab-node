@@ -18,8 +18,9 @@ $btn-small-font: type(font-size, tiny);
 $btn-large-pad: spacing();
 $btn-large-font: type(font-size, h5);
 
-$btn-disabled-bg: color(mono, light);
-$btn-disabled-text: color(mono, dark);
+$btn-disabled-bg: color(mono);
+$btn-disabled-text: color(mono, light);
+$btn-disabled-opacity: .35;
 
 $btn-colors: (
   success: (
@@ -110,6 +111,7 @@ $btn-colors: (
   color: $btn-disabled-text;
 
   background: $btn-disabled-bg;
+  opacity: $btn-disabled-opacity;
 
   @include hovers {
     color: $btn-disabled-text;

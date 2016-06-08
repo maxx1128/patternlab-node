@@ -8,7 +8,7 @@
 // Any universal block styles for all variations
 @include bem-mods(c-block) {
   overflow: hidden;
-  margin-bottom: spacing(halfMore);
+  margin-bottom: spacing(double);
 }
 
 .c-block__text {
@@ -84,7 +84,7 @@
   .c-block__text {
     @include position(absolute, null null 0 0);
     width: 100%;
-    padding: spacing(halfMore) spacing();
+    padding: spacing(double) spacing();
 
     color: color(mono, light);
 

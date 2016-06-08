@@ -11,10 +11,10 @@ $synapse: (
         large: breakpoint('large')
     ),
   spaceUnits: (
-    spacing('half'),
+    spacing(half),
     spacing(),
-    spacing('double'),
-    spacing('triple')
+    spacing(double),
+    spacing(double)
   )
 );
 

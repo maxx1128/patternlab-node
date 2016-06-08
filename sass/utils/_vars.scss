@@ -37,18 +37,12 @@ $g-base-spacing: em(16px);
 
 // Spacing units for padding, margin, etc
 $spacing-map: (
-  triple: decimal-round(($g-base-spacing * 3), 2),
   double: decimal-round(($g-base-spacing * 2), 2),
-  halfMore: decimal-round(($g-base-spacing * 1.5), 2),
 
   base: decimal-round($g-base-spacing, 2),
 
   half: decimal-round(($g-base-spacing / 2), 2),
-  third: decimal-round(($g-base-spacing / 3), 2),
-  quarter: decimal-round(($g-base-spacing / 4), 2),
-  fifth: decimal-round(($g-base-spacing / 5), 2),
-  sixth: decimal-round(($g-base-spacing / 6), 2),
-  eighth: decimal-round(($g-base-spacing / 8), 2)
+  quarter: decimal-round(($g-base-spacing / 4), 2)
 );
 
 
@@ -65,7 +59,7 @@ $g-success-color: #8be68b;
 $g-warning-color: #ff9c83;
 $g-alert-color: #e65239;
 
-$g-shade-1: 15%;
+$g-shade-1: 25%;
 
 
 // Map for storing all color variables
@@ -136,7 +130,7 @@ $modular-scale-base: rem(15px);
 $typography-map: (
   font-family: (
     base: $lucida-grande,
-    header: $georgia,
+    header: $helvetica,
     mono: $monospace
   ),
 
@@ -177,9 +171,9 @@ $typography-map: (
     h4: spacing(half) 0,
     h5: spacing(half) 0,
     h6: spacing(half) 0,
-    p: 0 0 spacing(halfMore) 0,
-    small: spacing(third) 0,
-    tiny: spacing(third) 0
+    p: 0 0 spacing(double) 0,
+    small: spacing(half) 0,
+    tiny: spacing(half) 0
   )
 );
 
@@ -196,12 +190,12 @@ $containers-map: (
   ),
 
   border-radius: (
-    base: spacing(third),
+    base: spacing(half),
     large: spacing()
   ),
 
   box-shadow: (
-    base: 1px 1px spacing() color(mono, dark)
+    base: 0 0 spacing() color(mono, dark)
   ),
 
   background-color: (

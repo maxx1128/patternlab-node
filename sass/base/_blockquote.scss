@@ -8,6 +8,5 @@ blockquote {
   font-size: type(font-size, h6);
   line-height: type(line-height, h4);
 
-  border-left: container(border, thick);
-  // background-color: color(mono, light);
+  border-left: container(border);
 }

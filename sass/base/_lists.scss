@@ -8,11 +8,11 @@ ul {
 
   ol,
   ul {
-    @include margin(spacing(third) null 0 null);
+    @include margin(spacing(half) null 0 null);
     margin-bottom: 0;
   }
 
-  li { margin-bottom: spacing(third); }
+  li { margin-bottom: spacing(half); }
 }
 
 /* Definition Lists */

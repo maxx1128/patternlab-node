@@ -21,7 +21,7 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
 }
 
 .sg-nav-title {
-  margin: spacing(third) 0 spacing(half) 0;
+  margin: spacing(half) 0 spacing(half) 0;
 }
 
 /* Header */
@@ -69,6 +69,31 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
     text-decoration: none;
     color: color(action);
     font-weight: type(font-weight, bold);
+  }
+}
+
+// Any items where a specific state has been added,
+// Such as being under review
+.sg-pattern-state {
+  position: relative;
+
+  &:after {
+    @include position(absolute, null spacing(half) spacing(half) null);
+
+    font-size: type(font-size, tiny);
+  }
+
+
+  &.inreview:after {
+    content: 'In Review';
+
+    color: color(warning, dark);
+  }
+
+  &.inprogress:after {
+    content: 'In Progress';
+
+    color: color(alert, dark);
   }
 }
 
