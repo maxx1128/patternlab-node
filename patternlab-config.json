@@ -51,7 +51,7 @@
   },
   "patternStateCascade": ["inprogress", "inreview", "complete"],
   "patternStates": {
-    "molecules-block-hero" : "inreview"
+    "components-hero-block" : "inreview"
   },
   "patternExportKeys": [],
   "patternExportDirectory": "./pattern_exports/",
