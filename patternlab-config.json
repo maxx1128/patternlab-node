@@ -23,6 +23,7 @@
     }
   },
   "styleGuideExcludes": [
+    "intro",
     "templates",
     "pages"
   ],
@@ -51,7 +52,8 @@
   },
   "patternStateCascade": ["inprogress", "inreview", "complete"],
   "patternStates": {
-    "components-hero-block" : "inreview"
+    "base-colors" : "inreview",
+    "base-typography" : "inprogress"
   },
   "patternExportKeys": [],
   "patternExportDirectory": "./pattern_exports/",

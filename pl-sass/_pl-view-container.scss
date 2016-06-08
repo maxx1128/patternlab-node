@@ -16,8 +16,8 @@ $sg-annot-height: 45%;
   font-family: type(font-family, base);
   line-height: type(line-height);
   
-  background: rgba(color(mono, darkest), 0.9);
-  color: color(mono, lightest);
+  background: rgba(color(mono, dark), 0.9);
+  color: color(mono, light);
 
   #patternlab-html:not(.show-menu) & {
     @include smaller-than(medium) {
@@ -72,7 +72,7 @@ $sg-annot-height: 45%;
     font-size: type(font-size, h5);
     font-weight: type(font-weight, bold);
 
-    background-color: color(mono, darker);
+    background-color: color(mono, dark);
   }
 }
 

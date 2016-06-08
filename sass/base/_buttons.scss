@@ -1,17 +1,17 @@
 $btn-bg: color(action);
-$btn-text: color(mono, lightest);
+$btn-text: color(mono, light);
 $btn-pad: spacing();
 $btn-radius: container(border-radius, large);
 $btn-hover-bg: color(action, dark);
 $btn-hover-text: $btn-text;
 $btn-trans: anim(time);
 
-$btn-alt-bg: color(mono, lightest);
+$btn-alt-bg: color(mono, light);
 $btn-alt-border: 2px solid color(action);
 $btn-alt-text: color(action);
 $btn-alt-hover-bg: color(action);
 $btn-alt-hover-border: $btn-alt-border;
-$btn-alt-hover-text: color(mono, lightest);
+$btn-alt-hover-text: color(mono, light);
 
 $btn-small-pad: spacing();
 $btn-small-font: type(font-size, tiny);

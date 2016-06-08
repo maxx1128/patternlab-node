@@ -42,7 +42,7 @@
 .c-block__excerpt {
   margin-bottom: 0;
 
-  color: color(mono, darkest);
+  color: color(mono, dark);
 }
 
 
@@ -86,7 +86,7 @@
     width: 100%;
     padding: spacing(halfMore) spacing();
 
-    color: color(mono, lightest);
+    color: color(mono, light);
 
     background: rgba(0, 0, 0, 0.5);
   }

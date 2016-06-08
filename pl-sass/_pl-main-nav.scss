@@ -5,13 +5,13 @@ $sg-menu-item-border: container(border);
 $sg-menu-item-height: 50px;
 
 
-$sg-tier-1-bg: color(mono, lightest);
+$sg-tier-1-bg: color(mono, light);
 $sg-tier-1-padding: spacing() null spacing() spacing(half);
 
-$sg-tier-2-bg: color(primary, lightest);
+$sg-tier-2-bg: color(info, light);
 $sg-tier-2-padding: spacing() null spacing() spacing();
 
-$sg-tier-3-bg: color(primary, lighter);
+$sg-tier-3-bg: color(info);
 $sg-tier-3-padding: 0 0 0 spacing(half);
 
 .sg-nav-intro {
@@ -67,7 +67,7 @@ $sg-tier-3-padding: 0 0 0 spacing(half);
     display: block;
 
     text-decoration: none;
-    color: color(action, dark);
+    color: color(action);
     font-weight: type(font-weight, bold);
   }
 }

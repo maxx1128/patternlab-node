@@ -1,14 +1,14 @@
 $swatches-per-row: 3;
-$swatches-tones-per-row: 3;
+$swatches-tones-per-row: 2;
 
 $swatch-base-height: 120px;
-$swatch-tone-height: 60px;
+$swatch-tone-height: 80px;
 
 $swatch-hex-position: null null spacing(half) spacing(half);
 $swatch-shade-position: spacing(half) null null spacing(half);
 
-$swatch-light-text: color(mono, lightest);
-$swatch-dark-text: color(mono, darkest);
+$swatch-light-text: color(mono, light);
+$swatch-dark-text: color(mono, dark);
 
 $swatch-base__shade-font-size: type(font-size, h5);
 $swatch-base__hex-font-size: type(font-size);

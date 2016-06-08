@@ -1,7 +1,7 @@
 .p-header {
   @include clearfix();
 
-  background: color(primary, lightest);
+  background: color(primary, light);
 }
 
 .p-header__container {

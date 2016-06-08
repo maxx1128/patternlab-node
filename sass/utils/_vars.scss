@@ -66,90 +66,56 @@ $g-warning-color: #ff9c83;
 $g-alert-color: #e65239;
 
 $g-shade-1: 15%;
-$g-shade-2: 40%;
-$g-shade-3: 65%;
 
 
 // Map for storing all color variables
 $color-map: (
   primary: (
-    lightest: tint($g-primary-color, $g-shade-3),
-    lighter: tint($g-primary-color, $g-shade-2),
     light: tint($g-primary-color, $g-shade-1),
     base: $g-primary-color,
-    dark: shade($g-primary-color, $g-shade-1),
-    darker: shade($g-primary-color, $g-shade-2),
-    darkest: shade($g-primary-color, $g-shade-3)
+    dark: shade($g-primary-color, $g-shade-1)
   ),
 
   secondary: (
-    lightest: tint($g-secondary-color, $g-shade-3),
-    lighter: tint($g-secondary-color, $g-shade-2),
     light: tint($g-secondary-color, $g-shade-1),
     base: $g-secondary-color,
-    dark: shade($g-secondary-color, $g-shade-1),
-    darker: shade($g-secondary-color, $g-shade-2),
-    darkest: shade($g-secondary-color, $g-shade-3)
+    dark: shade($g-secondary-color, $g-shade-1)
   ),
 
   action: (
-    lightest: tint($g-action-color, $g-shade-3),
-    lighter: tint($g-action-color, $g-shade-2),
     light: tint($g-action-color, $g-shade-1),
     base: $g-action-color,
-    dark: shade($g-action-color, $g-shade-1),
-    darker: shade($g-action-color, $g-shade-2),
-    darkest: shade($g-action-color, $g-shade-3)
+    dark: shade($g-action-color, $g-shade-1)
   ),
 
   mono: (
-    lightest: #fffefc,
-    lighter: tint($g-mono-color, $g-shade-2),
-    light: tint($g-mono-color, $g-shade-1),
+    light: #fffefc,
     base: $g-mono-color,
-    dark: shade($g-mono-color, $g-shade-1),
-    darker: shade($g-mono-color, $g-shade-2),
-    darkest: shade($g-mono-color, $g-shade-3)
+    dark: #111
   ),
 
   info: (
-    lightest: tint($g-info-color, $g-shade-3),
-    lighter: tint($g-info-color, $g-shade-2),
     light: tint($g-info-color, $g-shade-1),
     base: $g-info-color,
-    dark: shade($g-info-color, $g-shade-1),
-    darker: shade($g-info-color, $g-shade-2),
-    darkest: shade($g-info-color, $g-shade-3)
+    dark: shade($g-info-color, $g-shade-1)
   ),
 
   success: (
-    lightest: tint($g-success-color, $g-shade-3),
-    lighter: tint($g-success-color, $g-shade-2),
     light: tint($g-success-color, $g-shade-1),
     base: $g-success-color,
-    dark: shade($g-success-color, $g-shade-1),
-    darker: shade($g-success-color, $g-shade-2),
-    darkest: shade($g-success-color, $g-shade-3)
+    dark: shade($g-success-color, $g-shade-1)
   ),
 
   warning: (
-    lightest: tint($g-warning-color, $g-shade-3),
-    lighter: tint($g-warning-color, $g-shade-2),
     light: tint($g-warning-color, $g-shade-1),
     base: $g-warning-color,
-    dark: shade($g-warning-color, $g-shade-1),
-    darker: shade($g-warning-color, $g-shade-2),
-    darkest: shade($g-warning-color, $g-shade-3)
+    dark: shade($g-warning-color, $g-shade-1)
   ),
 
   alert: (
-    lightest: tint($g-alert-color, $g-shade-3),
-    lighter: tint($g-alert-color, $g-shade-2),
     light: tint($g-alert-color, $g-shade-1),
     base: $g-alert-color,
-    dark: shade($g-alert-color, $g-shade-1),
-    darker: shade($g-alert-color, $g-shade-2),
-    darkest: shade($g-alert-color, $g-shade-3)
+    dark: shade($g-alert-color, $g-shade-1)
   )
 );
 
@@ -225,10 +191,8 @@ $typography-map: (
 
 $containers-map: (
   border: (
-    base: 1px solid color(primary),
-    dark: 1px solid color(primary, darker),
-    thick: 3px solid color(primary),
-    alert: 3px solid color(alert)
+    base: 2px solid color(primary),
+    dark: 2px solid color(primary, dark)
   ),
 
   border-radius: (
@@ -237,13 +201,12 @@ $containers-map: (
   ),
 
   box-shadow: (
-    base: 1px 1px spacing() color(mono, darker)
+    base: 1px 1px spacing() color(mono, dark)
   ),
 
   background-color: (
-    light: color(mono, lighter),
-    base: color(primary, lightest),
-    dark: color(primary, lighter)
+    base: color(primary),
+    dark: color(primary, dark)
   ),
 
   padding: (

@@ -54,13 +54,12 @@ $synapse: (
   padding-top: ($layout-example-height * .2) !important;
   box-sizing: border-box;
 
-  color: color(info, darkest);
   text-align: center;
 
-  background-color: color(info, lighter);
+  background-color: color(info);
 
   &:nth-of-type(even) {
-    background-color: color(info, lightest);
+    background-color: color(info, light);
   }
 }
 

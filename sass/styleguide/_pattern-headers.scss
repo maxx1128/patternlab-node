@@ -20,7 +20,7 @@
 
     cursor: pointer;
     text-decoration: none;
-    color: color(mono, darker);
+    color: color(mono, dark);
 
     @include hovers() {
       color: color(mono, dark);

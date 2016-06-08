@@ -2,7 +2,7 @@
   @include clearfix();
   margin: 0;
   padding: 0;
-  background: color(mono, lightest);
+  background: color(mono, light);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -33,7 +33,7 @@
   border: container(border, dark);
   @include border-width(0 null);
 
-  background-color: color(mono, lightest);
+  background-color: color(mono, light);
 }
 
 // Where all generated elements go

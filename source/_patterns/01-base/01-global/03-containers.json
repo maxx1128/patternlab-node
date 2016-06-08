@@ -4,9 +4,7 @@
       "property": "border",
       "values": [
         { "name": "base" },
-        { "name": "dark" },
-        { "name": "thick" },
-        { "name": "alert" }
+        { "name": "dark" }
       ]
     }, { 
       "property": "border-radius",
@@ -23,7 +21,6 @@
       "property": "background-color",
       "values": [
         { "name": "base" },
-        { "name": "light" },
         { "name": "dark" }
       ]
     }, { 

@@ -4,11 +4,11 @@
 .p-footer {
   padding-top: spacing();
   
-  color: color(mono, lightest);
+  color: color(mono, light);
 
-  background: color(secondary, darkest);
+  background: color(secondary, dark);
 
-  a { color: color(mono, lightest); }
+  a { color: color(mono, light); }
 }
 
 .p-footer__container {

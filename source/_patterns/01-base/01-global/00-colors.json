@@ -11,11 +11,7 @@
   ],
 
   "color-tones": [
-    { "tone": "lightest" },
-    { "tone": "lighter" },
     { "tone": "light" },
-    { "tone": "dark" },
-    { "tone": "darker" },
-    { "tone": "darkest" }
+    { "tone": "dark" }
   ]
 }

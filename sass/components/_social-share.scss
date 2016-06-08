@@ -1,5 +1,5 @@
 $social-share-bg: color(secondary, dark);
-$social-share-bg-hover: color(secondary, darker);
+$social-share-bg-hover: color(secondary, dark);
 
 .c-social-share {
   overflow: hidden;
@@ -17,7 +17,7 @@ $social-share-bg-hover: color(secondary, darker);
     display: block;
     padding: spacing(half) spacing();
 
-    color: color(mono, lightest);
+    color: color(mono, light);
 
     border-radius: container(border-radius);
     background: $social-share-bg;

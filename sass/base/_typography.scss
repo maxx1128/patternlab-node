@@ -16,7 +16,7 @@ $type-properties: 'font-size', 'line-height', 'margin';
 body {
   font-family: type(font-family, base);
 
-  color: color(mono, darkest);
+  color: color(mono, dark);
 }
 
 
@@ -52,7 +52,7 @@ hr {
   height: 2px;
   margin: spacing(double) 0;
 
-  background: color(primary, lighter);
+  background: color(primary, light);
 }
 
 abbr {
