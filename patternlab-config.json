@@ -26,7 +26,7 @@
     "templates",
     "pages"
   ],
-  "defaultPattern": "all",
+  "defaultPattern": "intro-getting-started",
   "ignored-extensions" : ["scss", "DS_Store", "less"],
   "ignored-directories" : ["scss"],
   "debug": false,
