@@ -5,13 +5,13 @@ $sg-menu-item-border: container(border);
 $sg-menu-item-height: 50px;
 
 
-$sg-tier-1-bg: color(mono, light);
+$sg-tier-1-bg: #fff;
 $sg-tier-1-padding: spacing() null spacing() spacing(half);
 
-$sg-tier-2-bg: color(info, light);
+$sg-tier-2-bg: #eee;
 $sg-tier-2-padding: spacing() null spacing() spacing();
 
-$sg-tier-3-bg: color(info);
+$sg-tier-3-bg: #ddd;
 $sg-tier-3-padding: 0 0 0 spacing(half);
 
 .sg-nav-intro {

@@ -60,9 +60,5 @@ abbr {
   cursor: help;
 }
 
-mark {
-  padding: spacing(quarter) spacing(quarter);
-
-  background-color: color(warning);
-}
+mark { background-color: color(warning); }
 
