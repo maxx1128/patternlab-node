@@ -5,7 +5,19 @@
 			<div class="l-sidebar__main">
 				{{> patterns-article-header }}
 
-				{{> patterns-article-body }}
+					{{# articleText1 }}
+						<p>
+							{{ text }}
+						</p>
+					{{/ articleText1 }}
+
+					{{> base-figure-with-caption }}
+
+					{{# articleText2 }}
+						<p>
+							{{ text }}
+						</p>
+					{{/ articleText2 }}
 				
 				{{> components-social-share }}
 			</div><!--end l-main-->

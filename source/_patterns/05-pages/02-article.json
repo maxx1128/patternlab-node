@@ -57,12 +57,28 @@
 
 	"blockquote": "'Peru is on the threshold of becoming a narco-state,' he told supporters at his closing campaign rally in Lima.",
 
-	"article-content" : {
-		"intro": "Peruvians were choosing between two conservative candidates in a tight presidential election on Sunday that has become a referendum on the legacy of imprisoned ex-President Alberto Fujimori’s iron-handed rule in the 1990s.",
-		"p1": "Recent polls showed former World Bank economist Pedro Pablo Kuczynski having erased the lead held by his better-organized and politically sharper opponent, Keiko Fujimori, the daughter of Peru’s former strongman.",
-		"p2": "A mock voting exercise Saturday by Lima-based Gfk put support for Kuczynski at 51 percent compared with 49 percent for Fujimori. With a margin for error in the survey of plus or minus 1.6 percentage points, it was still a statistical tie but a far better standing for Kuczynski than a week ago, when he was trailing by more than 4 points. Fujimori topped him in the first round of voting by almost 20 points.",
-		"p3": "A potential swing vote in a close race could be the 885,000 Peruvians eligible to vote abroad — about 3.8 percent of the electorate.",
-		"p4": "The reference wasn’t just to her father’s well-known ties to corruption, organized crime and death squads, for which he’s serving a 25-year jail sentence, but an attempt to draw attention to a string of scandals that have hobbled Fujimori in the final stretch, most notably a report that one of her big fundraisers and the secretary general of her party is the target of a U.S. Drug Enforcement Administration investigation. Peru is the world’s largest producer of cocaine.",
-		"p5": "PPK, as Kuczynski is almost universally known in Peru, is also benefiting from a last-minute endorsement by the third-place finisher in the first round of voting, leftist congresswoman Veronika Mendoza, the protagonist of a massive anti-Fujimori demonstration this week the likes of which Peru hasn’t seen since the turbulent end of Fujimori’s rule 16 years ago."
-	}
+	"articleText1": [
+    {
+      "text": "In a tight presidential runoff election Sunday, Peruvians seemed equally divided between two very different candidates: the daughter of imprisoned ex-president Alberto Fujimori, and her older opponent, former World Bank economist Pedro Pablo Kuczynski."
+    }, {
+      "text": "Two exit polls on Sunday suggested that the 77-year-old Kuczynski would narrowly defeat Keiko Fujimori, though a third poll gave Fujimori a narrow lead, the Associated Press reported."
+    }, {
+      "text": "The vote was seen largely as a referendum on the legacy of Alberto Fujimori, an iron-handed ruler who led the nation for a decade in the 1990s. He is serving a 25-year sentence for corruption, among other charges."
+    }
+  ],
+
+
+  "articleText2": [
+    {
+      "text": "Keiko Fujimori, 41, originally seemed headed to easy victory: she won the first round of voting by a 20 percentage-point margin, but by Sunday, her wide lead over Kuczynski had disappeared."
+    }, {
+      "text": "In a quick count of 84.5% of sample ballots, pollster Ipsos-Apoyo said Kuczynski won 50.9% of votes, with Fujimori winning 49.1%, Reuters reported."
+    }, {
+      "text": "Another local pollster, Gfk, which was the most accurate in predicting results from the first round, showed Kuczynski winning by more than two percentage points, while a third poll by CPI showed Fujimori winning by three points."
+    }, {
+      "text": "Official results aren't expected until after 10 p.m. ET."
+    }, {
+      "text": "As exit polls demonstrated the tight race, a jubilant Fujimori waved to supporters from a hotel terrace in Lima. Meanwhile, Kuczynski's campaign aides filed into his home to await official results, flashing \"V' for victory\" signs."
+    }
+  ]
 }
