@@ -1,0 +1,52 @@
+&lt;h5&gt;
+  Font Families
+&lt;/h5&gt;
+
+&lt;br&gt;
+
+{{# font-families }}
+  &lt;div class=&quot;b-font-family__example b-font-family__{{ name }}&quot;&gt;
+    &lt;span class=&quot;b-font-family__example-{{ name }}&quot;&gt;
+      {{ name }}: 
+    &lt;/span&gt;
+  &lt;/div&gt;
+{{/ font-families }}
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;h5&gt;
+  Font Sizes
+&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;th width=&quot;30%&quot;&gt;
+      Element
+    &lt;/th&gt;
+
+    {{# type-properties }}
+      &lt;th&gt;
+        {{ name }}
+      &lt;/th&gt;
+    {{/ type-properties }}
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    {{# type-elements }}
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;{{ element }}&gt;
+            {{ label }}
+          &lt;/{{ element }}&gt;
+        &lt;/td&gt;
+
+        {{# type-properties }}
+          &lt;td&gt;
+            &lt;{{ element }} class=&quot;type-cell__{{ element }}-{{ property }}&quot;&gt;
+            &lt;/{{ element }}&gt;
+          &lt;/td&gt;
+        {{/ type-properties }}
+      &lt;/tr&gt;
+    {{/ type-elements }}
+  &lt;/tbody&gt;
+&lt;/table&gt;
