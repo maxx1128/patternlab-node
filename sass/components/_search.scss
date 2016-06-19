@@ -1,12 +1,12 @@
 /* Search Form */
-.search-field {
-  padding-right: 3em;
-}
+.search-field { padding-right: spacing(double); }
 
 .inline-form .search-submit {
   background: none;
-  padding: 0.78em 1em;
+  padding: spacing();
+
+  color: color(mono);
+
   border: 0;
-  border-left: 1px solid gray;
-  color: gray;
+  border-left: container(border);
 }

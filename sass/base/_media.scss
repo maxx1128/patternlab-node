@@ -7,6 +7,4 @@ img, video, object {
   height: auto;
 }
 
-iframe {
-  margin-bottom: 1rem;
-}
+iframe { margin-bottom: spacing(); }
